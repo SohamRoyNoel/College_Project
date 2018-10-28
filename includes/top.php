@@ -1,4 +1,7 @@
+
 <!DOCTYPE HTML>
+<?php include "db.php"?>
+<?php include "functions.php" ?>
 <html>
 <head>
     <title>Seeking an Job</title>
