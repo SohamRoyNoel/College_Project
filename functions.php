@@ -7,3 +7,4 @@ function escape($string){
 function Confirm(){
     echo "<script>alert(\"You've been registered; LOGIN to continue\")</script>";
 }
+

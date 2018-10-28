@@ -19,7 +19,6 @@ if (isset($_POST['register'])){
 
         Confirm();
     }
-
 }
 ?>
 <div class="container">
@@ -59,7 +58,7 @@ if (isset($_POST['register'])){
                     <div class="form-group col-md-12">
                         <label class="col-md-3 control-lable" for="dob">Birthday</label>
                         <div class="col-md-9">
-                            <input type="text" name="dob" id="datepicker" class="form-control input-sm" required/>
+                            <input type="text" name="dob" id="datepicker"  class="form-control input-sm" required/>
                         </div>
                     </div>
                 </div>
