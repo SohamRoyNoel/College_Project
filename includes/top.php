@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+<?php ob_start(); ?>
 
 <!DOCTYPE HTML>
 <?php include "db.php"?>

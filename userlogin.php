@@ -14,13 +14,36 @@ if (isset($_POST['login'])){
     }
 
 
+//    while ($row = mysqli_fetch_assoc($send)){
+//        $db_user_id = $row['id'];
+//        echo "<script>alert(\"You're logged in . {$db_user_id}\")</script>";
+//    }
+
     while ($row = mysqli_fetch_assoc($send)){
         $db_user_id = $row['id'];
+        $db_user_name = $row['name'];
+        $db_user_phone = $row['phone'];
+        $db_user_sex = $row['sex'];
+        $db_user_dob = $row['dob'];
+        $db_user_add = $row['address'];
+        $db_user_em = $row['email'];
+        $db_user_extra = $row['extra'];
+        $db_user_interest = $row['interest'];
+        $db_user_password = $row['password'];
+
+        $_SESSION['id'] = $db_user_id;
+        $_SESSION['name'] = $db_user_name;
+        $_SESSION['phone'] = $db_user_phone;
+        $_SESSION['sex'] = $db_user_sex;
+        $_SESSION['dob'] = $db_user_dob;
+        $_SESSION['add'] = $db_user_add;
+        $_SESSION['em'] = $db_user_em;
+        $_SESSION['extra'] = $db_user_extra;
+        $_SESSION['interest'] = $db_user_interest;
+        $_SESSION['password'] = $db_user_password;
         echo "<script>alert(\"You're logged in . {$db_user_id}\")</script>";
     }
 }
-
-
 ?>
 
 <div class="container">

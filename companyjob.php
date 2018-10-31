@@ -35,7 +35,7 @@
                             <label class="col-md-3 control-lable" for="country">Target To</label>
                             <div class="col-md-9">
                                 <select path="country" id="country" class="form-control input-sm">
-                                    <option value="">Select Country</option>
+                                    <option value="">Select Type Of Job</option>
                                     <option value="">Tech Support</option>
                                     <option value="">Part Time</option>
                                     <option value="">Full Time</option>
@@ -52,7 +52,7 @@
                         <div class="form-group col-md-12">
                             <label class="col-md-3 control-lable" for="dob">Job Location</label>
                             <div class="col-md-9">
-                                <input type="text" path="dob" id="dob" class="form-control input-sm"/>
+                                <input type="text" id="loc" class="form-control input-sm"/>
                             </div>
                         </div>
                     </div>
