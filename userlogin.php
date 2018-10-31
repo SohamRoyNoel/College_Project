@@ -13,12 +13,6 @@ if (isset($_POST['login'])){
         die("failed".mysqli_error());
     }
 
-
-//    while ($row = mysqli_fetch_assoc($send)){
-//        $db_user_id = $row['id'];
-//        echo "<script>alert(\"You're logged in . {$db_user_id}\")</script>";
-//    }
-
     while ($row = mysqli_fetch_assoc($send)){
         $db_user_id = $row['id'];
         $db_user_name = $row['name'];
@@ -41,7 +35,7 @@ if (isset($_POST['login'])){
         $_SESSION['extra'] = $db_user_extra;
         $_SESSION['interest'] = $db_user_interest;
         $_SESSION['password'] = $db_user_password;
-        echo "<script>alert(\"You're logged in . {$db_user_id}\")</script>";
+        header("Location: userprofile.php");
     }
 }
 ?>
@@ -103,7 +97,7 @@ if (isset($_POST['login'])){
                                     <div class="clearfix"> </div></a>
                                 <div class="clearfix"> </div>
                             </div>
-                            <h4>Don't have an Account? <a href="register.html"> Register Now!</a></h4>
+                            <h4>Don't have an Account? <a href="userreg.php"> Register Now!</a></h4>
                         </div>
                     </div>
                 </div>

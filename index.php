@@ -1,4 +1,9 @@
+<?php session_start(); ?>
+<?php ob_start(); ?>
+
 <!DOCTYPE HTML>
+<?php include "db.php"?>
+<?php include "functions.php" ?>
 <html>
 <head>
     <title>Seeking an Job</title>
@@ -68,7 +73,13 @@
                         <li><a href="jobs.html">Defence Jobs</a></li>
                     </ul>
                 </li>
-                <li><a href="login.html">Login</a></li>
+                <?php
+                if (isset($_SESSION['id'])){
+                    echo "<li><a href=\"./userlogin.php\">Logout</a></li>";
+                } else {
+                    echo "<li><a href=\"./userlogin.php\">Login</a></li>";
+                }
+                ?>
                 <li><a href="resume.html">Upload Resume</a></li>
             </ul>
         </div>

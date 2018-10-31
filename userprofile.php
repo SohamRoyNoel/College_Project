@@ -1,6 +1,7 @@
 <?php include "includes/top.php"?>
 <?php include "includes/header.php"?>
 
+
 <?php
 if(isset($_SESSION['id'])) {
     $id = $_SESSION['id'];
