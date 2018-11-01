@@ -23,9 +23,10 @@ if(isset($_SESSION['id'])) {
         $extra = $row['extra'];
         $interest = $row['interest'];
         $password = $row['password'];
+        $pic = $row['img'];
     }
-
-
+} else{
+    header("Location: error/index.php");
 }
 ?>
 
@@ -74,11 +75,36 @@ if(isset($_SESSION['id'])) {
         }
 ?>
 
+<?php
+        if (isset($_POST['imgs'])) {
+            $idps = $_SESSION['id'];
+            $p_image = $_FILES['images']['name'];
+            $post_image_temp = $_FILES['images']['tmp_name'];
+
+            move_uploaded_file($post_image_temp, "userImage/$p_image");
+
+            $imgdata = "update user set img = '{$p_image}' where id = {$idps}";
+            $executes = mysqli_query($connection, $imgdata);
+
+            header("Location: userprofile.php");
+        }
+?>
+
 <div class="container">
     <div class="col-sm-4">
         <div class="single">
             <div class="righ" style="alignment: right">
-                <img height="300" width="350" class="img img-circle" src="images/1.png">
+                <img height="300" width="350" class="img-rounded" src="userImage/<?php echo is_null($pic) ?  'miss.png' : $pic?>">
+                <br><br>
+                <form action="" method="post" enctype="multipart/form-data">
+                    <div class="input-group" style="margin-bottom: 5px">
+                        <input class="btn btn-default" type="file" name="images">
+                        <span class="input-group-btn">
+                        <button class="btn btn2-danger" name="imgs" type="submit">Upload</button>
+                        </span>
+                    </div>
+
+                </form>
             </div>
         </div>
     </div>

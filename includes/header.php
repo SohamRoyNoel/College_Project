@@ -57,7 +57,7 @@
                 </li>
                 <?php
                         if (isset($_SESSION['id'])){
-                            echo "<li><a href=\"./userlogin.php\">Logout</a></li>";
+                            echo "<li><a href=\"./logout.php\">Logout</a></li>";
                         } else {
                             echo "<li><a href=\"./userlogin.php\">Login</a></li>";
                         }
