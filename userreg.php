@@ -14,10 +14,28 @@ if (isset($_POST['register'])){
     $password = escape($_POST['password']);
 
     if (!empty($name) && !empty($phone) && !empty($sex) && !empty($dob) && !empty($address) && !empty($email) && !empty($extra) && !empty($interest)){
-        $query = "insert into user (name, phone, sex, dob, address, email, extra, interest, password) values ('{$name}', '{$phone}', '{$sex}', '{$dob}', '{$address}', '{$email}', '{$extra}', '{$interest}', '{$password}')";
-        $execute = mysqli_query($connection, $query);
 
-        Confirm();
+        $querys = "select * from user";
+        $send = mysqli_query($connection, $querys);
+        $flag = 1;
+
+        while ($row = mysqli_fetch_assoc($send)) {
+            $em = $row['email'];
+            if ($em == $email){
+                $flag = 0;
+            }
+        }
+
+        if ($flag == 1) {
+            $query = "insert into user (name, phone, sex, dob, address, email, extra, interest, password) values ('{$name}', '{$phone}', '{$sex}', '{$dob}', '{$address}', '{$email}', '{$extra}', '{$interest}', '{$password}')";
+            $execute = mysqli_query($connection, $query);
+
+            Confirm();
+        }
+
+        if ($flag == 0){
+            Hold();
+        }
     }
 }
 ?>
