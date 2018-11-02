@@ -13,3 +13,4 @@ function Hold(){
     echo "<script>alert(\"There is another account with this email.\")</script>";
 //    header("Location: userlogin.php");
 }
+

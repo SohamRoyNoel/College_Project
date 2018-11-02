@@ -77,6 +77,14 @@ if(isset($_SESSION['id'])) {
 
 <?php
         if (isset($_POST['imgs'])) {
+
+            // remove pic from server
+
+            $path = "userImage/".$pic;
+            unlink($path);
+
+            // end
+
             $idps = $_SESSION['id'];
             $p_image = $_FILES['images']['name'];
             $post_image_temp = $_FILES['images']['tmp_name'];
