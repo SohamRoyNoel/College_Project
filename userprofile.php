@@ -152,7 +152,7 @@ if(isset($_SESSION['id'])) {
             <form action="" method="post">
                 <p>
                 <div class="input-group" style="margin-bottom: 5px">
-                    <input type="text" class="form-control" name="names" placeholder="Name" value="<?php echo $name?>">
+                    <input type="text" class="form-control" name="names"  maxlength="50" placeholder="Name" value="<?php echo $name?>">
                     <span class="input-group-btn">
                 <button class="btn btn-default" name="bt1" type="submit">Edit!!</button>
                 </span>
@@ -163,13 +163,21 @@ if(isset($_SESSION['id'])) {
             <form action="" method="post">
                 <p>
                 <div class="input-group" style="margin-bottom: 5px">
-                    <input type="text" class="form-control" name="phones" placeholder="Phone" value="<?php echo $phone; ?>">
+                    <input type="text" class="form-control" name="phones" maxlength="10" placeholder="Phone" onkeypress="return isNumberKey(event)" value="<?php echo $phone; ?>">
                     <span class="input-group-btn">
                         <button class="btn btn-default" name="bt2" type="submit">Edit!!</button>
                         </span>
                 </div>
                 </p>
             </form>
+            <script>
+                function isNumberKey(evt){
+                    var charCode = (evt.which) ? evt.which : event.keyCode
+                    if (charCode > 31 && (charCode < 48 || charCode > 57))
+                        return false;
+                    return true;
+                }
+            </script>
 
             <form action="" method="post">
                 <p>
@@ -196,7 +204,7 @@ if(isset($_SESSION['id'])) {
             <form action="" method="post">
                 <p>
                 <div class="input-group" style="margin-bottom: 5px">
-                    <input type="text" class="form-control" name="adds" placeholder="Address" value="<?php echo $add?>">
+                    <input type="text" class="form-control" name="adds" placeholder="Address" maxlength="255" value="<?php echo $add?>">
                     <span class="input-group-btn">
                         <button class="btn btn-default" name="bt5" type="submit">Edit!!</button>
                         </span>
@@ -207,7 +215,7 @@ if(isset($_SESSION['id'])) {
             <form action="" method="post">
                 <p>
                 <div class="input-group" style="margin-bottom: 5px">
-                    <input type="text" class="form-control" id="tags" name="extras" placeholder="Skill" value="<?php echo $extra?>">
+                    <input type="text" class="form-control" id="tags" name="extras" maxlength="255" placeholder="Skill" value="<?php echo $extra?>">
                     <span class="input-group-btn">
                         <button class="btn btn-default" name="bt6" type="submit">Edit!!</button>
                         </span>
@@ -251,7 +259,7 @@ if(isset($_SESSION['id'])) {
             <form action="" method="post">
                 <p>
                 <div class="input-group" style="margin-bottom: 5px">
-                    <input type="text" class="form-control" placeholder="Email" value="<?php echo $em?>" disabled>
+                    <input type="text" class="form-control" placeholder="Email" maxlength="255" value="<?php echo $em?>" disabled>
                     <span class="input-group-btn">
                         <button class="btn btn-default" type="button">NoEdit!!</button>
                         </span>

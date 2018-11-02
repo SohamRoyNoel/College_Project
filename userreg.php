@@ -48,7 +48,7 @@ if (isset($_POST['register'])){
                     <div class="form-group col-md-12">
                         <label class="col-md-3 control-lable" for="firstName">Candidate Name</label>
                         <div class="col-md-9">
-                            <input type="text" id="name" name="name" class="form-control input-sm" required/>
+                            <input type="text" id="name" name="name" maxlength="50" class="form-control input-sm" required/>
                         </div>
                     </div>
                 </div>
@@ -56,7 +56,7 @@ if (isset($_POST['register'])){
                     <div class="form-group col-md-12">
                         <label class="col-md-3 control-lable" for="lastName">Phone No.</label>
                         <div class="col-md-9">
-                            <input type="text" name="phone" id="phone" class="form-control input-sm" onkeypress="return isNumberKey(event)" required/>
+                            <input type="text" name="phone" id="phone" maxlength="10" class="form-control input-sm" onkeypress="return isNumberKey(event)" required/>
                         </div>
                     </div>
                 </div>
@@ -92,7 +92,7 @@ if (isset($_POST['register'])){
                     <div class="form-group col-md-12">
                         <label class="col-md-3 control-lable" for="lastName">Address</label>
                         <div class="col-md-9">
-                            <input type="text" name="address" id="lastName" class="form-control input-sm" required/>
+                            <input type="text" name="address" id="lastName" maxlength="255" class="form-control input-sm" required/>
                         </div>
                     </div>
                 </div>
@@ -100,7 +100,7 @@ if (isset($_POST['register'])){
                     <div class="form-group col-md-12">
                         <label class="col-md-3 control-lable" for="email">Email</label>
                         <div class="col-md-9">
-                            <input type="text" name="email" id="email" class="form-control input-sm" required/>
+                            <input type="text" name="email" id="email" maxlength="255" class="form-control input-sm" required/>
                         </div>
                     </div>
                 </div>
@@ -108,7 +108,7 @@ if (isset($_POST['register'])){
                     <div class="form-group col-md-12">
                         <label class="col-md-3 control-lable" for="email">Extra Skills In</label>
                         <div class="col-md-9">
-                            <input type="text" name="extra" id="tags" class="form-control input-sm" required/>
+                            <input type="text" name="extra" id="tags" maxlength="255" class="form-control input-sm" required/>
                         </div>
                     </div>
                 </div>
@@ -140,7 +140,7 @@ if (isset($_POST['register'])){
                 </div>
                 <div class="row">
                     <div class="form-group col-md-12">
-                        <label class="col-md-3 control-lable" for="email">Password</label>
+                        <label class="col-md-3 control-lable" maxlength="255" for="email">Password</label>
                         <div class="col-md-9">
                             <input type="password" name="password" class="form-control input-sm" required/>
                         </div>
