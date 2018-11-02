@@ -106,7 +106,7 @@ if(isset($_SESSION['id'])) {
                 <br><br>
                 <form action="" method="post" enctype="multipart/form-data">
                     <div class="input-group" style="margin-bottom: 5px">
-                        <input class="btn btn-default" type="file" name="images">
+                        <input class="btn btn-default" type="file" name="images" required>
                         <span class="input-group-btn">
                         <button class="btn btn2-danger" name="imgs" type="submit">Upload</button>
                         </span>
