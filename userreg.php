@@ -56,13 +56,21 @@ if (isset($_POST['register'])){
                     <div class="form-group col-md-12">
                         <label class="col-md-3 control-lable" for="lastName">Phone No.</label>
                         <div class="col-md-9">
-                            <input type="text" name="phone" id="phone" class="form-control input-sm" required/>
+                            <input type="text" name="phone" id="phone" class="form-control input-sm" onkeypress="return isNumberKey(event)" required/>
                         </div>
                     </div>
                 </div>
+                <script>
+                    function isNumberKey(evt){
+                        var charCode = (evt.which) ? evt.which : event.keyCode
+                        if (charCode > 31 && (charCode < 48 || charCode > 57))
+                            return false;
+                        return true;
+                    }
+                </script>
                 <div class="row">
                     <div class="form-group col-md-12">
-                        <label class="col-md-3 control-lable" for="country">Interested In</label>
+                        <label class="col-md-3 control-lable" for="country">Sex</label>
                         <div class="col-md-9">
                             <select name="sex" id="country" class="form-control input-sm">
                                 <option value="0">Select Gender</option>
