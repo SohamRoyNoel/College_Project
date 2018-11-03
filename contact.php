@@ -70,8 +70,8 @@
             <div class="col-sm-4">
                 <address class="addr">
                     <p class="secondary3">
-                        , <br>
-                        Lorem Ipsum, D04 89GR.</p>
+                        Ring Road, <br>
+                        Bangalore, 748 026.</p>
                     <dl>
                         <dt>Freephone:</dt>
                         <dd>
@@ -128,7 +128,7 @@
                     <input type="text" name="name" maxlength="255" class="text" placeholder="Name"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required>
                     <input type="text" name="email" maxlength="255" class="text" placeholder="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" style="margin-left:3%" required>
                     <input type="text" name="phone" maxlength="10" minlength="10" class="text" placeholder="Phone" onkeypress="return isNumberKey(event)" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Phone';}" style="margin-left:3%" required>
-                </div>ff
+                </div>
                 <script>
                     function isNumberKey(evt){
                         var charCode = (evt.which) ? evt.which : event.keyCode
