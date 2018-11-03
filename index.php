@@ -80,7 +80,8 @@
                     echo "<li><a href=\"./userlogin.php\">Login</a></li>";
                 }
                 ?>
-                <li><a href="resume.html">Upload Resume</a></li>
+                <li><a href="./about.php">About</a></li>
+                <li><a href="./contact.php">Contact</a></li>
             </ul>
         </div>
         <div class="clearfix"> </div>
