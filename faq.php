@@ -3,7 +3,6 @@
 
 <div class="container">
     <div class="single">
-        <h2>Frequently Asked Questions</h2>
         <?php include "includes/sidebar.php"?>
         <div class="col-md-8">
             <div class="col_1">
@@ -42,7 +41,7 @@
 
                 <style>
                     .collapsible {
-                        background-color: #00adef;
+                        background-color: #dbdbdb;
                         color: white;
                         cursor: pointer;
                         padding: 18px;
@@ -54,7 +53,7 @@
                     }
 
                     .active, .collapsible:hover {
-                        background-color: #f15f43;
+                        background-color: #D2CF99;
                     }
 
                     .content {
@@ -64,6 +63,7 @@
                         background-color: #f1f1f1;
                     }
                 </style>
+                <h2>Frequently Asked Questions</h2>
                 <?php
                 if (isset($_POST['rep'])){
                     $rep = $_POST['reply'];
@@ -93,7 +93,7 @@
 
                     ?>
 
-                    <button class="collapsible"><b><i><?php echo $qus; ?></i></b></button>
+                    <button class="collapsible"><b><i style="color: black"><?php echo $qus; ?></i></b></button>
                     <div class="content">
                         <?php
                         $q = "select * from faq_reply";
