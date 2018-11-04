@@ -53,7 +53,7 @@
                     }
 
                     .active, .collapsible:hover {
-                        background-color: #D2CF99;
+                        background-color: #00aced;
                     }
 
                     .content {
@@ -108,24 +108,21 @@
 
                                 ?>
                                 <p>
-                                    <div style="margin-top: 4px" class="panel panel-success">
-                                        <div class="panel-heading">
-                                            <h3 class="panel-title"><?php echo $rep ? $rep : "No replies yet"; ?></h3>
-                                        </div>
+                                <div style="margin-top: 4px" class="panel panel-success">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title"><?php echo $rep ? $rep : "No replies yet"; ?></h3>
                                     </div>
+                                </div>
                                 </p>
                                 <?php
                             }
-
-
-
 
                             if ($qids == null) {
                                 ?>
                                 <p>
                                 <div style="margin-top: 4px" class="panel panel-success">
                                     <div class="panel-heading">
-                                        <h3 class="panel-title"><?php echo $rep ? $rep : "No replies yet"; ?></h3>
+                                        <h3 class="panel-title"><?php echo "No replies yet"; ?></h3>
                                     </div>
                                 </div>
                                 </p>
@@ -135,7 +132,7 @@
                         ?>
                         <p>
                         <form action="" method="post">
-                            <textarea class="form-control" style="margin-bottom: 5px" cols="85" rows="3" name="reply"></textarea>
+                            <textarea class="form-control" style="margin-bottom: 5px; margin-top: 5px" cols="85" rows="3" name="reply"></textarea>
 
                             <input type="hidden" name="hid" value="<?php echo $id?>">
 
