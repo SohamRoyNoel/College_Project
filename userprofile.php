@@ -141,7 +141,9 @@ if(isset($_SESSION['id'])) {
                         </div>
                         <p><!-- /.collapse --></p>
                     </div>
+                     <a href="userApplied.php"><button type="button" class="btn btn-primary btn-lg btn-block">Watch Jobs You Applied</button></a>
                 </div>
+
             </div>
         </div>
     </div>
