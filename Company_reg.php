@@ -167,23 +167,31 @@ if (isset($_POST['submit'])){
                     <label>Company Name</label>
                     <div class="pom-agile">
                         <span class="fa fa-building-o"></span>
-                        <input placeholder="Company Name" name="name" type="text" required="">
+                        <input placeholder="Company Name" maxlength="100" name="name" type="text" required="">
                     </div>
                 </div>
                 <div class="form-style-agile">
                     <label>Registration No.</label>
                     <div class="pom-agile">
                         <span class="glyphicon glyphicon-registration-mark"></span>
-                        <input placeholder="Registration No." name="reg" type="text" required="">
+                        <input placeholder="Registration No." maxlength="15" minlength="15" name="reg" type="text" required="">
                     </div>
                 </div>
                 <div class="form-style-agile">
                     <label>ISO</label>
                     <div class="pom-agile">
                         <span class="fa fa-info-circle"></span>
-                        <input placeholder="ISO" name="iso" type="text" required="">
+                        <input placeholder="ISO" name="iso" type="text" onkeypress="return isNumberKey(event)" required="">
                     </div>
                 </div>
+                <script>
+                    function isNumberKey(evt){
+                        var charCode = (evt.which) ? evt.which : event.keyCode
+                        if (charCode > 31 && (charCode < 48 || charCode > 57))
+                            return false;
+                        return true;
+                    }
+                </script>
                 <div class="form-style-agile">
                     <label>Since</label>
                     <div class="pom-agile">
@@ -195,7 +203,7 @@ if (isset($_POST['submit'])){
                     <label>Email</label>
                     <div class="pom-agile">
                         <span class="fa fa-envelope"></span>
-                        <input placeholder="Email" name="em" type="email" required="">
+                        <input placeholder="Email" maxlength="100" name="em" type="email" required="">
                     </div>
                 </div>
                 <div class="form-style-agile">
@@ -237,7 +245,7 @@ if (isset($_POST['submit'])){
                     <label>Password</label>
                     <div class="pom-agile">
                         <span class="fa fa-key"></span>
-                        <input placeholder="Password" name="ps" type="password" id="password1" required="">
+                        <input placeholder="Password" minlength="5" name="ps" type="password" id="password1" required="">
                     </div>
                 </div>
                 <div class="sub-agile">
