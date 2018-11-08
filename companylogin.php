@@ -48,7 +48,7 @@ if (isset($_POST['submit'])){
         $db_company_dob = $row['since'];
         $db_company_password = $row['password'];
 
-        $_SESSION['idc'] = $db_company_id;
+        $_SESSION['id'] = $db_company_id;
         $_SESSION['name'] = $db_company_name;
         $_SESSION['reg'] = $db_company_reg;
         $_SESSION['iso'] = $db_company_iso;

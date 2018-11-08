@@ -2,8 +2,8 @@
 <?php include "includes/header.php"?>
 
 <?php
-if(isset($_SESSION['idc'])) {
-    $id = $_SESSION['idc'];
+if(isset($_SESSION['id'])) {
+    $id = $_SESSION['id'];
     $query = "select * from company where id={$id}";
     $send = mysqli_query($connection, $query);
 
@@ -89,7 +89,7 @@ if (isset($_POST['imgs'])) {
     //echo $ext;
     if ($ext == "jpeg" || $ext == "png" || $ext == "gif" || $ext == "jpg") {
 
-        $idps = $_SESSION['idc'];
+        $idps = $_SESSION['id'];
         $p_image = $_FILES['images']['name'];
         $post_image_temp = $_FILES['images']['tmp_name'];
 
