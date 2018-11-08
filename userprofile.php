@@ -1,18 +1,13 @@
 <?php include "includes/top.php"?>
 <?php include "includes/header.php"?>
-
-
 <?php
 if(isset($_SESSION['id'])) {
     $id = $_SESSION['id'];
     $query = "select * from user where id={$id}";
     $send = mysqli_query($connection, $query);
-
     if (!$send){
         die("failed".mysqli_error());
     }
-
-
     while ($row = mysqli_fetch_assoc($send)){
         $name = $row['name'];
         $phone = $row['phone'];
@@ -32,106 +27,90 @@ if(isset($_SESSION['id'])) {
 ?>
 
 <?php
-        if (isset($_POST['bt1'])){
-            $ns = $_POST['names'];
-            $up1 = "update user set name = '{$ns}' where id = {$id}";
-            $ups = mysqli_query($connection, $up1);
-            header("Location: userprofile.php");
-        }
-        if (isset($_POST['bt2'])){
-            $phones = $_POST['phones'];
-            $up1 = "update user set phone = '{$phones}' where id = {$id}";
-            $ups = mysqli_query($connection, $up1);
-            header("Location: userprofile.php");
-        }
-        if (isset($_POST['bt3'])){
-            $sexs = $_POST['sexs'];
-            $up1 = "update user set sex = '{$sexs}' where id = {$id}";
-            $ups = mysqli_query($connection, $up1);
-            header("Location: userprofile.php");
-        }
-        if (isset($_POST['bt4'])){
-            $dobs = $_POST['dobs'];
-            $up1 = "update user set dob = '{$dobs}' where id = {$id}";
-            $ups = mysqli_query($connection, $up1);
-            header("Location: userprofile.php");
-        }
-        if (isset($_POST['bt5'])){
-            $adds = $_POST['adds'];
-            $up1 = "update user set address = '{$adds}' where id = {$id}";
-            $ups = mysqli_query($connection, $up1);
-            header("Location: userprofile.php");
-        }
-        if (isset($_POST['bt6'])){
-            $extras = $_POST['extras'];
-            $up1 = "update user set extra = '{$extras}' where id = {$id}";
-            $ups = mysqli_query($connection, $up1);
-            header("Location: userprofile.php");
-        }
-        if (isset($_POST['bt7'])){
-            $interests = $_POST['interests'];
-            $up1 = "update user set interest = '{$interests}' where id = {$id}";
-            $ups = mysqli_query($connection, $up1);
-            header("Location: userprofile.php");
-        }
+if (isset($_POST['bt1'])){
+    $ns = $_POST['names'];
+    $up1 = "update user set name = '{$ns}' where id = {$id}";
+    $ups = mysqli_query($connection, $up1);
+    header("Location: userprofile.php");
+}
+if (isset($_POST['bt2'])){
+    $phones = $_POST['phones'];
+    $up1 = "update user set phone = '{$phones}' where id = {$id}";
+    $ups = mysqli_query($connection, $up1);
+    header("Location: userprofile.php");
+}
+if (isset($_POST['bt3'])){
+    $sexs = $_POST['sexs'];
+    $up1 = "update user set sex = '{$sexs}' where id = {$id}";
+    $ups = mysqli_query($connection, $up1);
+    header("Location: userprofile.php");
+}
+if (isset($_POST['bt4'])){
+    $dobs = $_POST['dobs'];
+    $up1 = "update user set dob = '{$dobs}' where id = {$id}";
+    $ups = mysqli_query($connection, $up1);
+    header("Location: userprofile.php");
+}
+if (isset($_POST['bt5'])){
+    $adds = $_POST['adds'];
+    $up1 = "update user set address = '{$adds}' where id = {$id}";
+    $ups = mysqli_query($connection, $up1);
+    header("Location: userprofile.php");
+}
+if (isset($_POST['bt6'])){
+    $extras = $_POST['extras'];
+    $up1 = "update user set extra = '{$extras}' where id = {$id}";
+    $ups = mysqli_query($connection, $up1);
+    header("Location: userprofile.php");
+}
+if (isset($_POST['bt7'])){
+    $interests = $_POST['interests'];
+    $up1 = "update user set interest = '{$interests}' where id = {$id}";
+    $ups = mysqli_query($connection, $up1);
+    header("Location: userprofile.php");
+}
 ?>
 
 <?php
-        if (isset($_POST['imgs'])) {
-
-            // remove pic from server
-
-            $path = "CV/".$pic;
-            unlink($path);
-
-            // end
-
-            $ext = pathinfo($_FILES['images']['name'], PATHINFO_EXTENSION);
-           //echo $ext;
-            if ($ext == "jpeg" || $ext == "png" || $ext == "gif" || $ext == "jpg") {
-
-                $idps = $_SESSION['id'];
-                $p_image = $_FILES['images']['name'];
-                $post_image_temp = $_FILES['images']['tmp_name'];
-
-                move_uploaded_file($post_image_temp, "userImage/$p_image");
-
-                $imgdata = "update user set img = '{$p_image}' where id = {$idps}";
-                $executes = mysqli_query($connection, $imgdata);
-            } else{
-                echo "<script>alert(\"You've Uploaded A Wrong File\")</script>";
-            }
-
-            header("Location: userprofile.php");
-        }
+if (isset($_POST['imgs'])) {
+    // remove pic from server
+    $path = "CV/".$pic;
+    unlink($path);
+    // end
+    $ext = pathinfo($_FILES['images']['name'], PATHINFO_EXTENSION);
+    //echo $ext;
+    if ($ext == "jpeg" || $ext == "png" || $ext == "gif" || $ext == "jpg") {
+        $idps = $_SESSION['id'];
+        $p_image = $_FILES['images']['name'];
+        $post_image_temp = $_FILES['images']['tmp_name'];
+        move_uploaded_file($post_image_temp, "userImage/$p_image");
+        $imgdata = "update user set img = '{$p_image}' where id = {$idps}";
+        $executes = mysqli_query($connection, $imgdata);
+    } else{
+        echo "<script>alert(\"You've Uploaded A Wrong File\")</script>";
+    }
+    header("Location: userprofile.php");
+}
 ?>
 
 <?php
 if (isset($_POST['cvs'])) {
-
     // remove pic from server
-
     $path = "CV/".$cv;
     unlink($path);
-
     // end
-
     $exts = pathinfo($_FILES['cv']['name'], PATHINFO_EXTENSION);
     //echo $ext;
     if ($exts == "docx" || $exts == "pdf") {
-
         $idps = $_SESSION['id'];
         $p_image = $_FILES['cv']['name'];
         $post_image_temp = $_FILES['cv']['tmp_name'];
-
         move_uploaded_file($post_image_temp, "CV/$p_image");
-
         $imgdata = "update user set CV = '{$p_image}' where id = {$idps}";
         $executes = mysqli_query($connection, $imgdata);
     } else{
         echo "<script>alert(\"Only .doc & .pdf files are allowed. \")</script>";
     }
-
     header("Location: userprofile.php");
 }
 ?>
@@ -179,7 +158,7 @@ if (isset($_POST['cvs'])) {
                         </div>
                         <p><!-- /.collapse --></p>
                     </div>
-                     <a href="userApplied.php"><button type="button" class="btn btn-primary btn-lg btn-block">Watch Jobs You Applied</button></a>
+                    <a href="userApplied.php"><button type="button" class="btn btn-primary btn-lg btn-block">Watch Jobs You Applied</button></a>
                 </div>
 
             </div>
@@ -268,7 +247,7 @@ if (isset($_POST['cvs'])) {
                 <div class="input-group" style="margin-bottom: 5px">
                     <select name="interests" id="country" class="form-control input-sm">
                         <option value=""><?php echo ($interest==1?"Programmer":($interest==2?"Algorithmist":($interest==3?"Network Security"
-                            :($interest==4?"IT":($interest==5?"All Jobs":($interest==6?"Car Consultant":($interest==7?"Nursing"
+                                :($interest==4?"IT":($interest==5?"All Jobs":($interest==6?"Car Consultant":($interest==7?"Nursing"
                                     :($interest==8?"Security":($interest==9?"Driver":($interest==10?"Resturant":($interest==11?"Programmer"
                                         :($interest==12?"Programmer":($interest==13?"Programmer":($interest==14?"Programmer":($interest==15?"Programmer"
                                             :$interest==16?"Programmer":""))))))))))))))) ?></option>
