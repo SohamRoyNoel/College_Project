@@ -143,16 +143,16 @@ if (isset($_POST['submit'])){
             </a>
             <ul style="color: black" class="nav-w3ls">
                 <li>
-                    <a href="#">Home</a>
+                    <a href="index.php">Home</a>
                 </li>
                 <li>
-                    <a href="#">About Us</a>
+                    <a href="about.php">About Us</a>
                 </li>
                 <li>
-                    <a href="#">Contact</a>
+                    <a href="contact.php">Contact</a>
                 </li>
                 <li>
-                    <a href="#">FAQ</a>
+                    <a href="faq.php">FAQ</a>
                 </li>
             </ul>
         </div>
