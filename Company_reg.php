@@ -18,7 +18,9 @@ if (isset($_POST['submit'])){
 
         while ($row = mysqli_fetch_assoc($send)) {
             $ems = $row['email'];
-            if ($ems == $cem){
+            $isos = $row['iso'];
+            $regs = $row['reg'];
+            if ($ems == $cem || $isos == $ciso || $regs == $creg){
                 $flag = 0;
             }
         }
