@@ -1,5 +1,46 @@
 <?php include "includes/top.php"?>
+<?php
 
+if (isset($_POST['submit'])){
+    $cname = escape($_POST['name']);
+    $creg = escape($_POST['reg']);
+    $ciso = escape($_POST['iso']);
+    $cdob = escape($_POST['dob']);
+    $cem = escape($_POST['em']);
+    $ccountry = escape($_POST['con']);
+    $cpassword = escape($_POST['ps']);
+
+    if (!is_null($cname) && !is_null($creg) && !is_null($ciso) && !is_null($cdob) && !is_null($cem) && !is_null($ccountry) && !is_null($cpassword)){
+
+        $querys = "select * from company";
+        $send = mysqli_query($connection, $querys);
+        $flag = 1;
+
+        while ($row = mysqli_fetch_assoc($send)) {
+            $ems = $row['email'];
+            if ($ems == $cem){
+                $flag = 0;
+            }
+        }
+
+        if ($flag == 1) {
+            $query = "insert into company (name, reg, iso, email, password, country, since) values ('{$cname}', '{$creg}', '{$ciso}', '{$cem}', '{$cpassword}', '{$ccountry}', '{$cdob}')";
+            $execute = mysqli_query($connection, $query);
+
+            Confirm1();
+            header("Location: companylogin.php");
+        }
+
+        if ($flag == 0){
+            Hold();
+            header("Location: Company_reg.php");
+        }
+
+    }
+}
+
+
+?>
 <div>
     <nav class="navbar navbar-default" role="navigation">
         <div class="container">
@@ -100,7 +141,7 @@
             <a href="#" class="button-w3ls">
                 <i class="fas fa-long-arrow-alt-right"></i>
             </a>
-            <ul class="nav-w3ls">
+            <ul style="color: black" class="nav-w3ls">
                 <li>
                     <a href="#">Home</a>
                 </li>
@@ -121,47 +162,47 @@
         <div class="sub-main-w3">
             <h3>Signup Now</h3>
             <h5>Creating an account is free..</h5>
-            <form action="#" method="post">
+            <form action="" method="post">
                 <div class="form-style-agile">
                     <label>Company Name</label>
                     <div class="pom-agile">
                         <span class="fa fa-building-o"></span>
-                        <input placeholder="Company Name" name="Name" type="text" required="">
+                        <input placeholder="Company Name" name="name" type="text" required="">
                     </div>
                 </div>
                 <div class="form-style-agile">
                     <label>Registration No.</label>
                     <div class="pom-agile">
                         <span class="glyphicon glyphicon-registration-mark"></span>
-                        <input placeholder="Registration No." name="Name" type="text" required="">
+                        <input placeholder="Registration No." name="reg" type="text" required="">
                     </div>
                 </div>
                 <div class="form-style-agile">
                     <label>ISO</label>
                     <div class="pom-agile">
                         <span class="fa fa-info-circle"></span>
-                        <input placeholder="ISO" name="Name" type="text" required="">
+                        <input placeholder="ISO" name="iso" type="text" required="">
                     </div>
                 </div>
                 <div class="form-style-agile">
                     <label>Since</label>
                     <div class="pom-agile">
                         <span class="fa fa-calendar"></span>
-                        <input placeholder="Since" name="Name" type="text" required="">
+                        <input placeholder="Since" id="datepicker"  name="dob" type="text" required="">
                     </div>
                 </div>
                 <div class="form-style-agile">
                     <label>Email</label>
                     <div class="pom-agile">
                         <span class="fa fa-envelope"></span>
-                        <input placeholder="Email" name="Email" type="email" required="">
+                        <input placeholder="Email" name="em" type="email" required="">
                     </div>
                 </div>
                 <div class="form-style-agile">
                     <label>Country</label>
                     <div class="pom-agile">
                         <span class="fa fa-globe"></span>
-                        <select path="country" id="country" class="form-control input-sm" style="border: none">
+                        <select name="con" path="country" id="country" class="form-control input-sm" style="border: none">
                             <option value="">Select Country</option>
                             <option value="">Japan</option>
                             <option value="">Kenya</option>
@@ -196,22 +237,15 @@
                     <label>Password</label>
                     <div class="pom-agile">
                         <span class="fa fa-key"></span>
-                        <input placeholder="Password" name="Password" type="password" id="password1" required="">
-                    </div>
-                </div>
-                <div class="form-style-agile">
-                    <label>Confirm Password</label>
-                    <div class="pom-agile">
-                        <span class="fa fa-key"></span>
-                        <input placeholder="Confirm Password" name="Confirm Password" type="password" id="password2" required="">
+                        <input placeholder="Password" name="ps" type="password" id="password1" required="">
                     </div>
                 </div>
                 <div class="sub-agile">
-                    <input type="checkbox" id="brand1" value="">
+                    <i style="color: white" class="glyphicon glyphicon-exclamation-sign"></i>
                     <label for="brand1">
-                        <span></span>I Accept to the Terms & Conditions</label>
+                        <span></span>Here You Accept to the Terms & Conditions</label>
                 </div>
-                <input type="submit" value="Submit">
+                <input type="submit" name="submit" value="Register">
             </form>
         </div>
     </div>
