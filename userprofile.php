@@ -24,6 +24,7 @@ if(isset($_SESSION['id'])) {
         $interest = $row['interest'];
         $password = $row['password'];
         $pic = $row['img'];
+        $cv = $row['CV'];
     }
 } else{
     header("Location: error/index.php");
@@ -80,7 +81,7 @@ if(isset($_SESSION['id'])) {
 
             // remove pic from server
 
-            $path = "userImage/".$pic;
+            $path = "CV/".$pic;
             unlink($path);
 
             // end
@@ -103,6 +104,36 @@ if(isset($_SESSION['id'])) {
 
             header("Location: userprofile.php");
         }
+?>
+
+<?php
+if (isset($_POST['cvs'])) {
+
+    // remove pic from server
+
+    $path = "CV/".$cv;
+    unlink($path);
+
+    // end
+
+    $exts = pathinfo($_FILES['cv']['name'], PATHINFO_EXTENSION);
+    //echo $ext;
+    if ($exts == "docx" || $exts == "pdf") {
+
+        $idps = $_SESSION['id'];
+        $p_image = $_FILES['cv']['name'];
+        $post_image_temp = $_FILES['cv']['tmp_name'];
+
+        move_uploaded_file($post_image_temp, "CV/$p_image");
+
+        $imgdata = "update user set CV = '{$p_image}' where id = {$idps}";
+        $executes = mysqli_query($connection, $imgdata);
+    } else{
+        echo "<script>alert(\"Only .doc & .pdf files are allowed. \")</script>";
+    }
+
+    header("Location: userprofile.php");
+}
 ?>
 
 <div class="container">
@@ -263,6 +294,22 @@ if(isset($_SESSION['id'])) {
                         </span>
                 </div>
                 </p>
+            </form>
+
+            <form action="" method="post" enctype="multipart/form-data">
+                <?php
+                if (is_null($cv)){
+                    echo "Upload your CV here";
+                } else {
+                    echo "<b>You have Uploaded Your CV</b>";
+                }
+                ?>
+                <div class="input-group" style="margin-bottom: 5px">
+                    <input class="form-control" value="<?php echo $cv; ?>" style="border: none" type="file" name="cv" required>
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" name="cvs" type="submit">Upload CV</button>
+                        </span>
+                </div>
             </form>
 
             <form action="" method="post">
