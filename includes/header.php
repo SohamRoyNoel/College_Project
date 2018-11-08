@@ -40,8 +40,8 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Recruiters<b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li><a href="login.html">Recruiter</a></li>
-                        <li><a href="recruiters.html">Recruiters Login</a></li>
-                        <li><a href="codes.html">Recruiters Registration</a></li>
+                        <li><a href="./companylogin.php">Recruiters Login</a></li>
+                        <li><a href="./Company_reg.php">Recruiters Registration</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
