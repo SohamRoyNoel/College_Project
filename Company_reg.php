@@ -1,119 +1,236 @@
 <?php include "includes/top.php"?>
-<?php include "includes/header.php"?>
-<div class="container">
-    <div class="single">
-        <div class="form-container">
-            <h2>Companies' Registration</h2>
-            <form>
-                <div class="row">
-                    <div class="form-group col-md-12">
-                        <label class="col-md-3 control-lable" for="firstName">Company Name</label>
-                        <div class="col-md-9">
-                            <input type="text" path="firstName" id="firstName" class="form-control input-sm"/>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="form-group col-md-12">
-                        <label class="col-md-3 control-lable" for="lastName">Registration No.</label>
-                        <div class="col-md-9">
-                            <input type="text" path="lastName" id="lastName" class="form-control input-sm"/>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="form-group col-md-12">
-                        <label class="col-md-3 control-lable" for="lastName">ISO</label>
-                        <div class="col-md-9">
-                            <input type="text" path="lastName" id="lastName" class="form-control input-sm"/>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="form-group col-md-12">
-                        <label class="col-md-3 control-lable" for="sex">Scale</label>
-                        <div class="col-md-9" class="form-control input-sm">
-                            <div class="radios">
-                                <label for="radio-01" class="label_radio">
-                                    <input type="radio" name="scale" value="male"> Large
-                                </label>
-                                <label for="radio-02" class="label_radio">
-                                    <input type="radio" name="scale" value="male"> Medium
-                                </label>
-                                <label for="radio-03" class="label_radio">
-                                    <input type="radio" name="scale" value="male"> Small
-                                </label>
+
+<div>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="./index.php"><img src="images/logo.png" alt=""/></a>
+            </div>
+            <!--/.navbar-header-->
+            <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" style="height: 1px;">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Jobs<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="location.html">All Jobs</a></li>
+                            <li><a href="location.html">Walkin Jobs</a></li>
+                            <li><a href="location.html">Jobs by Company</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <ul class="multi-column-dropdown">
+                                        <li><a href="services.html">Cars</a></li>
+                                        <li><a href="services.html">Nurse</a></li>
+                                        <li><a href="services.html">Security</a></li>
+                                        <li><a href="services.html">Driver</a></li>
+                                        <li><a href="services.html">Fooding</a></li>
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="form-group col-md-12">
-                        <label class="col-md-3 control-lable" for="dob">Since</label>
-                        <div class="col-md-9">
-                            <input type="text" path="dob" id="dob" class="form-control input-sm"/>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="form-group col-md-12">
-                        <label class="col-md-3 control-lable" for="email">Email</label>
-                        <div class="col-md-9">
-                            <input type="text" path="email" id="email" class="form-control input-sm"/>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="form-group col-md-12">
-                        <label class="col-md-3 control-lable" for="country">Country</label>
-                        <div class="col-md-9">
-                            <select path="country" id="country" class="form-control input-sm">
-                                <option value="">Select Country</option>
-                                <option value="">Japan</option>
-                                <option value="">Kenya</option>
-                                <option value="">Dubai</option>
-                                <option value="">Italy</option>
-                                <option value="">Greece</option>
-                                <option value="">Iceland</option>
-                                <option value="">China</option>
-                                <option value="">Doha</option>
-                                <option value="">Irland</option>
-                                <option value="">Srilanka</option>
-                                <option value="">Russia</option>
-                                <option value="">Hong Kong</option>
-                                <option value="">Germany</option>
-                                <option value="">Canada</option>
-                                <option value="">Mexico</option>
-                                <option value="">Nepal</option>
-                                <option value="">Norway</option>
-                                <option value="">Oman</option>
-                                <option value="">Pakistan</option>
-                                <option value="">Kuwait</option>
-                                <option value="">Indonesia</option>
-                                <option value="">Spain</option>
-                                <option value="">Thailand</option>
-                                <option value="">Saudi Arabia</option>
-                                <option value="">Poland</option>
-                            </select>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Recruiters<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="login.html">Recruiter</a></li>
+                            <li><a href="./companylogin.php">Recruiters Login</a></li>
+                            <li><a href="./Company_reg.php">Recruiters Registration</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">More<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="jobs.html">Tech Support</a></li>
+                            <li><a href="jobs.html">Part time Jobs</a></li>
+                            <li><a href="jobs.html">Health Care</a></li>
+                            <li><a href="jobs.html">Internships</a></li>
+                            <li><a href="jobs.html">Research Jobs</a></li>
+                            <li><a href="jobs.html">Defence Jobs</a></li>
+                        </ul>
+                    </li>
+                    <?php
+                    if (isset($_SESSION['id'])){
+                        echo "<li><a href=\"./logout.php\">Logout</a></li>";
+                    } else {
+                        echo "<li><a href=\"./userlogin.php\">Login</a></li>";
+                    }
+                    ?>
 
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="form-group col-md-12">
-                        <label class="col-md-3 control-lable" for="subjects">Subjects</label>
-                        <div class="col-md-9 sm_1">
-                            <textarea cols="77" rows="6" value=" " onfocus="this.value='';" onblur="if (this.value == '') {this.value = '';}"> </textarea>
+                    <li><a href="./about.php">About</a></li>
+                    <li><a href="./contact.php">Contact</a></li>
+                    <li><a href="./faq.php">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <!--/.navbar-collapse-->
+    </nav>
+    <div class="banner_1">
+        <div class="container">
+            <div id="search_wrapper1">
+                <div id="search_form" class="clearfix">
+                    <h1>Register your Company</h1>
 
-                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="main-w3ls">
+    <div class="left-content">
+        <div class="w3ls-content">
+            <!-- logo -->
+            <h1>
+                <a href="index.php"><i class="fab fa-accusoft"></i>Welcome To Seeker.com</a>
+            </h1>
+            <!-- //logo -->
+            <h2>We provide better opportunity both company & candidate.</h2>
+            <a href="#" class="button-w3ls">
+                <i class="fas fa-long-arrow-alt-right"></i>
+            </a>
+            <ul class="nav-w3ls">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">About Us</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+                <li>
+                    <a href="#">FAQ</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="right-form-agile">
+        <!-- content -->
+        <div class="sub-main-w3">
+            <h3>Signup Now</h3>
+            <h5>Creating an account is free..</h5>
+            <form action="#" method="post">
+                <div class="form-style-agile">
+                    <label>Company Name</label>
+                    <div class="pom-agile">
+                        <span class="fa fa-building-o"></span>
+                        <input placeholder="Company Name" name="Name" type="text" required="">
                     </div>
                 </div>
-                <div class="row">
-                    <div class="form-actions floatRight">
-                        <input type="submit" value="Register" class="btn btn-primary btn-sm">
+                <div class="form-style-agile">
+                    <label>Registration No.</label>
+                    <div class="pom-agile">
+                        <span class="glyphicon glyphicon-registration-mark"></span>
+                        <input placeholder="Registration No." name="Name" type="text" required="">
                     </div>
                 </div>
+                <div class="form-style-agile">
+                    <label>ISO</label>
+                    <div class="pom-agile">
+                        <span class="fa fa-info-circle"></span>
+                        <input placeholder="ISO" name="Name" type="text" required="">
+                    </div>
+                </div>
+                <div class="form-style-agile">
+                    <label>Since</label>
+                    <div class="pom-agile">
+                        <span class="fa fa-calendar"></span>
+                        <input placeholder="Since" name="Name" type="text" required="">
+                    </div>
+                </div>
+                <div class="form-style-agile">
+                    <label>Email</label>
+                    <div class="pom-agile">
+                        <span class="fa fa-envelope"></span>
+                        <input placeholder="Email" name="Email" type="email" required="">
+                    </div>
+                </div>
+                <div class="form-style-agile">
+                    <label>Country</label>
+                    <div class="pom-agile">
+                        <span class="fa fa-globe"></span>
+                        <select path="country" id="country" class="form-control input-sm" style="border: none">
+                            <option value="">Select Country</option>
+                            <option value="">Japan</option>
+                            <option value="">Kenya</option>
+                            <option value="">Dubai</option>
+                            <option value="">Italy</option>
+                            <option value="">Greece</option>
+                            <option value="">Iceland</option>
+                            <option value="">China</option>
+                            <option value="">Doha</option>
+                            <option value="">Irland</option>
+                            <option value="">Srilanka</option>
+                            <option value="">Russia</option>
+                            <option value="">Hong Kong</option>
+                            <option value="">Germany</option>
+                            <option value="">Canada</option>
+                            <option value="">Mexico</option>
+                            <option value="">Nepal</option>
+                            <option value="">Norway</option>
+                            <option value="">Oman</option>
+                            <option value="">Pakistan</option>
+                            <option value="">Kuwait</option>
+                            <option value="">Indonesia</option>
+                            <option value="">Spain</option>
+                            <option value="">Thailand</option>
+                            <option value="">Saudi Arabia</option>
+                            <option value="">Poland</option>
+                        </select>
+
+                    </div>
+                </div>
+                <div class="form-style-agile">
+                    <label>Password</label>
+                    <div class="pom-agile">
+                        <span class="fa fa-key"></span>
+                        <input placeholder="Password" name="Password" type="password" id="password1" required="">
+                    </div>
+                </div>
+                <div class="form-style-agile">
+                    <label>Confirm Password</label>
+                    <div class="pom-agile">
+                        <span class="fa fa-key"></span>
+                        <input placeholder="Confirm Password" name="Confirm Password" type="password" id="password2" required="">
+                    </div>
+                </div>
+                <div class="sub-agile">
+                    <input type="checkbox" id="brand1" value="">
+                    <label for="brand1">
+                        <span></span>I Accept to the Terms & Conditions</label>
+                </div>
+                <input type="submit" value="Submit">
             </form>
         </div>
     </div>
 </div>
+<!-- //content -->
+<!-- password-script -->
+<script>
+    window.onload = function () {
+        document.getElementById("password1").onchange = validatePassword;
+        document.getElementById("password2").onchange = validatePassword;
+    }
+
+    function validatePassword() {
+        var pass2 = document.getElementById("password2").value;
+        var pass1 = document.getElementById("password1").value;
+        if (pass1 != pass2)
+            document.getElementById("password2").setCustomValidity("Passwords Don't Match");
+        else
+            document.getElementById("password2").setCustomValidity('');
+        //empty string means no validation error
+    }
+</script>

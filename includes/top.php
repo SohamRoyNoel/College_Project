@@ -21,7 +21,7 @@
     <script src="https://cdn.ckeditor.com/4.10.0/standard/ckeditor.js"></script>
 
 
-
+    <link rel="stylesheet" href="css/styleR.css" type="text/css" media="all" />
 
     <script>
         $( function() {
