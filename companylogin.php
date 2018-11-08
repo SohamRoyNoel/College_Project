@@ -26,6 +26,39 @@
 
 
 </head>
+
+<?php
+if (isset($_POST['submit'])){
+    $em = escape($_POST['email']);
+    $ps = escape($_POST['password']);
+
+    $query = "select * from company where email='{$em}' and password='{$ps}'";
+    $send = mysqli_query($connection, $query);
+
+    if (!$send){
+        die("failed".mysqli_error());
+    }
+
+    while ($row = mysqli_fetch_assoc($send)){
+        $db_company_id = $row['id'];
+        $db_company_name = $row['name'];
+        $db_company_reg = $row['reg'];
+        $db_company_iso = $row['iso'];
+        $db_company_em = $row['email'];
+        $db_company_dob = $row['since'];
+        $db_company_password = $row['password'];
+
+        $_SESSION['id'] = $db_company_id;
+        $_SESSION['name'] = $db_company_name;
+        $_SESSION['reg'] = $db_company_reg;
+        $_SESSION['iso'] = $db_company_iso;
+        $_SESSION['dob'] = $db_company_dob;
+        $_SESSION['em'] = $db_company_em;
+        $_SESSION['password'] = $db_company_password;
+    }
+    header("Location: companyprofile.php");
+}
+?>
 <body>
 
 <div class="">
@@ -118,7 +151,7 @@
 <br>
 <div class="">
 <!--    <form style="margin-top: 125px; margin-left: -240px">-->
-<form style="margin-top: 250px; color: #FF4081">
+<form style="margin-top: 250px; color: #FF4081" action="" method="post">
     <div class="svgContainer">
         <div>
             <svg class="mySVG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200">
@@ -219,27 +252,25 @@
                 </g>
 
 
-
-
             </svg>
         </div>
     </div>
 
     <div class="inputGroup inputGroup1">
-        <label for="loginEmail" id="loginEmailLabel">Username</label>
-        <input type="text" id="loginEmail" maxlength="254" />
-        <p class="helper helper1">username</p>
+        <label for="loginEmail" id="loginEmailLabel">Email</label>
+        <input type="text" name="email" id="loginEmail" maxlength="254" />
+        <p class="helper helper1">email</p>
     </div>
     <div class="inputGroup inputGroup2">
         <label for="loginPassword" id="loginPasswordLabel">Password</label>
-        <input type="password" id="loginPassword" />
+        <input type="password" name="password" id="loginPassword" />
         <label id="showPasswordToggle" for="showPasswordCheck">Show
             <input id="showPasswordCheck" type="checkbox"/>
             <div class="indicator"></div>
         </label>
     </div>
     <div class="inputGroup inputGroup3">
-        <input class="btn btn-primary btn-lg btn-block" type="submit" id="login" value="Log in">
+        <input class="btn btn-primary btn-lg btn-block" name="submit" type="submit" value="Log in">
 <!--        <button id="login">Log in</button>-->
     </div>
 </form>
