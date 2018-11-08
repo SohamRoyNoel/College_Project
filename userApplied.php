@@ -25,7 +25,7 @@ if(isset($_SESSION['id'])) {
         $pic = $row['img'];
     }
 } else{
-    header("Location: error/index.php");
+    header("Location: error.php");
 }
 ?>
 

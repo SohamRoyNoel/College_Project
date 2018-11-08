@@ -1,5 +1,6 @@
-<?php session_start(); ?>
 <?php ob_start(); ?>
+<?php session_start(); ?>
+
 
 <!DOCTYPE HTML>
 <?php include "db.php"?>
@@ -16,6 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css" />
 </head>
 <body>
+
 <nav class="navbar navbar-default" role="navigation">
     <div class="container">
         <div class="navbar-header">

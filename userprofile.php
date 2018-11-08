@@ -85,14 +85,21 @@ if(isset($_SESSION['id'])) {
 
             // end
 
-            $idps = $_SESSION['id'];
-            $p_image = $_FILES['images']['name'];
-            $post_image_temp = $_FILES['images']['tmp_name'];
+            $ext = pathinfo($_FILES['images']['name'], PATHINFO_EXTENSION);
+           //echo $ext;
+            if ($ext == "jpeg" || $ext == "png" || $ext == "gif" || $ext == "jpg") {
 
-            move_uploaded_file($post_image_temp, "userImage/$p_image");
+                $idps = $_SESSION['id'];
+                $p_image = $_FILES['images']['name'];
+                $post_image_temp = $_FILES['images']['tmp_name'];
 
-            $imgdata = "update user set img = '{$p_image}' where id = {$idps}";
-            $executes = mysqli_query($connection, $imgdata);
+                move_uploaded_file($post_image_temp, "userImage/$p_image");
+
+                $imgdata = "update user set img = '{$p_image}' where id = {$idps}";
+                $executes = mysqli_query($connection, $imgdata);
+            } else{
+                echo "<script>alert(\"You've Uploaded A Wrong File\")</script>";
+            }
 
             header("Location: userprofile.php");
         }
