@@ -214,31 +214,31 @@ if (isset($_POST['submit'])){
                         <span class="fa fa-globe"></span>
                         <select name="con" path="country" id="country" class="form-control input-sm" style="border: none">
                             <option value="">Select Country</option>
-                            <option value="">Japan</option>
-                            <option value="">Kenya</option>
-                            <option value="">Dubai</option>
-                            <option value="">Italy</option>
-                            <option value="">Greece</option>
-                            <option value="">Iceland</option>
-                            <option value="">China</option>
-                            <option value="">Doha</option>
-                            <option value="">Irland</option>
-                            <option value="">Srilanka</option>
-                            <option value="">Russia</option>
-                            <option value="">Hong Kong</option>
-                            <option value="">Germany</option>
-                            <option value="">Canada</option>
-                            <option value="">Mexico</option>
-                            <option value="">Nepal</option>
-                            <option value="">Norway</option>
-                            <option value="">Oman</option>
-                            <option value="">Pakistan</option>
-                            <option value="">Kuwait</option>
-                            <option value="">Indonesia</option>
-                            <option value="">Spain</option>
-                            <option value="">Thailand</option>
-                            <option value="">Saudi Arabia</option>
-                            <option value="">Poland</option>
+                            <option value="Japan">Japan</option>
+                            <option value="Kenya">Kenya</option>
+                            <option value="Dubai">Dubai</option>
+                            <option value="Italy">Italy</option>
+                            <option value="Greece">Greece</option>
+                            <option value="Iceland">Iceland</option>
+                            <option value="China">China</option>
+                            <option value="Doha">Doha</option>
+                            <option value="Irland">Irland</option>
+                            <option value="Srilanka">Srilanka</option>
+                            <option value="Russia">Russia</option>
+                            <option value="Hong Kong">Hong Kong</option>
+                            <option value="Germany">Germany</option>
+                            <option value="Canada">Canada</option>
+                            <option value="Mexico">Mexico</option>
+                            <option value="Nepal">Nepal</option>
+                            <option value="Norway">Norway</option>
+                            <option value="Oman">Oman</option>
+                            <option value="Pakistan">Pakistan</option>
+                            <option value="Kuwait">Kuwait</option>
+                            <option value="Indonesia">Indonesia</option>
+                            <option value="Spain">Spain</option>
+                            <option value="Thailand">Thailand</option>
+                            <option value="Saudi Arabia">Saudi Arabia</option>
+                            <option value="Poland">Poland</option>
                         </select>
 
                     </div>

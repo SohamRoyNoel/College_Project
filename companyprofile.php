@@ -3,7 +3,7 @@
 
 <?php
 if(isset($_SESSION['idc'])) {
-    $id = $_SESSION['id'];
+    $id = $_SESSION['idc'];
     $query = "select * from company where id={$id}";
     $send = mysqli_query($connection, $query);
 
