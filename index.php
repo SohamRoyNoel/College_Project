@@ -160,33 +160,64 @@
                 </ul>
             </div>
         </div>
-        <div class="col-md-8">
+
+        <?php
+                $jobs = "select * from jobs";
+                $query = mysqli_query($connection, $jobs);
+                while ($row = mysqli_fetch_assoc($query)){
+                    $id1 = $row['id'];
+                    $cid1 = $row['company_id'];
+                    $object1 = $row['object'];
+                    $hremail1 = $row['HRem'];
+                    $hrcontact1 = $row['HRph'];
+                    $salary1 = $row['salary'];
+                    $location1 = $row['location'];
+                    $target1 = $row['targetTo'];
+                    $skill1 = $row['skill'];
+                    $education1 = $row['mineducation'];
+                    $role1 = $row['role'];
+
+                    $company = "select * from company where id = {$cid1}";
+                    $cquery = mysqli_query($connection, $company);
+                    while ($row = mysqli_fetch_assoc($cquery)){
+                        $db_company_id = $row['id'];
+                        $db_company_name = $row['name'];
+                        $db_company_reg = $row['reg'];
+                        $db_company_iso = $row['iso'];
+                        $db_company_em = $row['email'];
+                        $db_company_dob = $row['since'];
+                        $db_company_img = $row['img'];
+                        $db_company_password = $row['password'];
+                    }
+        ?>
+
+        <div class="col-md-8 pull-right">
             <div class="col_1">
                 <div class="col-sm-4 row_2">
-                    <a href="single.html"><img src="images/a1.jpg" class="img-responsive" alt=""/></a>
+                    <a href="single.html"><img src="companyImage/<?php echo $db_company_img; ?>" class="img-responsive" alt=""/></a>
                 </div>
                 <div class="col-sm-8 row_1">
-                    <h4><a href="single.html">It is a long established fact</a></h4>
+                    <h4><a href="single.html"><?php echo $role1; ?></a></h4>
                     <h6>SIt is a long <span class="dot">·</span> Jul. 31, 2015</h6>
-                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered</p>
+                    <p><?php echo $object1; ?></p>
                     <div class="social">
                         <a class="btn_1" href="#">
-                            <i class="fa fa-facebook fb"></i>
-                            <span class="share1 fb">Share</span>
+                            <i class="fa fa-eye"></i>
+                            <span class="share1 fb">Watch Details</span>
                         </a>
                         <a class="btn_1" href="#">
-                            <i class="fa fa-twitter tw"></i>
-                            <span class="share1">Tweet</span>
-                        </a>
-                        <a class="btn_1" href="#">
-                            <i class="fa fa-google-plus google"></i>
-                            <span class="share1 google">Share</span>
+                            <i class="fa fa-envelope"></i>
+                            <span class="share1">Apply</span>
                         </a>
                     </div>
                 </div>
                 <div class="clearfix"> </div>
             </div>
         </div>
+
+
+    <?php } ?>
+
         <div class="clearfix"> </div>
     </div>
 </div>
