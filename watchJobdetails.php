@@ -1,6 +1,48 @@
 <?php include "includes/top.php"?>
 <?php include "includes/header.php"?>
 
+<?php
+if (isset($_GET['j'])){
+    $idJob = intval($_GET['j']);
+
+    $jobs = "select * from jobs where id = {$idJob}";
+    $query = mysqli_query($connection, $jobs);
+    while ($row = mysqli_fetch_assoc($query)) {
+        $id1 = $row['id'];
+        $title1 = $row['title'];
+        $date = $row['date'];
+        $cid1 = $row['company_id'];
+        $object1 = $row['object'];
+        $hremail1 = $row['HRem'];
+        $hrcontact1 = $row['HRph'];
+        $salary1 = $row['salary'];
+        $location1 = $row['location'];
+        $target1 = $row['targetTo'];
+        $skill1 = $row['skill'];
+        $education1 = $row['mineducation'];
+        $role1 = $row['role'];
+
+        $company = "select * from company where id = {$cid1}";
+        $cquery = mysqli_query($connection, $company);
+        while ($row = mysqli_fetch_assoc($cquery)) {
+            $db_company_id = $row['id'];
+            $db_company_name = $row['name'];
+            $db_company_reg = $row['reg'];
+            $db_company_iso = $row['iso'];
+            $db_company_em = $row['email'];
+            $db_company_dob = $row['since'];
+            $db_company_img = $row['img'];
+
+            $db_company_scale = $row['scale'];
+            $db_company_address = $row['address'];
+            $db_company_country = $row['country'];
+            $db_company_subject = $row['subject'];
+        }
+    }
+}
+?>
+
+
 <div class="single">
     <div class="col-md-4">
         <div class="col_3">
@@ -18,52 +60,57 @@
     </div>
 
     <div class="col-md-8 single_right">
-        <h3>Sed ut perspiciatis unde omnis iste natus</h3>
+        <h3>Watch The Company Profile Details</h3>
         <div class="row_1">
             <div class="col-sm-5 single_img">
-                <img src="images/a1.jpg" class="img-responsive" alt=""/>
+                <img src="companyImage/<?php echo $db_company_img; ?>" class="img-responsive" alt=""/>
             </div>
             <div class="col-sm-7 single-para">
-                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', </p>
-                <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                <p><b><i>Posted By :</i></b> <?php echo $db_company_name?></p>
+                <p><b>Registration :</b> <?php echo $db_company_reg?>  </p>
+                <p><b>ISO :</b> <?php echo $db_company_iso?>  </p>
+                <p><b>Scale :</b> <?php echo $db_company_scale?>  </p>
+                <p><b>Email :</b> <?php echo $db_company_em?>  </p>
+                <p><b>Address :</b> <?php echo $db_company_address?>  </p>
+                <p><b>Country :</b> <?php echo $db_company_country?>  </p>
+                <p><b>Subject :</b> <?php echo $db_company_subject?>  </p>
+                <p><b>ESTD :</b> <?php echo $db_company_dob?>  </p>
             </div>
             <div class="clearfix"> </div>
         </div>
-        <h5>At vero eos et accusamus et iusto odio dignissimos</h5>
-        <p>"On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. </p>
-        <h5>At vero eos et accusamus et iusto odio dignissimos</h5>
-        <p>"On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. </p>
-        <div class="comments">
-            <h6>Comments</h6>
-            <div class="media media_1">
-                <div class="media-left"><a href="#"> </a></div>
-                <div class="media-body">
-                    <h4 class="media-heading"><a class="author" href="#">Sollicitudin</a><a class="reply" href="#">Reply</a><div class="clearfix"> </div></h4>
-                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                </div>
-                <div class="clearfix"> </div>
-            </div>
-            <div class="media">
-                <div class="media-left"><a href="#"> </a></div>
-                <div class="media-body">
-                    <h4 class="media-heading"><a class="author" href="#">Sollicitudin</a><a class="reply" href="#">Reply</a><div class="clearfix"> </div></h4>
-                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                </div>
+        <h5>Job Details Related To This Post</h5>
+        <div class="panel panel-warning">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <div style="color: black">
+                        <b style="color: #00acee">Company :</b> &nbsp; <?php echo $db_company_name; ?><br>
+                        <b style="color: #00acee">Company :</b>&nbsp; <?php echo $title1; ?><br>
+                        <b style="color: #00acee">Role :</b>&nbsp;<?php echo $role1; ?><br>
+                        <b style="color: #00acee">Min Education :</b>&nbsp;<?php echo $education1; ?><br>
+                        <b style="color: #00acee">Skill :</b>&nbsp;<?php echo $skill1; ?><br>
+                        <b style="color: #00acee">Target :</b>&nbsp;<?php echo $target1; ?><br>
+                        <b style="color: #00acee">Location :</b>&nbsp;<?php echo $location1; ?><br>
+                        <b style="color: #00acee">Salary :</b>&nbsp;<?php echo $salary1; ?><br>
+                        <b style="color: #00acee">HRPhone :</b>&nbsp;<?php echo $hrcontact1; ?><br>
+                        <b style="color: #00acee">HRMail :</b>&nbsp;<?php echo $hremail1; ?><br>
+                        <b style="color: #00acee">Job Objective :</b>&nbsp;<?php echo $object1; ?><br>
+                        <b style="color: #00acee">Posted On :</b>&nbsp; <?php echo $date; ?><br>
+                    </div>
+                </h4>
             </div>
         </div>
-        <form>
-            <div class="to">
-                <input type="text" class="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
-                <input type="text" class="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" style="margin-left:3%">
-            </div>
-            <div class="text">
-                <textarea value="Message" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message</textarea>
-            </div>
-            <div class="form-submit1">
-                <input name="submit" type="submit" id="submit" value="Submit"><br>
-            </div>
-            <div class="clearfix"></div>
-        </form>
+        <h5>Points To Be Noted While Apply</h5>
+        <p>
+        <ul class="list-group">
+            <li class="list-group-item list-group-item-success">1. Now You are seeing the job</li>
+            <li class="list-group-item list-group-item-info">2. If you are interested simply click <b>APPLY</b></li>
+            <li class="list-group-item list-group-item-warning">3. Login Or Register Yourself</li>
+            <li class="list-group-item list-group-item-danger">4. Give answer of two or three questions</li>
+            <li class="list-group-item list-group-item-default">5. Final click on submit will post your PROFILE to company</li>
+        </ul>
+        </p>
+
+        <a href=""> <input type="submit" class="btn btn-primary btn-lg btn-block" value="Apply Now"></input></a>
     </div>
     <div class="clearfix"> </div>
 </div>

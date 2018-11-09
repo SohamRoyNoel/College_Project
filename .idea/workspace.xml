@@ -4,7 +4,10 @@
     <bookmark url="file://$PROJECT_DIR$/companyjob.php" line="238" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a90452ef-ea80-4805-b477-6e6a3ffa420b" name="Default" comment="" />
+    <list default="true" id="a90452ef-ea80-4805-b477-6e6a3ffa420b" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/watchJobdetails.php" beforeDir="false" afterPath="$PROJECT_DIR$/watchJobdetails.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,20 +17,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="192" column="21" lean-forward="true" selection-start-line="192" selection-start-column="21" selection-end-line="192" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="watchJobdetails.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/watchJobdetails.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+            <state relative-caret-position="493">
+              <caret line="112" column="98" selection-start-line="112" selection-start-column="98" selection-end-line="112" selection-end-column="98" />
+              <folding>
+                <element signature="n#style#0;n#b#0;n#div#0;n#h3#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#3245#3251#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#b#1;n#div#0;n#h3#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#3351#3357#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#b#2;n#div#0;n#h3#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#3445#3451#1#HTML" expanded="true" />
+                <element signature="n#style#0;n#b#3;n#div#0;n#h3#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#3546#3552#1#HTML" expanded="true" />
+                <element signature="n#style#0;n#b#4;n#div#0;n#h3#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#3644#3650#1#HTML" expanded="true" />
+                <element signature="n#style#0;n#b#5;n#div#0;n#h3#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#3739#3745#1#HTML" expanded="true" />
+                <element signature="n#style#0;n#b#6;n#div#0;n#h3#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#3837#3843#1#HTML" expanded="true" />
+                <element signature="n#style#0;n#b#7;n#div#0;n#h3#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#3935#3941#1#HTML" expanded="true" />
+                <element signature="n#style#0;n#b#8;n#div#0;n#h3#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#4032#4038#1#HTML" expanded="true" />
+                <element signature="n#style#0;n#b#9;n#div#0;n#h3#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#4131#4137#1#HTML" expanded="true" />
+                <element signature="n#style#0;n#b#10;n#div#0;n#h3#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#4235#4241#1#HTML" expanded="true" />
+                <element signature="n#style#0;n#b#11;n#div#0;n#h3#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#4334#4340#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -36,7 +56,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.js</find>
       <find>seek</find>
       <find>seeking</find>
       <find>Register Form</find>
@@ -66,6 +85,7 @@
       <find>It is a long established fact</find>
       <find>Job Role</find>
       <find>Sed ut perspiciatis unde omnis iste natus</find>
+      <find>Comments</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -115,8 +135,8 @@
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/companyprofile.php" />
         <option value="$PROJECT_DIR$/companyjob.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$USER_HOME$/Desktop/web/single.html" />
+        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/watchJobdetails.php" />
       </list>
     </option>
@@ -194,7 +214,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.watchJobdetails.php">
+  <component name="RunManager" selected="JavaScript Debug.index.php">
     <configuration name="companyjob.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost/JOBS/companyjob.php" />
     <configuration name="companylogin.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost/JOBS/companylogin.php" />
     <configuration name="companyprofile.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost/JOBS/companyprofile.php" />
@@ -210,8 +230,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.watchJobdetails.php" />
         <item itemvalue="JavaScript Debug.index.php" />
+        <item itemvalue="JavaScript Debug.watchJobdetails.php" />
         <item itemvalue="JavaScript Debug.companyjob.php" />
         <item itemvalue="JavaScript Debug.companylogin.php" />
         <item itemvalue="JavaScript Debug.companyprofile.php" />
@@ -271,12 +291,12 @@
       <workItem from="1541705212406" duration="13209000" />
       <workItem from="1541739959946" duration="12423000" />
       <workItem from="1541756403969" duration="2431000" />
-      <workItem from="1541768699579" duration="5315000" />
+      <workItem from="1541768699579" duration="7850000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="191977000" />
+    <option name="totallyTimeSpent" value="194512000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -289,6 +309,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1456" height="916" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14111748" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32904884" />
@@ -299,7 +320,7 @@
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32904884" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3277635" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3277635" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39974293" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -522,13 +543,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/companyprofile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="21" column="30" lean-forward="true" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="142">
@@ -564,13 +578,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/companyjob.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="34" lean-forward="true" selection-start-column="34" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Desktop/web/single.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="241">
@@ -580,15 +587,58 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="192" column="21" lean-forward="true" selection-start-line="192" selection-start-column="21" selection-end-line="192" selection-end-column="21" />
+        <state relative-caret-position="212">
+          <caret line="169" column="41" lean-forward="true" selection-start-line="169" selection-start-column="41" selection-end-line="169" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/companyprofile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="137" column="67" lean-forward="true" selection-start-line="137" selection-start-column="67" selection-end-line="137" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/companyjob.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="221" column="48" lean-forward="true" selection-start-line="221" selection-start-column="48" selection-end-line="221" selection-end-column="48" />
+          <folding>
+            <element signature="n#style#0;n#b#0;n#div#0;n#button#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/watchJobdetails.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+        <state relative-caret-position="493">
+          <caret line="112" column="98" selection-start-line="112" selection-start-column="98" selection-end-line="112" selection-end-column="98" />
+          <folding>
+            <element signature="n#style#0;n#b#0;n#div#0;n#h3#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#3245#3251#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#b#1;n#div#0;n#h3#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#3351#3357#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#b#2;n#div#0;n#h3#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#3445#3451#1#HTML" expanded="true" />
+            <element signature="n#style#0;n#b#3;n#div#0;n#h3#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#3546#3552#1#HTML" expanded="true" />
+            <element signature="n#style#0;n#b#4;n#div#0;n#h3#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#3644#3650#1#HTML" expanded="true" />
+            <element signature="n#style#0;n#b#5;n#div#0;n#h3#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#3739#3745#1#HTML" expanded="true" />
+            <element signature="n#style#0;n#b#6;n#div#0;n#h3#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#3837#3843#1#HTML" expanded="true" />
+            <element signature="n#style#0;n#b#7;n#div#0;n#h3#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#3935#3941#1#HTML" expanded="true" />
+            <element signature="n#style#0;n#b#8;n#div#0;n#h3#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#4032#4038#1#HTML" expanded="true" />
+            <element signature="n#style#0;n#b#9;n#div#0;n#h3#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#4131#4137#1#HTML" expanded="true" />
+            <element signature="n#style#0;n#b#10;n#div#0;n#h3#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#4235#4241#1#HTML" expanded="true" />
+            <element signature="n#style#0;n#b#11;n#div#0;n#h3#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#4334#4340#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

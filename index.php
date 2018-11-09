@@ -196,14 +196,14 @@
         <div class="col-md-8 pull-right">
             <div class="col_1">
                 <div class="col-sm-4 row_2">
-                    <a href="single.html"><img src="companyImage/<?php echo $db_company_img; ?>" class="img-responsive" alt=""/></a>
+                    <a href="watchJobdetails.php?j=<?php echo $id1; ?>"><img src="companyImage/<?php echo $db_company_img; ?>" class="img-responsive" alt=""/></a>
                 </div>
                 <div class="col-sm-8 row_1">
-                    <h4><a href="single.html"><?php echo $title1; ?></a></h4>
+                    <h4><a href="watchJobdetails.php?j=<?php echo $id1; ?>"><?php echo $title1; ?></a></h4>
                     <h6>Posted On <span class="dot">·</span> <?php echo $date; ?></h6>
                     <p><?php echo $object1; ?></p>
                     <div class="social">
-                        <a class="btn_1" href="#">
+                        <a class="btn_1" href="watchJobdetails.php?j=<?php echo $id1; ?>">
                             <i class="fa fa-eye"></i>
                             <span class="share1 fb">Watch Details</span>
                         </a>
