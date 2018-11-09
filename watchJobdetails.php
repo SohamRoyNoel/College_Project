@@ -110,7 +110,15 @@ if (isset($_GET['j'])){
         </ul>
         </p>
 
-        <a href=""> <input type="submit" class="btn btn-primary btn-lg btn-block" value="Apply Now"></input></a>
+        <?php
+                if (isset($_SESSION['id'])){
+                    echo "<a href=\"companyCONFIRM.php?j=$idJob\"> <input type=\"submit\" class=\"btn btn-primary btn-lg btn-block\" value=\"Apply Now\"></input></a>";
+                } else {
+                    echo "<a href=\"userlogin.php\"> <input type=\"submit\" class=\"btn btn-primary btn-lg btn-block\" value=\"Apply Now\"></input></a>";
+                }
+        ?>
+
+
     </div>
     <div class="clearfix"> </div>
 </div>

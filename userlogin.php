@@ -35,6 +35,7 @@ if (isset($_POST['login'])){
         $_SESSION['extra'] = $db_user_extra;
         $_SESSION['interest'] = $db_user_interest;
         $_SESSION['password'] = $db_user_password;
+        $_SESSION['secret'] = "XXX105";
         header("Location: userprofile.php");
     }
 }
