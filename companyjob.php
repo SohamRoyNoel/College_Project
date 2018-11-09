@@ -1,16 +1,42 @@
 <?php include "includes/top.php"?>
 <?php include "includes/header.php"?>
+
+<?php
+        if (isset($_POST['submit'])){
+            $company_id = $_SESSION['id'];
+            $object = $_POST['object'];
+            $hremail = $_POST['hremail'];
+            $hrcontact = $_POST['hrcontact'];
+            $salary = $_POST['salary'];
+            $location = $_POST['location'];
+            $target = $_POST['target'];
+            $skill = $_POST['skill'];
+            $education = $_POST['education'];
+            $role = $_POST['role'];
+
+            if (!is_null($object) && !is_null($hremail) && !is_null($hrcontact) && !is_null($salary) && !is_null($location) && !is_null($target) && !is_null($skill) && !is_null($education) && !is_null($role)){
+
+                $query = "insert into jobs (company_id, role, mineducation, skill, targetTo, location, salary, HRph, HRem, object) values 
+                          ('{$company_id }', '{$role}', '{$education}', '{$skill}', '{$target}', '{$location}', '{$salary}', '{$hrcontact}', '{$hremail}', '{$object}')";
+                $execute = mysqli_query($connection, $query);
+
+                // header("Location: companyjob.php");
+
+            }
+        }
+?>
+
 <div class="container">
     <div class="col-sm-7">
         <div class="single">
             <div class="form-container">
                 <h2>Post Job Here</h2>
-                <form>
+                <form action="" method="post">
                     <div class="row">
                         <div class="form-group col-md-12">
                             <label class="col-md-3 control-lable" for="firstName">Job Role</label>
                             <div class="col-md-9">
-                                <input type="text" path="firstName" id="firstName" class="form-control input-sm"/>
+                                <input type="text" path="firstName" maxlength="15" minlength="4" id="firstName" name="role" class="form-control input-sm"/>
                             </div>
                         </div>
                     </div>
@@ -18,15 +44,15 @@
                         <div class="form-group col-md-12">
                             <label class="col-md-3 control-lable" for="lastName">Education</label>
                             <div class="col-md-9">
-                                <input type="text" path="lastName" id="lastName" class="form-control input-sm"/>
+                                <input type="text" path="lastName" id="lastName" maxlength="20" minlength="2" name="education" class="form-control input-sm"/>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="form-group col-md-12">
-                            <label class="col-md-3 control-lable" for="lastName">Role</label>
+                            <label class="col-md-3 control-lable" for="lastName">Skill</label>
                             <div class="col-md-9">
-                                <input type="text" path="lastName" id="lastName" class="form-control input-sm"/>
+                                <input type="text" path="lastName" id="lastName" maxlength="50" minlength="1" name="skill" class="form-control input-sm"/>
                             </div>
                         </div>
                     </div>
@@ -34,15 +60,15 @@
                         <div class="form-group col-md-12">
                             <label class="col-md-3 control-lable" for="country">Target To</label>
                             <div class="col-md-9">
-                                <select path="country" id="country" class="form-control input-sm">
+                                <select name="target" path="country" id="country" class="form-control input-sm">
                                     <option value="">Select Type Of Job</option>
-                                    <option value="">Tech Support</option>
-                                    <option value="">Part Time</option>
-                                    <option value="">Full Time</option>
-                                    <option value="">Internship</option>
-                                    <option value="">Health Care</option>
-                                    <option value="">Research</option>
-                                    <option value="">Defence</option>
+                                    <option value="Tech Support">Tech Support</option>
+                                    <option value="Part Time">Part Time</option>
+                                    <option value="Full Time">Full Time</option>
+                                    <option value="Internship">Internship</option>
+                                    <option value="Health Care">Health Care</option>
+                                    <option value="Research">Research</option>
+                                    <option value="Defence">Defence</option>
                                 </select>
 
                             </div>
@@ -52,7 +78,7 @@
                         <div class="form-group col-md-12">
                             <label class="col-md-3 control-lable" for="dob">Job Location</label>
                             <div class="col-md-9">
-                                <input type="text" id="loc" class="form-control input-sm"/>
+                                <input type="text" name="location" maxlength="15" minlength="4" id="loc" class="form-control input-sm"/>
                             </div>
                         </div>
                     </div>
@@ -60,7 +86,7 @@
                         <div class="form-group col-md-12">
                             <label class="col-md-3 control-lable" for="dob">Salary</label>
                             <div class="col-md-9">
-                                <input type="text" path="dob" id="dob" class="form-control input-sm"/>
+                                <input type="text" name="salary" path="dob" maxlength="10" minlength="4" id="dob" class="form-control input-sm"/>
                             </div>
                         </div>
                     </div>
@@ -68,7 +94,7 @@
                         <div class="form-group col-md-12">
                             <label class="col-md-3 control-lable" for="dob">HR Contact</label>
                             <div class="col-md-9">
-                                <input type="text" path="dob" id="dob" class="form-control input-sm"/>
+                                <input type="text" path="dob" name="hrcontact" maxlength="10" minlength="10" id="dob" class="form-control input-sm"/>
                             </div>
                         </div>
                     </div>
@@ -76,7 +102,7 @@
                         <div class="form-group col-md-12">
                             <label class="col-md-3 control-lable" for="email">HR Email</label>
                             <div class="col-md-9">
-                                <input type="text" path="email" id="email" class="form-control input-sm"/>
+                                <input type="text" path="email" name="hremail" maxlength="50" minlength="4" id="email" class="form-control input-sm"/>
                             </div>
                         </div>
                     </div>
@@ -84,14 +110,14 @@
                         <div class="form-group col-md-12">
                             <label class="col-md-3 control-lable" for="subjects">Object</label>
                             <div class="col-md-9 sm_1">
-                                <textarea cols="77" rows="6" value=" " onfocus="this.value='';" onblur="if (this.value == '') {this.value = '';}"> </textarea>
+                                <textarea maxlength="200" minlength="10" name="object" cols="77" rows="6" value=" " onfocus="this.value='';" onblur="if (this.value == '') {this.value = '';}"> </textarea>
 
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="form-actions floatRight">
-                            <input type="submit" value="Register" class="btn btn-primary btn-sm">
+                            <input type="submit" name="submit" value="Register" class="btn btn-primary btn-sm">
                         </div>
                     </div>
                 </form>
