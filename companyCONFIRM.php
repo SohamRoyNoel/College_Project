@@ -11,9 +11,10 @@ if (isset($_POST['subs'])){
     $q2 = $_POST['q2'];
     $q3 = $_POST['q3'];
     $jobid = $_GET['j'];
+    $user_id = $_SESSION['id'];
 
     if (!empty($q1) && !empty($q2) && !empty($q3)){
-        $query = "insert into confirm(jobid, q1, q2, q3) values ('{$jobid}', '{$q1}', '{$q2}', '{$q3}')";
+        $query = "insert into confirm(jobid, userid, q1, q2, q3) values ('{$jobid}', {$user_id}, '{$q1}', '{$q2}', '{$q3}')";
         $execute = mysqli_query($connection, $query);
         $_SESSION['confirmQ'] = "true";
 
