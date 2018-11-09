@@ -116,13 +116,13 @@ if(isset($_SESSION['id'])) {
                                             <h4 style="font-family: 'Bell MT'; font-size: 30px"><b><img src="companyImage/<?php echo $cimg; ?>" style="height: 50px; width: 70px">&nbsp; <?php echo $cname; ?><i class="pull-right"> <?php
 
                                                     if ($status==0 && $status != null){
-                                                        echo "<button class=\"btn btn-danger\">Rejected</button>";
+                                                        echo "<button disabled class=\"btn btn-danger\">Rejected</button>";
                                                     }
                                                     if ($status==1){
-                                                        echo  "<button class=\"btn btn-success\">Invited</button>";
+                                                        echo  "<button disabled class=\"btn btn-success\">Invited</button>";
                                                     }
                                                     if ($status == null){
-                                                        echo "<button class=\"btn btn-warning\">Pending</button>";
+                                                        echo "<button disabled class=\"btn btn-warning\">Pending</button>";
                                                     }
 
                                                     ?></i></b></h4>
