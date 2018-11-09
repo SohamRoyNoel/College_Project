@@ -337,14 +337,15 @@ if (isset($_POST['submit'])){
                                     <div class="form-group col-md-4">
                                         <label class="col-md-3 control-lable" for="subjects">Object</label>
                                         <div class="col-md-9 sm_1">
-                                            <input type="text" path="email" value="<?php echo $object1?>" name="objectP" maxlength="50" minlength="4" id="email" class="form-control input-sm" required/>
-
+                                            <input type="text" path="email" value="<?php echo $object1?>" name="objectP" maxlength="200" minlength="10" id="email" class="form-control input-sm" required/>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="form-actions">
+                                        <a href="companyResponse.php?j=<?php echo $id1; ?>"><input type="button" name="editsubmit" value="Response" class="btn btn-primary btn-sm"></a>
                                         <input type="submit" name="editsubmit" value="Edit" class="btn btn-primary btn-sm">
+                                        <input type="submit" name="" value="Delete" class="btn btn-primary btn-sm">
                                     </div>
                                 </div>
                             </form>

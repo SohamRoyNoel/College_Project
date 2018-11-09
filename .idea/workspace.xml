@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a90452ef-ea80-4805-b477-6e6a3ffa420b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/userlogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/userlogin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/watchJobdetails.php" beforeDir="false" afterPath="$PROJECT_DIR$/watchJobdetails.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/companyjob.php" beforeDir="false" afterPath="$PROJECT_DIR$/companyjob.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,29 +17,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="watchJobdetails.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/watchJobdetails.php">
+      <file leaf-file-name="companyResponse.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/companyResponse.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1624">
-              <caret line="116" column="58" selection-start-line="116" selection-start-column="58" selection-end-line="116" selection-end-column="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="116" column="13" lean-forward="true" selection-start-line="116" selection-start-column="13" selection-end-line="116" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="userlogin.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/userlogin.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="28">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="392">
+              <caret line="28" column="106" selection-start-line="28" selection-start-column="106" selection-end-line="28" selection-end-column="106" />
+              <folding>
+                <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -125,12 +110,13 @@
         <option value="$PROJECT_DIR$/companylogin.php" />
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/companyprofile.php" />
-        <option value="$PROJECT_DIR$/companyjob.php" />
         <option value="$USER_HOME$/Desktop/web/single.html" />
         <option value="$PROJECT_DIR$/companyCONFIRM.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/watchJobdetails.php" />
         <option value="$PROJECT_DIR$/userlogin.php" />
+        <option value="$PROJECT_DIR$/companyjob.php" />
+        <option value="$PROJECT_DIR$/companyResponse.php" />
       </list>
     </option>
   </component>
@@ -161,7 +147,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -173,6 +158,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -207,27 +193,27 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index.php">
+  <component name="RunManager" selected="JavaScript Debug.companyResponse.php">
     <configuration name="companyCONFIRM.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost/JOBS/companyCONFIRM.php" />
+    <configuration name="companyResponse.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost/JOBS/companyResponse.php" />
     <configuration name="companyjob.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost/JOBS/companyjob.php" />
-    <configuration name="companylogin.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost/JOBS/companylogin.php" />
     <configuration name="index.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost/JOBS/index.php" />
     <configuration name="index.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost/JOBS/compLogin/index.php" />
     <configuration name="watchJobdetails.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost/JOBS/watchJobdetails.php" />
     <list>
       <item itemvalue="JavaScript Debug.index.php" />
-      <item itemvalue="JavaScript Debug.companylogin.php" />
       <item itemvalue="JavaScript Debug.companyjob.php" />
       <item itemvalue="JavaScript Debug.watchJobdetails.php" />
       <item itemvalue="JavaScript Debug.companyCONFIRM.php" />
+      <item itemvalue="JavaScript Debug.companyResponse.php" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.companyResponse.php" />
         <item itemvalue="JavaScript Debug.index.php" />
         <item itemvalue="JavaScript Debug.companyCONFIRM.php" />
         <item itemvalue="JavaScript Debug.watchJobdetails.php" />
         <item itemvalue="JavaScript Debug.companyjob.php" />
-        <item itemvalue="JavaScript Debug.companylogin.php" />
       </list>
     </recent_temporary>
   </component>
@@ -285,12 +271,13 @@
       <workItem from="1541739959946" duration="12423000" />
       <workItem from="1541756403969" duration="2431000" />
       <workItem from="1541768699579" duration="7850000" />
-      <workItem from="1541777987145" duration="3756000" />
+      <workItem from="1541777987145" duration="4207000" />
+      <workItem from="1541783553905" duration="5849000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="198268000" />
+    <option name="totallyTimeSpent" value="204568000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -305,7 +292,7 @@
     <frame x="1358" y="-8" width="1456" height="916" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14326647" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14541547" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32904884" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
@@ -333,13 +320,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Desktop/web/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Desktop/web/contact.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="213">
@@ -433,13 +413,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/userApplied.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/logout.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="70">
@@ -523,20 +496,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/userprofile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="29" column="26" lean-forward="true" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/companylogin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="37" column="16" lean-forward="true" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Desktop/web/single.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="241">
@@ -544,24 +503,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/companyprofile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="137" column="67" lean-forward="true" selection-start-line="137" selection-start-column="67" selection-end-line="137" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Desktop/web/register.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
           <caret line="285" column="22" lean-forward="true" selection-start-line="285" selection-start-column="22" selection-end-line="285" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/companyjob.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="221" column="48" lean-forward="true" selection-start-line="221" selection-start-column="48" selection-end-line="221" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -586,24 +531,69 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/userApplied.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="116" column="13" lean-forward="true" selection-start-line="116" selection-start-column="13" selection-end-line="116" selection-end-column="13" />
+        <state relative-caret-position="378">
+          <caret line="29" column="2" lean-forward="true" selection-start-line="29" selection-start-column="2" selection-end-line="29" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/companyprofile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="3" column="5" lean-forward="true" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/watchJobdetails.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1624">
-          <caret line="116" column="58" selection-start-line="116" selection-start-column="58" selection-end-line="116" selection-end-column="58" />
+        <state relative-caret-position="1416">
+          <caret line="110" column="12" lean-forward="true" selection-start-line="110" selection-start-column="12" selection-end-line="110" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="179" column="47" lean-forward="true" selection-start-line="179" selection-start-column="47" selection-end-line="179" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/companylogin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="50" column="41" lean-forward="true" selection-start-line="50" selection-start-column="41" selection-end-line="50" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/userlogin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="182">
+          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/companyjob.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="199" column="16" selection-start-line="199" selection-start-column="16" selection-end-line="199" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userprofile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="147" column="70" lean-forward="true" selection-start-line="147" selection-start-column="70" selection-end-line="147" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/companyResponse.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="28" column="106" selection-start-line="28" selection-start-column="106" selection-end-line="28" selection-end-column="106" />
+          <folding>
+            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
