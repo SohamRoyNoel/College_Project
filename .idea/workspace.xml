@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a90452ef-ea80-4805-b477-6e6a3ffa420b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/companyCONFIRM.php" beforeDir="false" afterPath="$PROJECT_DIR$/companyCONFIRM.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userApplied.php" beforeDir="false" afterPath="$PROJECT_DIR$/userApplied.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userlogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/userlogin.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,27 +16,36 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="userApplied.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/userApplied.php">
+    <leaf>
+      <file leaf-file-name="forgetpassword.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/forgetpassword.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="534">
-              <caret line="128" column="48" lean-forward="true" selection-start-line="128" selection-start-column="48" selection-end-line="128" selection-end-column="48" />
+            <state relative-caret-position="364">
+              <caret line="26" column="58" selection-start-line="26" selection-start-column="58" selection-end-line="26" selection-end-column="58" />
               <folding>
-                <element signature="n#style#0;n#img#0;n#i#0;n#b#0;n#h4#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#5110#5116#0#HTML" expanded="true" />
-                <element signature="e#1#7#0" expanded="true" />
-                <element signature="e#5968#5974#0#HTML" expanded="true" />
-                <element signature="e#6055#6061#0#HTML" expanded="true" />
-                <element signature="e#6146#6152#0#HTML" expanded="true" />
-                <element signature="e#6238#6244#0#HTML" expanded="true" />
-                <element signature="e#6330#6336#0#HTML" expanded="true" />
-                <element signature="e#6422#6428#0#HTML" expanded="true" />
-                <element signature="e#6514#6520#0#HTML" expanded="true" />
-                <element signature="e#6608#6614#0#HTML" expanded="true" />
-                <element signature="e#6703#6709#0#HTML" expanded="true" />
-                <element signature="e#6794#6800#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#body#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="forgetpasswordconfirm.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/forgetpasswordconfirm.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="changepassword.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/changepassword.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -46,10 +54,8 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Register Form</find>
       <find>Accordion</find>
       <find>img</find>
-      <find>LogIn to your Account</find>
       <find>Sign Up for Newsletter</find>
       <find>tags</find>
       <find>tag</find>
@@ -76,6 +82,8 @@
       <find>Watch The Company Profile Details</find>
       <find>Featured Employers</find>
       <find>update</find>
+      <find>Forgot Password?</find>
+      <find>LogIn to your Account</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -125,11 +133,14 @@
         <option value="$USER_HOME$/Desktop/web/single.html" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/watchJobdetails.php" />
-        <option value="$PROJECT_DIR$/userlogin.php" />
         <option value="$PROJECT_DIR$/companyjob.php" />
         <option value="$PROJECT_DIR$/companyResponse.php" />
         <option value="$PROJECT_DIR$/companyCONFIRM.php" />
         <option value="$PROJECT_DIR$/userApplied.php" />
+        <option value="$PROJECT_DIR$/userlogin.php" />
+        <option value="$PROJECT_DIR$/forgetpasswordconfirm.php" />
+        <option value="$PROJECT_DIR$/forgetpassword.php" />
+        <option value="$PROJECT_DIR$/changepassword.php" />
       </list>
     </option>
   </component>
@@ -160,6 +171,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -171,7 +183,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -182,16 +193,16 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\JOBS\PHPMailer" />
+      <recent name="C:\xampp\htdocs\JOBS\images" />
+      <recent name="C:\xampp\htdocs\JOBS" />
+      <recent name="C:\xampp\htdocs\JOBS\css" />
+      <recent name="C:\xampp\htdocs\JOBS\js" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\JOBS" />
       <recent name="C:\xampp\htdocs\JOBS\error" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\JOBS" />
-      <recent name="C:\xampp\htdocs\JOBS\images" />
-      <recent name="C:\xampp\htdocs\JOBS\css" />
-      <recent name="C:\xampp\htdocs\JOBS\js" />
-      <recent name="C:\xampp\htdocs\JOBS\compLogin" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -206,27 +217,27 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.userApplied.php">
+  <component name="RunManager" selected="JavaScript Debug.forgetpasswordconfirm.php">
     <configuration name="companyCONFIRM.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost/JOBS/companyCONFIRM.php" />
     <configuration name="companyResponse.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost/JOBS/companyResponse.php" />
+    <configuration name="forgetpasswordconfirm.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost/JOBS/forgetpasswordconfirm.php" />
     <configuration name="index.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost/JOBS/index.php" />
     <configuration name="index.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost/JOBS/compLogin/index.php" />
     <configuration name="userApplied.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost/JOBS/userApplied.php" />
-    <configuration name="watchJobdetails.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost/JOBS/watchJobdetails.php" />
     <list>
       <item itemvalue="JavaScript Debug.index.php" />
-      <item itemvalue="JavaScript Debug.watchJobdetails.php" />
       <item itemvalue="JavaScript Debug.companyCONFIRM.php" />
       <item itemvalue="JavaScript Debug.companyResponse.php" />
       <item itemvalue="JavaScript Debug.userApplied.php" />
+      <item itemvalue="JavaScript Debug.forgetpasswordconfirm.php" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.userApplied.php" />
+        <item itemvalue="JavaScript Debug.forgetpasswordconfirm.php" />
         <item itemvalue="JavaScript Debug.index.php" />
+        <item itemvalue="JavaScript Debug.userApplied.php" />
         <item itemvalue="JavaScript Debug.companyResponse.php" />
         <item itemvalue="JavaScript Debug.companyCONFIRM.php" />
-        <item itemvalue="JavaScript Debug.watchJobdetails.php" />
       </list>
     </recent_temporary>
   </component>
@@ -285,12 +296,13 @@
       <workItem from="1541756403969" duration="2431000" />
       <workItem from="1541768699579" duration="7850000" />
       <workItem from="1541777987145" duration="4207000" />
-      <workItem from="1541783553905" duration="12901000" />
+      <workItem from="1541783553905" duration="13213000" />
+      <workItem from="1541797183384" duration="3928000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="211620000" />
+    <option name="totallyTimeSpent" value="215860000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -305,7 +317,7 @@
     <frame x="1358" y="-8" width="1456" height="916" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14541547" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14756447" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32904884" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
@@ -333,24 +345,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Desktop/web/contact.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="307" column="28" lean-forward="true" selection-start-line="307" selection-start-column="28" selection-end-line="307" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/sidebar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/userImage/12.jpg" />
     <entry file="file://$PROJECT_DIR$/userImage/4k-anime-girl-wallpaper-12-n-3840x2400-wallpaper-girl-anime-teenager.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -363,15 +357,9 @@
     <entry file="file://$PROJECT_DIR$/images/logo.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/f3.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/a7.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/a2.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/images/f3.jpg" />
+    <entry file="file://$PROJECT_DIR$/images/a7.jpg" />
+    <entry file="file://$PROJECT_DIR$/images/a2.jpg" />
     <entry file="file://$PROJECT_DIR$/images/c2.gif">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -530,13 +518,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="12" column="81" lean-forward="true" selection-start-line="12" selection-start-column="81" selection-end-line="12" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/companyprofile.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
@@ -548,13 +529,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1416">
           <caret line="110" column="12" lean-forward="true" selection-start-line="110" selection-start-column="12" selection-end-line="110" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="179" column="47" lean-forward="true" selection-start-line="179" selection-start-column="47" selection-end-line="179" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -586,13 +560,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/userlogin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/companyCONFIRM.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
@@ -602,8 +569,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/userApplied.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="128" column="48" lean-forward="true" selection-start-line="128" selection-start-column="48" selection-end-line="128" selection-end-column="48" />
+        <state relative-caret-position="394">
+          <caret line="124" column="78" selection-start-line="124" selection-start-column="78" selection-end-line="124" selection-end-column="78" />
           <folding>
             <element signature="n#style#0;n#img#0;n#i#0;n#b#0;n#h4#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="e#5110#5116#0#HTML" expanded="true" />
@@ -619,6 +586,57 @@
             <element signature="e#6703#6709#0#HTML" expanded="true" />
             <element signature="e#6794#6800#0#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="200" column="64" lean-forward="true" selection-start-line="200" selection-start-column="64" selection-end-line="200" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userlogin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="92" column="50" lean-forward="true" selection-start-line="92" selection-start-column="50" selection-end-line="92" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHPMailer/language/phpmailer.lang-am.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="15" column="81" lean-forward="true" selection-start-line="15" selection-start-column="81" selection-end-line="15" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forgetpassword.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="26" column="58" selection-start-line="26" selection-start-column="58" selection-end-line="26" selection-end-column="58" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forgetpasswordconfirm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changepassword.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
         </state>
       </provider>
     </entry>

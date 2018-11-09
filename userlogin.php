@@ -86,7 +86,7 @@ if (isset($_POST['login'])){
                         </div>
                         <div class="forgot">
                             <div class="login-para">
-                                <p><a href="#"> Forgot Password? </a></p>
+                                <p><a href="forgetpassword.php"> Forgot Password? </a></p>
                             </div>
                             <div class="clearfix"> </div>
                         </div>
