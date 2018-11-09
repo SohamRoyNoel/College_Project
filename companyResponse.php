@@ -25,6 +25,22 @@
         header("Location: error.php");
     }
 ?>
+<?php
+if (isset($_POST['invite'])){
+    $grab = $_POST['hola'];
+    $hole = "1";
+    $qs = "update confirm set status = '{$hole}' where id = {$grab}";
+    $ex = mysqli_query($connection, $qs);
+    header("Location: companyResponse.php?j=$jobval&k=$compval");
+}
+if (isset($_POST['decline'])){
+    $grab = $_POST['hola'];
+    $holes = "0";
+    $qs = "update confirm set status = '{$holes}' where id = {$grab}";
+    $ex = mysqli_query($connection, $qs);
+    header("Location: companyResponse.php?j=$jobval&k=$compval");
+}
+?>
 
 <div class="container">
     <div class="single">
@@ -64,6 +80,7 @@
                 <?php
                         while ($row = mysqli_fetch_assoc($execute)) {
                             $user_id = $row['userid'];
+                            $id = $row['id'];
 
 
                             $query1 = "select * from user where id = {$user_id}";
@@ -93,9 +110,12 @@
                                                     :($interest==12?"Programmer":($interest==13?"Programmer":($interest==14?"Programmer":($interest==15?"Programmer"
                                                         :$interest==16?"Programmer":""))))))))))))))) ?></td>
                                     <td><?php echo $db_user_name; ?></td>
-                                    <td><input type="submit" class="btn btn-success" name="invite" value="Invite"></td>
-                                    <td><input type="submit" class="btn btn-danger" name="decline" value="Decline"></td>
 
+                                    <form action="" method="post">
+                                        <td><input type="submit" class="btn btn-success" name="invite" value="Invite"></td>
+                                        <input type="hidden" name="hola" value="<?php echo $id; ?>">
+                                        <td><input type="submit" class="btn btn-danger" name="decline" value="Decline"></td>
+                                    </form>
                                 </tr>
                                 <?php
                             }

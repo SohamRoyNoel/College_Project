@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a90452ef-ea80-4805-b477-6e6a3ffa420b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/companyResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/companyResponse.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,7 +15,17 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="companyResponse.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/companyResponse.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="33" column="66" selection-start-line="33" selection-start-column="66" selection-end-line="33" selection-end-column="66" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -41,7 +51,6 @@
       <find>post job</find>
       <find>Accordion2</find>
       <find>register</find>
-      <find>update</find>
       <find>It is a long established fact</find>
       <find>Job Role</find>
       <find>Sed ut perspiciatis unde omnis iste natus</find>
@@ -49,6 +58,7 @@
       <find>subject</find>
       <find>Watch The Company Profile Details</find>
       <find>Featured Employers</find>
+      <find>update</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -258,12 +268,12 @@
       <workItem from="1541756403969" duration="2431000" />
       <workItem from="1541768699579" duration="7850000" />
       <workItem from="1541777987145" duration="4207000" />
-      <workItem from="1541783553905" duration="7506000" />
+      <workItem from="1541783553905" duration="9213000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="206225000" />
+    <option name="totallyTimeSpent" value="207932000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -276,6 +286,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1456" height="916" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14541547" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32904884" />
@@ -558,27 +569,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/companyjob.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="338" column="18" selection-start-line="338" selection-start-column="18" selection-end-line="338" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/userprofile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="147" column="70" lean-forward="true" selection-start-line="147" selection-start-column="70" selection-end-line="147" selection-end-column="70" />
+        <state relative-caret-position="234">
+          <caret line="31" column="61" lean-forward="true" selection-start-line="31" selection-start-column="61" selection-end-line="31" selection-end-column="61" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/companyResponse.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
-          <folding>
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/companyjob.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="338" column="18" selection-start-line="338" selection-start-column="18" selection-end-line="338" selection-end-column="18" />
+        <state relative-caret-position="462">
+          <caret line="33" column="66" selection-start-line="33" selection-start-column="66" selection-end-line="33" selection-end-column="66" />
         </state>
       </provider>
     </entry>
