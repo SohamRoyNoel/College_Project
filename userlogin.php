@@ -36,7 +36,15 @@ if (isset($_POST['login'])){
         $_SESSION['interest'] = $db_user_interest;
         $_SESSION['password'] = $db_user_password;
         $_SESSION['secret'] = "XXX105";
-        header("Location: userprofile.php");
+
+        if (isset($_GET['j'])){
+            $val = $_GET['j'];
+            header("Location: companyCONFIRM.php?j=$val");
+        } else {
+            header("Location: userprofile.php");
+        }
+
+
     }
 }
 ?>
