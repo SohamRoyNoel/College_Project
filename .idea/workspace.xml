@@ -14,11 +14,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="604">
-              <caret line="223" selection-start-line="223" selection-end-line="227" selection-end-column="6" />
+            <state relative-caret-position="240">
+              <caret line="192" column="21" lean-forward="true" selection-start-line="192" selection-start-column="21" selection-end-line="192" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="watchJobdetails.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/watchJobdetails.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -27,7 +36,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Rackham</find>
       <find>.js</find>
       <find>seek</find>
       <find>seeking</find>
@@ -57,6 +65,7 @@
       <find>update</find>
       <find>It is a long established fact</find>
       <find>Job Role</find>
+      <find>Sed ut perspiciatis unde omnis iste natus</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -107,6 +116,8 @@
         <option value="$PROJECT_DIR$/companyprofile.php" />
         <option value="$PROJECT_DIR$/companyjob.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$USER_HOME$/Desktop/web/single.html" />
+        <option value="$PROJECT_DIR$/watchJobdetails.php" />
       </list>
     </option>
   </component>
@@ -183,27 +194,27 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index.php">
+  <component name="RunManager" selected="JavaScript Debug.watchJobdetails.php">
     <configuration name="companyjob.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost/JOBS/companyjob.php" />
     <configuration name="companylogin.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost/JOBS/companylogin.php" />
     <configuration name="companyprofile.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost/JOBS/companyprofile.php" />
     <configuration name="index.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost/JOBS/index.php" />
     <configuration name="index.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost/JOBS/compLogin/index.php" />
-    <configuration name="reg.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost/JOBS/reg.php" />
+    <configuration name="watchJobdetails.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost/JOBS/watchJobdetails.php" />
     <list>
       <item itemvalue="JavaScript Debug.index.php" />
       <item itemvalue="JavaScript Debug.companylogin.php" />
-      <item itemvalue="JavaScript Debug.reg.php" />
       <item itemvalue="JavaScript Debug.companyprofile.php" />
       <item itemvalue="JavaScript Debug.companyjob.php" />
+      <item itemvalue="JavaScript Debug.watchJobdetails.php" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.watchJobdetails.php" />
         <item itemvalue="JavaScript Debug.index.php" />
         <item itemvalue="JavaScript Debug.companyjob.php" />
         <item itemvalue="JavaScript Debug.companylogin.php" />
         <item itemvalue="JavaScript Debug.companyprofile.php" />
-        <item itemvalue="JavaScript Debug.reg.php" />
       </list>
     </recent_temporary>
   </component>
@@ -260,12 +271,12 @@
       <workItem from="1541705212406" duration="13209000" />
       <workItem from="1541739959946" duration="12423000" />
       <workItem from="1541756403969" duration="2431000" />
-      <workItem from="1541768699579" duration="4272000" />
+      <workItem from="1541768699579" duration="5315000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="190934000" />
+    <option name="totallyTimeSpent" value="191977000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -278,9 +289,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1456" height="916" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14111748" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14111748" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32904884" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
@@ -289,7 +299,7 @@
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32904884" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3277635" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3277635" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39974293" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -308,10 +318,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test.php" />
-    <entry file="file://$PROJECT_DIR$/error/css/style.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$USER_HOME$/Desktop/web/about.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="619">
@@ -516,13 +522,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Company_reg.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/companyprofile.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -558,17 +557,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Company_reg.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/companyjob.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-445">
-          <caret line="234" column="63" selection-start-line="234" selection-start-column="63" selection-end-line="234" selection-end-column="63" />
+        <state>
+          <caret column="34" lean-forward="true" selection-start-column="34" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/web/single.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="223" column="18" lean-forward="true" selection-start-line="223" selection-start-column="18" selection-end-line="223" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="604">
-          <caret line="223" selection-start-line="223" selection-end-line="227" selection-end-column="6" />
+        <state relative-caret-position="240">
+          <caret line="192" column="21" lean-forward="true" selection-start-line="192" selection-start-column="21" selection-end-line="192" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/watchJobdetails.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
         </state>
       </provider>
     </entry>
