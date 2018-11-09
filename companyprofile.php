@@ -146,7 +146,7 @@ if (isset($_POST['imgs'])) {
                         </div>
                         <p><!-- /.collapse --></p>
                     </div>
-                    <a href=""><button type="button" class="btn btn-primary btn-lg btn-block">Post Job Or See Previous</button></a>
+                    <a href="companyjob.php"><button type="button" class="btn btn-primary btn-lg btn-block">Post Job Or See Previous</button></a>
                 </div>
 
             </div>

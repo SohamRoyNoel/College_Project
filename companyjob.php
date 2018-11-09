@@ -2,6 +2,12 @@
 <?php include "includes/header.php"?>
 
 <?php
+        if (!isset($_SESSION['id']) && !isset($_SESSION['reg']) && !isset($_SESSION['iso'])){
+            header("Location: error.php");
+        }
+?>
+
+<?php
         if (isset($_POST['submit'])){
             $company_id = $_SESSION['id'];
             $object = $_POST['object'];
