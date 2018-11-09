@@ -10,6 +10,7 @@ if (!isset($_SESSION['id']) && !isset($_SESSION['reg']) && !isset($_SESSION['iso
 <?php
 if (isset($_POST['submit'])){
     $company_id = $_SESSION['id'];
+    $title = $_POST['title'];
     $object = $_POST['object'];
     $hremail = $_POST['hremail'];
     $hrcontact = $_POST['hrcontact'];
@@ -19,11 +20,12 @@ if (isset($_POST['submit'])){
     $skill = $_POST['skill'];
     $education = $_POST['education'];
     $role = $_POST['role'];
+    $date = date("Y/m/d");
 
     if (!is_null($object) && !is_null($hremail) && !is_null($hrcontact) && !is_null($salary) && !is_null($location) && !is_null($target) && !is_null($skill) && !is_null($education) && !is_null($role)){
 
-        $query = "insert into jobs (company_id, role, mineducation, skill, targetTo, location, salary, HRph, HRem, object) values 
-                          ('{$company_id }', '{$role}', '{$education}', '{$skill}', '{$target}', '{$location}', '{$salary}', '{$hrcontact}', '{$hremail}', '{$object}')";
+        $query = "insert into jobs (company_id, title, role, mineducation, skill, targetTo, location, salary, HRph, HRem, object, date) values 
+                          ('{$company_id }', '{$title}', '{$role}', '{$education}', '{$skill}', '{$target}', '{$location}', '{$salary}', '{$hrcontact}', '{$hremail}', '{$object}', '{$date}')";
         $execute = mysqli_query($connection, $query);
 
         header("Location: companyjob.php");
@@ -39,6 +41,14 @@ if (isset($_POST['submit'])){
             <div class="form-container">
                 <h2>Post Job Here</h2>
                 <form action="" method="post">
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label class="col-md-3 control-lable" for="firstName">Job Title</label>
+                            <div class="col-md-9">
+                                <input value="" type="text" path="firstName" maxlength="50" minlength="4" id="firstName" name="title" class="form-control input-sm" required/>
+                            </div>
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="form-group col-md-12">
                             <label class="col-md-3 control-lable" for="firstName">Job Role</label>
@@ -166,6 +176,7 @@ if (isset($_POST['submit'])){
 
                 if (isset($_POST['editsubmit'])){
                     $idP = $_POST['hidden'];
+                    $titleP=$_POST['titleP'];
                     $roleP=$_POST['roleP'];
                     $educationP=$_POST['educationP'];
                     $skillP=$_POST['skillP'];
@@ -176,7 +187,7 @@ if (isset($_POST['submit'])){
                     $hremailP=$_POST['hremailP'];
                     $objectP=$_POST['objectP'];
 
-                    $up1 = "update jobs set role='{$roleP}' ,mineducation='{$educationP}', skill='{$skillP}', targetTo='{$targetP}', location='{$locationP}', salary='{$salaryP}', HRph='{$hrcontactP}', HRem='{$hremailP}', object='{$objectP}' where id = {$idP}";
+                    $up1 = "update jobs set title='{$titleP}', role='{$roleP}' ,mineducation='{$educationP}', skill='{$skillP}', targetTo='{$targetP}', location='{$locationP}', salary='{$salaryP}', HRph='{$hrcontactP}', HRem='{$hremailP}', object='{$objectP}' where id = {$idP}";
                     $ups = mysqli_query($connection, $up1);
                     header("Location: companyjob.php");
                 }
@@ -195,6 +206,8 @@ if (isset($_POST['submit'])){
                 while ($row = mysqli_fetch_assoc($send)){
                     $id1 = $row['id'];
                     $object1 = $row['object'];
+                    $title1 = $row['title'];
+                    $dates1 = $row['date'];
                     $hremail1 = $row['HRem'];
                     $hrcontact1 = $row['HRph'];
                     $salary1 = $row['salary'];
@@ -209,6 +222,7 @@ if (isset($_POST['submit'])){
                     <button class="collapsible">
                         <div style="color: black">
                             <b style="color: #D2CF99">Company :</b> <?php echo $_SESSION['name']; ?><br>
+                            <b style="color: #D2CF99">Company :</b> <?php echo $title1; ?><br>
                             <b style="color: #D2CF99">Role :</b><?php echo $role1; ?><br>
                             <b style="color: #D2CF99">Min Education :</b><?php echo $education1; ?><br>
                             <b style="color: #D2CF99">Skill :</b><?php echo $skill1; ?><br>
@@ -218,6 +232,7 @@ if (isset($_POST['submit'])){
                             <b style="color: #D2CF99">HRPhone :</b><?php echo $hrcontact1; ?><br>
                             <b style="color: #D2CF99">HRMail :</b><?php echo $hremail1; ?><br>
                             <b style="color: #D2CF99">Job Objective :</b><?php echo $object1; ?><br>
+                            <b style="color: #D2CF99">Posted On :</b> <?php echo $dates1; ?><br>
                         </div>
                     </button>
                     <div class="content">
@@ -226,6 +241,14 @@ if (isset($_POST['submit'])){
                         <h2>Edit</h2>
                         <div class="container">
                             <form action="" method="post">
+                                <div class="row">
+                                    <div class="form-group col-md-4">
+                                        <label class="col-md-3 control-lable" for="firstName">Job Title</label>
+                                        <div class="col-md-9">
+                                            <input value="<?php echo $title1?>" type="text" path="firstName" maxlength="50" minlength="4" id="firstName" name="titleP" class="form-control input-sm" required/>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="row">
                                     <div class="form-group col-md-4">
                                         <label class="col-md-3 control-lable" for="firstName">Job Role</label>
