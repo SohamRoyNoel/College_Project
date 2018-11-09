@@ -1,6 +1,12 @@
 <?php include "includes/top.php"?>
 
 <?php
+    if (!isset($_SESSION['forgetHolder'])){
+        header('index.php');
+    }
+?>
+
+<?php
 if (isset($_POST['submit'])){
 
     $realotp = $_SESSION['otp'];

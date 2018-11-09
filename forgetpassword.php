@@ -11,6 +11,8 @@
             $rec = $_POST['email'];
             $_SESSION['changer'] = $rec;
 
+            $_SESSION['forgetHolder'] = "true";
+
             $mail = new PHPMailer();
             $mail->isSMTP();
             $mail->SMTPAuth = true;

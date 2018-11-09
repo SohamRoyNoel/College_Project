@@ -1,11 +1,16 @@
 <?php include "includes/top.php"?>
-
+<?php
+if (!isset($_SESSION['forgetHolder'])){
+    header('index.php');
+}
+?>
 <?php
 
 if (isset($_POST['submit'])){
     $fst = $_POST['psw1'];
     $snd = $_POST['psw2'];
     $em = $_SESSION['changer'];
+    unset($_SESSION['changer']);
 
     if ($fst == $snd){
         $query = "update user set password = '{$fst}' where email='{$em}'";
