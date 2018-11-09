@@ -15,10 +15,12 @@ if (isset($_POST['subs'])){
     if (!empty($q1) && !empty($q2) && !empty($q3)){
         $query = "insert into confirm(jobid, q1, q2, q3) values ('{$jobid}', '{$q1}', '{$q2}', '{$q3}')";
         $execute = mysqli_query($connection, $query);
+        $_SESSION['confirmQ'] = "true";
 
         if (!$execute){
             mysqli_error($connection);
         }
+        header("Location: index.php");
     } else {
         echo "<script>alert(\"You can not leave any field empty.\")</script>";
     }

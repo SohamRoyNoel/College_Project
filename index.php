@@ -107,6 +107,15 @@
 </div>
 <div class="container">
     <div class="grid_1">
+        <?php
+            if (isset($_SESSION['confirmQ'])){
+                $val = $_SESSION['confirmQ'];
+                if ($val == "true"){
+                    echo "<script>alert(\"You have successfully applied for the job.\")</script>";
+                    unset($_SESSION['confirmQ']);
+                }
+            }
+        ?>
         <h3>Featured Employers</h3>
         <ul id="flexiselDemo3">
             <li><img src="images/c1.gif"  class="img-responsive" /></li>
