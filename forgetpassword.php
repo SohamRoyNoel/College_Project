@@ -9,6 +9,8 @@
 
 
             $rec = $_POST['email'];
+            $_SESSION['changer'] = $rec;
+
             $mail = new PHPMailer();
             $mail->isSMTP();
             $mail->SMTPAuth = true;
