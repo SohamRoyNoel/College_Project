@@ -62,7 +62,8 @@ if (isset($_POST['decline'])){
             ?>
             <h2>Responses Related To The JOB</h2>
             <h4 style="margin-left: 420px; font-size: 25px; background-color: #D2CF99; margin-right: 420px"><b><?php echo $jobname?></b></h4><br>
-            <table class="table table-condensed">
+            <center>
+            <table class="table table-responsive">
                 <thead>
                     <th>Candidate name</th>
                     <th>Phone</th>
@@ -94,7 +95,7 @@ if (isset($_POST['decline'])){
                                 $db_user_em = $row['email'];
                                 $db_user_extra = $row['extra'];
                                 $interest = $row['interest'];
-                                $db_user_password = $row['CV'];
+                                $db_user_cv = $row['CV'];
                                 ?>
                                 <tr>
                                     <td><?php echo $db_user_name; ?></td>
@@ -109,7 +110,9 @@ if (isset($_POST['decline'])){
                                                 :($interest==8?"Security":($interest==9?"Driver":($interest==10?"Resturant":($interest==11?"Programmer"
                                                     :($interest==12?"Programmer":($interest==13?"Programmer":($interest==14?"Programmer":($interest==15?"Programmer"
                                                         :$interest==16?"Programmer":""))))))))))))))) ?></td>
-                                    <td><?php echo $db_user_name; ?></td>
+
+                                    <td><a href="download.php?book=<?php echo $db_user_cv?>" class="btn btn-outline-light btn-lg"><i
+                                                    class="fa fa-download"></i><span>&nbsp;&nbsp;Download CV</span></a></td>
 
                                     <form action="" method="post">
                                         <td><input type="submit" class="btn btn-success" name="invite" value="Invite"></td>
@@ -123,6 +126,7 @@ if (isset($_POST['decline'])){
                 ?>
                 </tbody>
             </table>
+            </center>
         </div>
         <div class="clearfix"> </div>
     </div>
