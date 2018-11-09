@@ -166,6 +166,8 @@
                 $query = mysqli_query($connection, $jobs);
                 while ($row = mysqli_fetch_assoc($query)){
                     $id1 = $row['id'];
+                    $title1 = $row['title'];
+                    $date = $row['date'];
                     $cid1 = $row['company_id'];
                     $object1 = $row['object'];
                     $hremail1 = $row['HRem'];
@@ -197,8 +199,8 @@
                     <a href="single.html"><img src="companyImage/<?php echo $db_company_img; ?>" class="img-responsive" alt=""/></a>
                 </div>
                 <div class="col-sm-8 row_1">
-                    <h4><a href="single.html"><?php echo $role1; ?></a></h4>
-                    <h6>SIt is a long <span class="dot">·</span> Jul. 31, 2015</h6>
+                    <h4><a href="single.html"><?php echo $title1; ?></a></h4>
+                    <h6>Posted On <span class="dot">·</span> <?php echo $date; ?></h6>
                     <p><?php echo $object1; ?></p>
                     <div class="social">
                         <a class="btn_1" href="#">
