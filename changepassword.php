@@ -11,11 +11,22 @@ if (isset($_POST['submit'])){
     $snd = $_POST['psw2'];
     $em = $_SESSION['changer'];
     unset($_SESSION['changer']);
+    $f = $_SESSION['used'];
 
-    if ($fst == $snd){
-        $query = "update user set password = '{$fst}' where email='{$em}'";
-        $execute = mysqli_query($connection, $query);
-        header("Location: index.php");
+    if ($f == "user") {
+        if ($fst == $snd) {
+            $query = "update user set password = '{$fst}' where email='{$em}'";
+            $execute = mysqli_query($connection, $query);
+            header("Location: index.php");
+        }
+    }
+
+    if ($f == "company"){
+        if ($fst == $snd){
+            $query = "update company set password = '{$fst}' where email='{$em}'";
+            $execute = mysqli_query($connection, $query);
+            header("Location: index.php");
+        }
     }
 }
 

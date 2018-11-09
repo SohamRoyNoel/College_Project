@@ -264,6 +264,7 @@ if (isset($_POST['submit'])){
     <div class="inputGroup inputGroup2">
         <label for="loginPassword" id="loginPasswordLabel">Password</label>
         <input type="password" name="password" id="loginPassword" />
+        <a href="forgetpassword.php?user=company"><h3>Forget Password?</h3></a>
         <label id="showPasswordToggle" for="showPasswordCheck">Show
             <input id="showPasswordCheck" type="checkbox"/>
             <div class="indicator"></div>

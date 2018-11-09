@@ -13,6 +13,11 @@
 
             $_SESSION['forgetHolder'] = "true";
 
+            if (isset($_GET['user'])){
+                $f = $_GET['user'];
+                $_SESSION['used'] = $f;
+            }
+
             $mail = new PHPMailer();
             $mail->isSMTP();
             $mail->SMTPAuth = true;
