@@ -205,6 +205,7 @@ if (isset($_POST['submit'])){
 
                 while ($row = mysqli_fetch_assoc($send)){
                     $id1 = $row['id'];
+                    $company_idp = $row['company_id'];
                     $object1 = $row['object'];
                     $title1 = $row['title'];
                     $dates1 = $row['date'];
@@ -343,7 +344,7 @@ if (isset($_POST['submit'])){
                                 </div>
                                 <div class="row">
                                     <div class="form-actions">
-                                        <a href="companyResponse.php?j=<?php echo $id1; ?>"><input type="button" name="editsubmit" value="Response" class="btn btn-primary btn-sm"></a>
+                                        <a href="companyResponse.php?j=<?php echo $id1; ?>&k=<?php echo $company_idp?>"><input type="button" name="editsubmit" value="Response" class="btn btn-primary btn-sm"></a>
                                         <input type="submit" name="editsubmit" value="Edit" class="btn btn-primary btn-sm">
                                         <input type="submit" name="" value="Delete" class="btn btn-primary btn-sm">
                                     </div>

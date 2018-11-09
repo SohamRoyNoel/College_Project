@@ -2,7 +2,26 @@
 <?php include "includes/header.php"?>
 
 <?php
+    // validation layer 1
     if (!isset($_SESSION['id']) && !isset($_SESSION['reg']) && !isset($_SESSION['iso']) && !isset($_GET['j'])){
+        header("Location: error.php");
+    }
+
+    // validation layer 2
+    $jobval = $_GET['j'];
+    $compval = $_GET['k'];
+    $real = $_SESSION['id'];
+    if ($compval != $real){
+        header("Location: error.php");
+    }
+
+    // validation layer 3
+    $validationq = "select * from jobs where id = {$jobval} and company_id = {$compval}";
+    $valudatione = mysqli_query($connection, $validationq);
+    while ($v = mysqli_fetch_assoc($valudatione)){
+        $titlexp = $v['title'];
+    }
+    if (empty($titlexp)){
         header("Location: error.php");
     }
 ?>
