@@ -33,7 +33,6 @@ if (isset($_POST['submit'])){
 ?>
 
 
-
 <div class="container">
     <div class="col-sm-7">
         <div class="single">
@@ -162,6 +161,28 @@ if (isset($_POST['submit'])){
                     }
                 </style>
 
+                <!--Edit-->
+                <?php
+
+                if (isset($_POST['editsubmit'])){
+                    $idP = $_POST['hidden'];
+                    $roleP=$_POST['roleP'];
+                    $educationP=$_POST['educationP'];
+                    $skillP=$_POST['skillP'];
+                    $targetP=$_POST['targetP'];
+                    $locationP=$_POST['locationP'];
+                    $salaryP=$_POST['salaryP'];
+                    $hrcontactP=$_POST['hrcontactP'];
+                    $hremailP=$_POST['hremailP'];
+                    $objectP=$_POST['objectP'];
+
+                    $up1 = "update jobs set role='{$roleP}' ,mineducation='{$educationP}', skill='{$skillP}', targetTo='{$targetP}', location='{$locationP}', salary='{$salaryP}', HRph='{$hrcontactP}', HRem='{$hremailP}', object='{$objectP}' where id = {$idP}";
+                    $ups = mysqli_query($connection, $up1);
+                    header("Location: companyjob.php");
+                }
+                ?>
+                <!--Edit-->
+
                 <?php
                 $companys_id = $_SESSION['id'];
                 $query = "select * from jobs where company_id='{$companys_id}'";
@@ -172,6 +193,7 @@ if (isset($_POST['submit'])){
                 }
 
                 while ($row = mysqli_fetch_assoc($send)){
+                    $id1 = $row['id'];
                     $object1 = $row['object'];
                     $hremail1 = $row['HRem'];
                     $hrcontact1 = $row['HRph'];
@@ -183,6 +205,7 @@ if (isset($_POST['submit'])){
                     $role1 = $row['role'];
 
                     ?>
+
                     <button class="collapsible">
                         <div style="color: black">
                             <b style="color: #D2CF99">Company :</b> <?php echo $_SESSION['name']; ?><br>
@@ -207,7 +230,7 @@ if (isset($_POST['submit'])){
                                     <div class="form-group col-md-4">
                                         <label class="col-md-3 control-lable" for="firstName">Job Role</label>
                                         <div class="col-md-9">
-                                            <input value="<?php echo $role1?>" type="text" path="firstName" maxlength="15" minlength="4" id="firstName" name="role" class="form-control input-sm" required/>
+                                            <input value="<?php echo $role1?>" type="text" path="firstName" maxlength="15" minlength="4" id="firstName" name="roleP" class="form-control input-sm" required/>
                                         </div>
                                     </div>
                                 </div>
@@ -215,15 +238,25 @@ if (isset($_POST['submit'])){
                                     <div class="form-group col-md-4">
                                         <label class="col-md-3 control-lable" for="lastName">Education</label>
                                         <div class="col-md-9">
-                                            <input type="text" value="<?php echo $education1?>" path="lastName" id="lastName" maxlength="20" minlength="2" name="education" class="form-control input-sm" required/>
+                                            <input type="text" value="<?php echo $education1?>" path="lastName" id="lastName" maxlength="20" minlength="2" name="educationP" class="form-control input-sm" required/>
                                         </div>
                                     </div>
                                 </div>
+
+                                <div class="row">
+                                    <div class="form-group col-md-4">
+                                        <label class="col-md-3 control-lable" for="lastName">Education</label>
+                                        <div class="col-md-9">
+                                            <input type="hidden" value="<?php echo $id1?>" path="lastName" id="lastName" maxlength="20" minlength="2" name="hidden" class="form-control input-sm" required/>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <div class="row">
                                     <div class="form-group col-md-4">
                                         <label class="col-md-3 control-lable" for="lastName">Skill</label>
                                         <div class="col-md-9">
-                                            <input type="text" value="<?php echo $skill1?>" path="lastName" id="lastName" maxlength="50" minlength="1" name="skill" class="form-control input-sm" required/>
+                                            <input type="text" value="<?php echo $skill1?>" path="lastName" id="lastName" maxlength="50" minlength="1" name="skillP" class="form-control input-sm" required/>
                                         </div>
                                     </div>
                                 </div>
@@ -231,8 +264,8 @@ if (isset($_POST['submit'])){
                                     <div class="form-group col-md-4">
                                         <label class="col-md-3 control-lable" for="country">Target To</label>
                                         <div class="col-md-9">
-                                            <select name="target" path="country" id="country" class="form-control input-sm">
-                                                <option value=""><?php echo $target1?></option>
+                                            <select name="targetP" path="country" id="country" class="form-control input-sm">
+                                                <option value="<?php echo $target1?>"><?php echo $target1?></option>
                                                 <option value="Tech Support">Tech Support</option>
                                                 <option value="Part Time">Part Time</option>
                                                 <option value="Full Time">Full Time</option>
@@ -249,7 +282,7 @@ if (isset($_POST['submit'])){
                                     <div class="form-group col-md-4">
                                         <label class="col-md-3 control-lable" for="dob">Job Location</label>
                                         <div class="col-md-9">
-                                            <input type="text" value="<?php echo $location1?>" name="location" maxlength="15" minlength="4" id="loc" class="form-control input-sm" required/>
+                                            <input type="text" value="<?php echo $location1?>" name="locationP" maxlength="15" minlength="4" id="loc" class="form-control input-sm" required/>
                                         </div>
                                     </div>
                                 </div>
@@ -257,7 +290,7 @@ if (isset($_POST['submit'])){
                                     <div class="form-group col-md-4">
                                         <label class="col-md-3 control-lable" for="dob">Salary</label>
                                         <div class="col-md-9">
-                                            <input type="text" value="<?php echo $salary1?>" name="salary" path="dob" maxlength="10" minlength="4" id="dob" class="form-control input-sm" required/>
+                                            <input type="text" value="<?php echo $salary1?>" name="salaryP" path="dob" maxlength="10" minlength="4" id="dob" class="form-control input-sm" required/>
                                         </div>
                                     </div>
                                 </div>
@@ -265,7 +298,7 @@ if (isset($_POST['submit'])){
                                     <div class="form-group col-md-4">
                                         <label class="col-md-3 control-lable" for="dob">HR Contact</label>
                                         <div class="col-md-9">
-                                            <input type="text" path="dob" value="<?php echo $hrcontact1?>" name="hrcontact" maxlength="10" minlength="10" id="dob" class="form-control input-sm" required/>
+                                            <input type="text" path="dob" value="<?php echo $hrcontact1?>" name="hrcontactP" maxlength="10" minlength="10" id="dob" class="form-control input-sm" required/>
                                         </div>
                                     </div>
                                 </div>
@@ -273,7 +306,7 @@ if (isset($_POST['submit'])){
                                     <div class="form-group col-md-4">
                                         <label class="col-md-3 control-lable" for="email">HR Email</label>
                                         <div class="col-md-9">
-                                            <input type="text" path="email" value="<?php echo $hremail1?>" name="hremail" maxlength="50" minlength="4" id="email" class="form-control input-sm" required/>
+                                            <input type="text" path="email" value="<?php echo $hremail1?>" name="hremailP" maxlength="50" minlength="4" id="email" class="form-control input-sm" required/>
                                         </div>
                                     </div>
                                 </div>
@@ -281,14 +314,14 @@ if (isset($_POST['submit'])){
                                     <div class="form-group col-md-4">
                                         <label class="col-md-3 control-lable" for="subjects">Object</label>
                                         <div class="col-md-9 sm_1">
-                                            <input type="text" path="email" value="<?php echo $object1?>" name="hremail" maxlength="50" minlength="4" id="email" class="form-control input-sm" required/>
+                                            <input type="text" path="email" value="<?php echo $object1?>" name="objectP" maxlength="50" minlength="4" id="email" class="form-control input-sm" required/>
 
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="form-actions">
-                                        <input type="submit" name="submit" value="Edit" class="btn btn-primary btn-sm">
+                                        <input type="submit" name="editsubmit" value="Edit" class="btn btn-primary btn-sm">
                                     </div>
                                 </div>
                             </form>
