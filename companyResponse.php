@@ -131,4 +131,8 @@ if (isset($_POST['decline'])){
         <div class="clearfix"> </div>
     </div>
 </div>
-
+<div class="footer">
+    <div class="" style="margin-left: 460px">
+        <p>Copyright © 2018 Seeking . All Rights Reserved . Design by <a href="" target="_blank">PreciousSquad</a> </p>
+    </div>
+</div>

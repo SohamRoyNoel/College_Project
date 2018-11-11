@@ -278,3 +278,9 @@ if (isset($_POST['submit'])){
         //empty string means no validation error
     }
 </script>
+
+<div class="footer">
+    <div class="" style="margin-left: 460px">
+        <p>Copyright © 2018 Seeking . All Rights Reserved . Design by <a href="" target="_blank">PreciousSquad</a> </p>
+    </div>
+</div>

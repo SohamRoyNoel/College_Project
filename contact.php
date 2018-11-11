@@ -152,9 +152,8 @@
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d921.0703104064787!2d88.43097102918348!3d22.568582237478267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0275ad93c8289b%3A0xc099131033eb5917!2sSDF+Building%2C+GP+Block%2C+Sector+V%2C+Salt+Lake+City%2C+Kolkata%2C+West+Bengal+700091!5e0!3m2!1sen!2sin!4v1541188468173" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 </div>
 
-<div class="footer_bottom">
-        <div class="copy">
-            <p>Copyright © 2015 Seeking . All Rights Reserved . Design by <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
-        </div>
+<div class="footer">
+    <div class="" style="margin-left: 460px">
+        <p>Copyright © 2018 Seeking . All Rights Reserved . Design by <a href="" target="_blank">PreciousSquad</a> </p>
     </div>
 </div>

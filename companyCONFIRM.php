@@ -68,7 +68,7 @@ if (isset($_POST['subs'])){
             </div>
 
             <div class="form-actions">
-                <input type="submit" value="Submit" name="subs" class="btn btn-primary btn-sm">
+                <input type="submit" value="Submit" name="subs" class="btn btn-primary btn-sm"><br><br>
             </div>
         </div>
     </form>
@@ -78,4 +78,9 @@ if (isset($_POST['subs'])){
 </div>
 
 <div class="clearfix"> </div>
+</div>
+<div class="footer">
+    <div class="" style="margin-left: 460px">
+        <p>Copyright © 2018 Seeking . All Rights Reserved . Design by <a href="" target="_blank">PreciousSquad</a> </p>
+    </div>
 </div>

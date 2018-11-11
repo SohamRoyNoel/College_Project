@@ -118,7 +118,7 @@ if (isset($_POST['login'])){
     </div>
 </div>
 <div class="footer">
-    <div class="container">
-        <p>Copyright © 2015 Seeking . All Rights Reserved . Design by <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
+    <div class="" style="margin-left: 460px">
+        <p>Copyright © 2018 Seeking . All Rights Reserved . Design by <a href="" target="_blank">PreciousSquad</a> </p>
     </div>
 </div>
