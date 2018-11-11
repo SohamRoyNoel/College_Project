@@ -38,14 +38,14 @@
                 </li>
                 <?php
                 if (!isset($_SESSION['iso'])){
-                ?>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Recruiters<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="./companylogin.php">Recruiters Login</a></li>
-                        <li><a href="./Company_reg.php">Recruiters Registration</a></li>
-                    </ul>
-                </li>
+                    ?>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Recruiters<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="./companylogin.php">Recruiters Login</a></li>
+                            <li><a href="./Company_reg.php">Recruiters Registration</a></li>
+                        </ul>
+                    </li>
                 <?php } ?>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">More<b class="caret"></b></a>
@@ -59,16 +59,28 @@
                     </ul>
                 </li>
                 <?php
-                        if (isset($_SESSION['id'])){
-                            echo "<li><a href=\"./logout.php\">Logout</a></li>";
-                        } else {
-                            echo "<li><a href=\"./userlogin.php\">Login</a></li>";
-                        }
+                if (isset($_SESSION['id'])){
+                    echo "<li><a href=\"./logout.php\">Logout</a></li>";
+                } else {
+                    echo "<li><a href=\"./userlogin.php\">Login</a></li>";
+                }
                 ?>
 
                 <li><a href="./about.php">About</a></li>
                 <li><a href="./contact.php">Contact</a></li>
                 <li><a href="./faq.php">FAQ</a></li>
+                <?php
+                if (isset($_SESSION['secret'])){
+                    $sec = $_SESSION['secret'];
+                    $img = $_SESSION['img'];
+                    if ($sec == "XXX105") {
+                        echo "<li><a href=\"./userprofile.php\"><img src=\"userImage/$img\" class=\"img-circle\" height=\"30\" width=\"35\" alt='No Pic'> </a></li>";
+                    }
+                    if ($sec == "XXX106") {
+                        echo "<li><a href=\"./companyprofile.php\"><img src=\"companyImage/$img\" class=\"img-circle\" height=\"30\" width=\"35\" alt='No Pic'> </a></li>";
+                    }
+                }
+                ?>
             </ul>
         </div>
         <div class="clearfix"> </div>
@@ -81,17 +93,17 @@
             <div id="search_form" class="clearfix">
                 <?php
                 if (!isset($_SESSION['iso'])){
-                ?>
-                <h1>Start your job search</h1>
-                <p>
+                    ?>
+                    <h1>Start your job search</h1>
+                    <p>
 
                     <input type="text" class="text" placeholder=" " value="Enter Keyword(s)" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter Keyword(s)';}">
                     <input type="text" class="text" placeholder=" " value="Location" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Location';}">
                     <label class="btn2 btn-2 btn2-1b"><input type="submit" value="Find Jobs"></label>
                     <?php
                 } else {
-                ?>
-                <h1>Start your job post</h1>
+                    ?>
+                    <h1>Start your job post</h1>
                 <?php } ?>
                 </p>
             </div>

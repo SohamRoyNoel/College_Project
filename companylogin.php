@@ -47,6 +47,7 @@ if (isset($_POST['submit'])){
         $db_company_iso = $row['iso'];
         $db_company_em = $row['email'];
         $db_company_dob = $row['since'];
+        $db_company_img = $row['img'];
         $db_company_password = $row['password'];
 
         $_SESSION['id'] = $db_company_id;
@@ -55,7 +56,9 @@ if (isset($_POST['submit'])){
         $_SESSION['iso'] = $db_company_iso;
         $_SESSION['dob'] = $db_company_dob;
         $_SESSION['em'] = $db_company_em;
+        $_SESSION['img'] = $db_company_img;
         $_SESSION['password'] = $db_company_password;
+        $_SESSION['secret'] = "XXX106";
     }
     header("Location: companyprofile.php");
 }

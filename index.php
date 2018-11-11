@@ -89,6 +89,18 @@
                 <li><a href="./about.php">About</a></li>
                 <li><a href="./contact.php">Contact</a></li>
                 <li><a href="./faq.php">FAQ</a></li>
+                <?php
+                if (isset($_SESSION['secret'])){
+                    $sec = $_SESSION['secret'];
+                    $img = $_SESSION['img'];
+                    if ($sec == "XXX105") {
+                        echo "<li><a href=\"./userprofile.php\"><img src=\"userImage/$img\" class=\"img-circle\" height=\"30\" width=\"35\" alt='No Pic'> </a></li>";
+                    }
+                    if ($sec == "XXX106") {
+                        echo "<li><a href=\"./companyprofile.php\"><img src=\"companyImage/$img\" class=\"img-circle\" height=\"30\" width=\"35\" alt='No Pic'> </a></li>";
+                    }
+                }
+                ?>
             </ul>
         </div>
         <div class="clearfix"> </div>

@@ -22,6 +22,7 @@ if (isset($_POST['login'])){
         $db_user_add = $row['address'];
         $db_user_em = $row['email'];
         $db_user_extra = $row['extra'];
+        $db_user_img = $row['img'];
         $db_user_interest = $row['interest'];
         $db_user_password = $row['password'];
 
@@ -35,6 +36,7 @@ if (isset($_POST['login'])){
         $_SESSION['extra'] = $db_user_extra;
         $_SESSION['interest'] = $db_user_interest;
         $_SESSION['password'] = $db_user_password;
+        $_SESSION['img'] = $db_user_img;
         $_SESSION['secret'] = "XXX105";
 
         if (isset($_GET['j'])){
