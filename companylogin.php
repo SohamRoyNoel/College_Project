@@ -38,7 +38,10 @@ if (isset($_POST['submit'])){
 
     if (!$send){
         die("failed".mysqli_error());
+        // header("Location: companylogin.php");
     }
+
+    $flags = 0;
 
     while ($row = mysqli_fetch_assoc($send)){
         $db_company_id = $row['id'];
@@ -49,6 +52,7 @@ if (isset($_POST['submit'])){
         $db_company_dob = $row['since'];
         $db_company_img = $row['img'];
         $db_company_password = $row['password'];
+        $flags = 1;
 
         $_SESSION['id'] = $db_company_id;
         $_SESSION['name'] = $db_company_name;
@@ -60,7 +64,12 @@ if (isset($_POST['submit'])){
         $_SESSION['password'] = $db_company_password;
         $_SESSION['secret'] = "XXX106";
     }
-    header("Location: companyprofile.php");
+
+    if ($flags == 1)
+        header("Location: companyprofile.php");
+    if ($flags == 0)
+        header("Location: companylogin.php");
+
 }
 ?>
 <body>
