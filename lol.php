@@ -11,32 +11,32 @@
 <!-- Team Container -->
 <div class="w3-container w3-padding-64 w3-center" id="team">
     <h2>OUR TEAM</h2>
-    <p>Meet the team - our office rats:</p>
+    <p>Meet the team - our precious squad</p>
 
     <div class="w3-row"><br>
 
         <div class="w3-quarter">
-            <img src="/w3images/avatar.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-            <h3>Johnny Walker</h3>
-            <p>Web Designer</p>
+            <img src="favicon/soham.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+            <h3>Soham Roy</h3>
+            <p>UI Developer</p>
         </div>
 
         <div class="w3-quarter">
-            <img src="/w3images/avatar.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-            <h3>Rebecca Flex</h3>
-            <p>Support</p>
+            <img src="favicon/aditya.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+            <h3>Aditya Rahut</h3>
+            <p>Admin Developer</p>
         </div>
 
         <div class="w3-quarter">
-            <img src="/w3images/avatar.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-            <h3>Jan Ringo</h3>
-            <p>Boss man</p>
+            <img src="favicon/ivy.jpg" alt="Boss" style="width:135px; height: 134px" class="w3-circle w3-hover-opacity">
+            <h3>Ivy Saha</h3>
+            <p>Analyst & Debugger</p>
         </div>
 
         <div class="w3-quarter">
-            <img src="/w3images/avatar.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-            <h3>Kai Ringo</h3>
-            <p>Fixer</p>
+            <img src="favicon/tanay.jpg" alt="Boss" style="width:135px; height: 136px"class="w3-circle w3-hover-opacity">
+            <h3>Tanay Das</h3>
+            <p>Tester</p>
         </div>
 
     </div>
@@ -50,23 +50,23 @@
 
 <!-- Pricing Row -->
 <div class="w3-row-padding w3-center w3-padding-64" id="pricing">
-    <h2>PRICING</h2>
-    <p>Choose a pricing plan that fits your needs.</p><br>
+    <h2>Seeker</h2>
+    <p>Find who you are</p><br>
     <div class="w3-third w3-margin-bottom">
         <ul class="w3-ul w3-border w3-hover-shadow">
             <li class="w3-theme">
-                <p class="w3-xlarge">Basic</p>
+                <p class="w3-xlarge">Seeker.com</p>
             </li>
-            <li class="w3-padding-16"><b>10GB</b> Storage</li>
-            <li class="w3-padding-16"><b>10</b> Emails</li>
-            <li class="w3-padding-16"><b>10</b> Domains</li>
-            <li class="w3-padding-16"><b>Endless</b> Support</li>
+            <li class="w3-padding-16"><b>Seeker</b> Jobs</li>
+            <li class="w3-padding-16"><b>No</b> Registration fees</li>
+            <li class="w3-padding-16"><b>No</b> Unwanted Advertisements</li>
+            <li class="w3-padding-16"><b>Endless</b> Opportunity</li>
             <li class="w3-padding-16">
-                <h2 class="w3-wide"><i class="fa fa-usd"></i> 10</h2>
+                <h2 class="w3-wide"><i class="fa fa-usd"></i> 0</h2>
                 <span class="w3-opacity">per month</span>
             </li>
             <li class="w3-theme-l5 w3-padding-24">
-                <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Sign Up</button>
+                <a href=""> <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Login</button></a>
             </li>
         </ul>
     </div>
@@ -74,18 +74,18 @@
     <div class="w3-third w3-margin-bottom">
         <ul class="w3-ul w3-border w3-hover-shadow">
             <li class="w3-theme-l2">
-                <p class="w3-xlarge">Pro</p>
+                <p class="w3-xlarge">User</p>
             </li>
-            <li class="w3-padding-16"><b>25GB</b> Storage</li>
-            <li class="w3-padding-16"><b>25</b> Emails</li>
-            <li class="w3-padding-16"><b>25</b> Domains</li>
-            <li class="w3-padding-16"><b>Endless</b> Support</li>
+            <li class="w3-padding-16"><b>Endless</b> Jobs</li>
+            <li class="w3-padding-16"><b>No</b> Registration fees</li>
+            <li class="w3-padding-16"><b>No</b> Unwanted Advertisements</li>
+            <li class="w3-padding-16"><b>Endless</b> Opportunity</li>
             <li class="w3-padding-16">
-                <h2 class="w3-wide"><i class="fa fa-usd"></i> 25</h2>
+                <h2 class="w3-wide"><i class="fa fa-usd"></i> 0</h2>
                 <span class="w3-opacity">per month</span>
             </li>
             <li class="w3-theme-l5 w3-padding-24">
-                <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Sign Up</button>
+                <a href="userlogin.php"> <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Register/Login</button></a>
             </li>
         </ul>
     </div>
@@ -93,21 +93,23 @@
     <div class="w3-third w3-margin-bottom">
         <ul class="w3-ul w3-border w3-hover-shadow">
             <li class="w3-theme">
-                <p class="w3-xlarge">Premium</p>
+                <p class="w3-xlarge">Company</p>
             </li>
-            <li class="w3-padding-16"><b>50GB</b> Storage</li>
-            <li class="w3-padding-16"><b>50</b> Emails</li>
-            <li class="w3-padding-16"><b>50</b> Domains</li>
-            <li class="w3-padding-16"><b>Endless</b> Support</li>
+            <li class="w3-padding-16"><b>Countless</b> Scholars</li>
+            <li class="w3-padding-16"><b>No</b> Registration fees</li>
+            <li class="w3-padding-16"><b>No</b> Unwanted Advertisements</li>
+            <li class="w3-padding-16"><b>Endless</b> Opportunity</li>
             <li class="w3-padding-16">
-                <h2 class="w3-wide"><i class="fa fa-usd"></i> 50</h2>
+                <h2 class="w3-wide"><i class="fa fa-usd"></i> 0</h2>
                 <span class="w3-opacity">per month</span>
             </li>
             <li class="w3-theme-l5 w3-padding-24">
-                <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Sign Up</button>
+                <a href="companylogin.php"> <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Register/Login</button></a>
             </li>
         </ul>
     </div>
+
+
 </div>
 </body>
 </html>
