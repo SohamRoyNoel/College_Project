@@ -17,22 +17,38 @@
                 $f = $_GET['user'];
                 $_SESSION['used'] = $f;
                 if ($f == 'company' || $f == 'user'){
-                    $mail = new PHPMailer();
-                    $mail->isSMTP();
-                    $mail->SMTPAuth = true;
-                    $mail->SMTPSecure = 'ssl';
-                    $mail->Host = 'smtp.gmail.com';
-                    $mail->Port = '465';
-                    $mail->isHTML();
-                    $mail->Username='jobseekerowner@gmail.com';
-                    $mail->Password = 'iloveass1234';
-                    $mail->SetFrom('no-reply@howcode.org');
-                    $mail->Subject = 'Seeker.com password change verification';
-                    $mail->Body = 'your seeker.com change password otp is ' . $otp;
-                    $mail->AddAddress($rec);
-                    $mail->Send();
 
-                    header("Location: forgetpasswordconfirm.php");
+                    $quest = "select * from user where email = '{$rec}'";
+                    $execute = mysqli_query($connection, $quest);
+
+                    $flag = 0;
+                    while ($row = mysqli_fetch_assoc($execute)){
+                        $id = $row['id'];
+                        if ($id > 0){
+                            $flag = 1;
+                        }
+                    }
+
+                    if ($flag == 1){
+                        $mail = new PHPMailer();
+                        $mail->isSMTP();
+                        $mail->SMTPAuth = true;
+                        $mail->SMTPSecure = 'ssl';
+                        $mail->Host = 'smtp.gmail.com';
+                        $mail->Port = '465';
+                        $mail->isHTML();
+                        $mail->Username='jobseekerowner@gmail.com';
+                        $mail->Password = 'iloveass1234';
+                        $mail->SetFrom('no-reply@howcode.org');
+                        $mail->Subject = 'Seeker.com password change verification';
+                        $mail->Body = 'your seeker.com change password otp is ' . $otp;
+                        $mail->AddAddress($rec);
+                        $mail->Send();
+
+                        header("Location: forgetpasswordconfirm.php");
+                    } else {
+                        echo "<script>alert(\"Seems you're a new user, please register yourself.\")</script>";
+                    }
                 }
             }
 

@@ -6,28 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a90452ef-ea80-4805-b477-6e6a3ffa420b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/images/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/images/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/images/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/images/error-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/images/error.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/images/g1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/images/g2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/images/g3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/images/g4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/images/g5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/images/g6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/images/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/images/logo1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/images/s1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/includes/header.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/includes/navigation.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/js/modernizr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/js/proton.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/top.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/top.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forgetpassword.php" beforeDir="false" afterPath="$PROJECT_DIR$/forgetpassword.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,20 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="top.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/top.php">
+      <file leaf-file-name="forgetpassword.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/forgetpassword.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="79" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="10" column="79" selection-start-line="10" selection-start-column="79" selection-end-line="10" selection-end-column="79" />
+            <state relative-caret-position="434">
+              <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -139,10 +109,8 @@
         <option value="$PROJECT_DIR$/forgetpasswordconfirm.php" />
         <option value="$PROJECT_DIR$/companyResponse.php" />
         <option value="$PROJECT_DIR$/download.php" />
-        <option value="$PROJECT_DIR$/companylogin.php" />
         <option value="$PROJECT_DIR$/userlogin.php" />
         <option value="$PROJECT_DIR$/changepassword.php" />
-        <option value="$PROJECT_DIR$/forgetpassword.php" />
         <option value="$PROJECT_DIR$/admin/includes/navigation.php" />
         <option value="$PROJECT_DIR$/admin/includes/headnav.php" />
         <option value="$PROJECT_DIR$/admin/addjob.php" />
@@ -152,6 +120,8 @@
         <option value="$PROJECT_DIR$/admin/index.php" />
         <option value="$PROJECT_DIR$/includes/top.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/companylogin.php" />
+        <option value="$PROJECT_DIR$/forgetpassword.php" />
       </list>
     </option>
   </component>
@@ -189,11 +159,6 @@
             <path>
               <item name="JOBS" type="b2602c69:ProjectViewProjectNode" />
               <item name="JOBS" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JOBS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JOBS" type="462c0819:PsiDirectoryNode" />
-              <item name="favicon" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -317,12 +282,12 @@
       <workItem from="1541826405291" duration="412000" />
       <workItem from="1541828410278" duration="4711000" />
       <workItem from="1541834006349" duration="298000" />
-      <workItem from="1541915311905" duration="1247000" />
+      <workItem from="1541915311905" duration="3349000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="228460000" />
+    <option name="totallyTimeSpent" value="230562000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -480,27 +445,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/companylogin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="259" column="66" lean-forward="true" selection-start-line="259" selection-start-column="66" selection-end-line="259" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/forgetpassword.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="18" column="53" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/forgetpasswordconfirm.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -585,6 +529,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
           <caret line="10" column="79" selection-start-line="10" selection-start-column="79" selection-end-line="10" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/companylogin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="9" column="79" selection-start-line="9" selection-start-column="79" selection-end-line="9" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forgetpassword.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
         </state>
       </provider>
     </entry>
