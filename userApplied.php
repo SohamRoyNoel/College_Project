@@ -69,6 +69,16 @@ if(isset($_SESSION['id'])) {
 
 
                             <h2>Your Applications</h2>
+                            <?php
+                                    if (isset($_POST['cancel'])){
+                                        $jobs_del = $_POST['hide'];
+                                        $candidate_id = $_SESSION['id'];
+
+                                        $qdel = "delete from confirm where jobid={$jobs_del} and userid={$candidate_id}";
+                                        $execute = mysqli_query($connection, $qdel);
+                                        header("Location: userApplied.php");
+                                    }
+                            ?>
 
                             <?php
                             $id = $_SESSION['id'];
@@ -137,7 +147,10 @@ if(isset($_SESSION['id'])) {
                                             <p>HR Contact : &nbsp;<?php echo $hrcontact1; ?></p>
                                             <p>HR email : &nbsp;<?php echo $hremail1; ?></p>
                                             <p>Object : &nbsp;<?php echo $object1; ?></p>
-                                            <p><input type="submit" class="btn btn-danger" value="Cancel Your Job Interest"></input></p>
+                                            <form action="" method="post">
+                                                <p><input name="hide" type="hidden" class="btn btn-danger" value="<?php echo $id1?>"/></p>
+                                                <p><input name="cancel" type="submit" class="btn btn-danger" value="Cancel Your Job Interest"/></p>
+                                            </form>
                                         </div>
                                         <?php
                                     }
