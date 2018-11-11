@@ -76,11 +76,20 @@
     <div class="container">
         <div id="search_wrapper1">
             <div id="search_form" class="clearfix">
+                <?php
+                if (!isset($_SESSION['iso'])){
+                ?>
                 <h1>Start your job search</h1>
                 <p>
+
                     <input type="text" class="text" placeholder=" " value="Enter Keyword(s)" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter Keyword(s)';}">
                     <input type="text" class="text" placeholder=" " value="Location" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Location';}">
                     <label class="btn2 btn-2 btn2-1b"><input type="submit" value="Find Jobs"></label>
+                    <?php
+                } else {
+                ?>
+                <h1>Start your job post</h1>
+                <?php } ?>
                 </p>
             </div>
         </div>
