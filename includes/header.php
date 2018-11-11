@@ -37,7 +37,7 @@
                     </ul>
                 </li>
                 <?php
-                if (!isset($_SESSION['iso'])){
+                if (!isset($_SESSION['iso']) && !isset($_SESSION['sex'])){
                     ?>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Recruiters<b class="caret"></b></a>
