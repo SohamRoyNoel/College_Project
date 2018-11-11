@@ -68,7 +68,8 @@ if (isset($_POST['submit'])){
     if ($flags == 1)
         header("Location: companyprofile.php");
     if ($flags == 0)
-        header("Location: companylogin.php");
+        echo "<script>alert(\"There is another account with this email.\")</script>";
+        //header("Location: companylogin.php");
 
 }
 ?>
