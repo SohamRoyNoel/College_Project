@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/companyjob.php" line="239" />
+    <bookmark url="file://$PROJECT_DIR$/companyjob.php" line="254" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a90452ef-ea80-4805-b477-6e6a3ffa420b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about.php" beforeDir="false" afterPath="$PROJECT_DIR$/about.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/companyjob.php" beforeDir="false" afterPath="$PROJECT_DIR$/companyjob.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,29 +19,12 @@
     <pharConfigPath>$PROJECT_DIR$/PHPMailer/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="about.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/about.php">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="companyjob.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/companyjob.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="521">
-              <caret line="51" column="22" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lol.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lol.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#3;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="276">
+              <caret line="205" column="59" selection-start-line="205" selection-start-column="59" selection-end-line="205" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -116,7 +99,6 @@
         <option value="$PROJECT_DIR$/companyprofile.php" />
         <option value="$USER_HOME$/Desktop/web/single.html" />
         <option value="$PROJECT_DIR$/watchJobdetails.php" />
-        <option value="$PROJECT_DIR$/companyjob.php" />
         <option value="$PROJECT_DIR$/companyCONFIRM.php" />
         <option value="$PROJECT_DIR$/userApplied.php" />
         <option value="$PROJECT_DIR$/Company_reg.php" />
@@ -139,6 +121,7 @@
         <option value="$USER_HOME$/Desktop/web/about.html" />
         <option value="$PROJECT_DIR$/about.php" />
         <option value="$PROJECT_DIR$/lol.php" />
+        <option value="$PROJECT_DIR$/companyjob.php" />
       </list>
     </option>
   </component>
@@ -155,7 +138,7 @@
     <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1358" />
     <option name="y" value="-8" />
     <option name="width" value="1456" />
@@ -169,7 +152,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -181,6 +163,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -300,12 +283,13 @@
       <workItem from="1541826405291" duration="412000" />
       <workItem from="1541828410278" duration="4711000" />
       <workItem from="1541834006349" duration="298000" />
-      <workItem from="1541915311905" duration="6910000" />
+      <workItem from="1541915311905" duration="7284000" />
+      <workItem from="1541951383201" duration="1471000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="234123000" />
+    <option name="totallyTimeSpent" value="235968000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -317,20 +301,21 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-8" width="1456" height="916" extended-state="7" />
+    <frame x="1358" y="-8" width="1456" height="916" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1812321" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1833811" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32904884" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32904884" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3277635" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39974293" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39974293" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -455,13 +440,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/companyjob.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-112">
-          <caret line="208" column="46" lean-forward="true" selection-start-line="208" selection-start-column="46" selection-end-line="208" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/js/jquery.cookie.js" />
     <entry file="file://$PROJECT_DIR$/admin/css/bootstrap.css" />
     <entry file="file://$PROJECT_DIR$/admin/js/jquery2.0.3.min.js" />
@@ -558,23 +536,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/about.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="51" column="22" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
+        <state relative-caret-position="282">
+          <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lol.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#3;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="14">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/companyjob.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="205" column="59" selection-start-line="205" selection-start-column="59" selection-end-line="205" selection-end-column="59" />
         </state>
       </provider>
     </entry>

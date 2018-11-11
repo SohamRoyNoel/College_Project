@@ -194,6 +194,21 @@ if (isset($_POST['submit'])){
                 ?>
                 <!--Edit-->
 
+                <!--Delete-->
+                <?php
+
+                    if (isset($_POST['delete'])){
+                        $delid = $_POST['hidden'];  //gets job table job id
+                        $querydel = "delete from jobs where id = {$delid}";
+                        $querydel1 = "delete from confirm where jobid = {$delid}";
+                        $executedel = mysqli_query($connection, $querydel);
+                        $executedel1 = mysqli_query($connection, $querydel1);
+                        header("Location: companyjob.php");
+                    }
+
+                ?>
+                <!--Delete-->
+
                 <?php
                 $companys_id = $_SESSION['id'];
                 $query = "select * from jobs where company_id='{$companys_id}'";
@@ -346,7 +361,7 @@ if (isset($_POST['submit'])){
                                     <div class="form-actions">
                                         <a href="companyResponse.php?j=<?php echo $id1; ?>&k=<?php echo $company_idp?>"><input type="button" name="editsubmit" value="Response" class="btn btn-primary btn-sm"></a>
                                         <input type="submit" name="editsubmit" value="Edit" class="btn btn-primary btn-sm">
-                                        <input type="submit" name="" value="Delete" class="btn btn-primary btn-sm">
+                                        <input type="submit" name="delete" value="Delete" class="btn btn-primary btn-sm">
                                     </div>
                                 </div>
                             </form>
