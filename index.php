@@ -67,17 +67,6 @@
                         </ul>
                     </li>
                 <?php } ?>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">More<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="jobs.html">Tech Support</a></li>
-                        <li><a href="jobs.html">Part time Jobs</a></li>
-                        <li><a href="jobs.html">Health Care</a></li>
-                        <li><a href="jobs.html">Internships</a></li>
-                        <li><a href="jobs.html">Research Jobs</a></li>
-                        <li><a href="jobs.html">Defence Jobs</a></li>
-                    </ul>
-                </li>
                 <?php
                 if (isset($_SESSION['id'])){
                     echo "<li><a href=\"./userlogin.php\">Logout</a></li>";
@@ -239,10 +228,6 @@
                         <a class="btn_1" href="watchJobdetails.php?j=<?php echo $id1; ?>">
                             <i class="fa fa-eye"></i>
                             <span class="share1 fb">Watch Details</span>
-                        </a>
-                        <a class="btn_1" href="#">
-                            <i class="fa fa-envelope"></i>
-                            <span class="share1">Apply</span>
                         </a>
                     </div>
                 </div>

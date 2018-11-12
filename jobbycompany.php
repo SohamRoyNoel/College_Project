@@ -97,10 +97,6 @@
                                     <i class="fa fa-eye"></i>
                                     <span class="share1 fb">Watch Details</span>
                                 </a>
-                                <a class="btn_1" href="#">
-                                    <i class="fa fa-envelope"></i>
-                                    <span class="share1">Apply</span>
-                                </a>
                             </div>
                         </div>
                         <div class="clearfix"></div>
