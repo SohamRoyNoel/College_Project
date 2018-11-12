@@ -16,8 +16,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Jobs<b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li><a href="location.html">All Jobs</a></li>
-                        <li><a href="location.html">Walkin Jobs</a></li>
-                        <li><a href="location.html">Jobs by Company</a></li>
+                        <li><a href="jobbycompany.php">Jobs by Company</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
