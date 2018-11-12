@@ -36,7 +36,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Jobs<b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li><a href="location.html">All Jobs</a></li>
+                        <li><a href="index.php">All Jobs</a></li>
                         <li><a href="jobbycompany.php">Jobs by Company</a></li>
                     </ul>
                 </li>
