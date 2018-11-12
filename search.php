@@ -39,7 +39,7 @@
             <div class="login-form-section">
                 <div class="login-content">
                     <div class="section-title">
-                        <h3>Job By Company</h3>
+                        <h3>Jobs According To Your Search</h3>
                     </div>
                 </div>
             </div>
@@ -49,12 +49,18 @@
         if (isset($_GET['skill']) && isset($_GET['location'])) {
             $skill = $_GET['skill'];
             $location = $_GET['location'];
+
+            if (empty($skill) || empty($location)){
+                echo "You did not mention Skill or Location, Please search again";
+            }
+
             // echo $jid;
             $jobfetch = "select * from jobs where skill = '{$skill}' and location = '{$location}'";
             $execute = mysqli_query($connection, $jobfetch);
 
             if (!$execute)
                 echo mysqli_error($connection);
+            $flag = 0;
 
             while ($row = mysqli_fetch_assoc($execute)) {
                 $id1 = $row['id'];
@@ -82,35 +88,42 @@
                     $db_company_dob = $row['since'];
                     $db_company_img = $row['img'];
                     $db_company_password = $row['password'];
+                    $flag = 1;
                 }
-                ?>
 
-                <div class="col-md-8 pull-right">
-                    <div class="col_1">
-                        <div class="col-sm-4 row_2">
-                            <a href="watchJobdetails.php?j=<?php echo $id1; ?>"><img
-                                    src="companyImage/<?php echo $db_company_img; ?>" class="img-responsive"
-                                    alt=""/></a>
-                        </div>
-                        <div class="col-sm-8 row_1">
-                            <h4><a href="watchJobdetails.php?j=<?php echo $id1; ?>"><?php echo $title1; ?></a></h4>
-                            <h6>Posted On <span class="dot">·</span> <?php echo $date; ?></h6>
-                            <p><?php echo $object1; ?></p>
-                            <div class="social">
-                                <a class="btn_1" href="watchJobdetails.php?j=<?php echo $id1; ?>">
-                                    <i class="fa fa-eye"></i>
-                                    <span class="share1 fb">Watch Details</span>
-                                </a>
-                                <a class="btn_1" href="#">
-                                    <i class="fa fa-envelope"></i>
-                                    <span class="share1">Apply</span>
-                                </a>
+                if ($flag ==1) {
+                    ?>
+
+                    <div class="col-md-8 pull-right">
+                        <div class="col_1">
+                            <div class="col-sm-4 row_2">
+                                <a href="watchJobdetails.php?j=<?php echo $id1; ?>"><img
+                                            src="companyImage/<?php echo $db_company_img; ?>" class="img-responsive"
+                                            alt=""/></a>
                             </div>
+                            <div class="col-sm-8 row_1">
+                                <h4><a href="watchJobdetails.php?j=<?php echo $id1; ?>"><?php echo $title1; ?></a></h4>
+                                <h6>Posted On <span class="dot">·</span> <?php echo $date; ?></h6>
+                                <p><?php echo $object1; ?></p>
+                                <div class="social">
+                                    <a class="btn_1" href="watchJobdetails.php?j=<?php echo $id1; ?>">
+                                        <i class="fa fa-eye"></i>
+                                        <span class="share1 fb">Watch Details</span>
+                                    </a>
+                                    <a class="btn_1" href="#">
+                                        <i class="fa fa-envelope"></i>
+                                        <span class="share1">Apply</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
                         </div>
-                        <div class="clearfix"></div>
                     </div>
-                </div>
-                <?php
+                    <?php
+                }
+            }
+            if ($flag == 0){
+                echo "No Job found related to " . $skill  . " in " . $location . " try Something new";
             }
         }?>
         <div class="clearfix"> </div>
