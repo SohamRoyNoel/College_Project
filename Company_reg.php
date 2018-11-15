@@ -85,20 +85,9 @@ if (isset($_POST['submit'])){
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Recruiters<b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="login.html">Recruiter</a></li>
                             <li><a href="./companylogin.php">Recruiters Login</a></li>
                             <li><a href="./Company_reg.php">Recruiters Registration</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">More<b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="jobs.html">Tech Support</a></li>
-                            <li><a href="jobs.html">Part time Jobs</a></li>
-                            <li><a href="jobs.html">Health Care</a></li>
-                            <li><a href="jobs.html">Internships</a></li>
-                            <li><a href="jobs.html">Research Jobs</a></li>
-                            <li><a href="jobs.html">Defence Jobs</a></li>
+                            <li><a href="./login.php">Admin Login</a></li>
                         </ul>
                     </li>
                     <?php

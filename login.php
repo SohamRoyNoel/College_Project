@@ -7,7 +7,6 @@
 <html>
 <head>
     <title>Seeking an Job</title>
-    <link rel="shotcut icon" type="image/png" href="favicon/job-seekers-1.png">
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -27,56 +26,21 @@
 
 
 </head>
-
 <?php
-if (isset($_POST['submit'])){
-    $em = escape($_POST['email']);
-    $ps = escape($_POST['password']);
+    checkIfUserIsLoggedInAndRedirect('/JOBS/admin');
+    if(ifItIsMethod('post')){
+if(isset($_POST['name']) && isset($_POST['password'])){
 
-    $query = "select * from company where email='{$em}' and password='{$ps}'";
-    $send = mysqli_query($connection, $query);
+				login_user($_POST['name'], $_POST['password']);
+            }
+    
 
-    if (!$send){
-        die("failed".mysqli_error());
-        // header("Location: companylogin.php");
     }
-
-    $flags = 0;
-
-    while ($row = mysqli_fetch_assoc($send)){
-        $db_company_id = $row['id'];
-        $db_company_name = $row['name'];
-        $db_company_reg = $row['reg'];
-        $db_company_iso = $row['iso'];
-        $db_company_em = $row['email'];
-        $db_company_dob = $row['since'];
-        $db_company_img = $row['img'];
-        $db_company_password = $row['password'];
-        $flags = 1;
-
-        $_SESSION['id'] = $db_company_id;
-        $_SESSION['name'] = $db_company_name;
-        $_SESSION['reg'] = $db_company_reg;
-        $_SESSION['iso'] = $db_company_iso;
-        $_SESSION['dob'] = $db_company_dob;
-        $_SESSION['em'] = $db_company_em;
-        $_SESSION['img'] = $db_company_img;
-        $_SESSION['password'] = $db_company_password;
-        $_SESSION['secret'] = "XXX106";
-    }
-
-    if ($flags == 1)
-        header("Location: companyprofile.php");
-    if ($flags == 0)
-        echo "<script>alert(\"Opppps! Wrong Email or Password.\")</script>";
-        //header("Location: companylogin.php");
-
-}
 ?>
 <body>
 
 <div class="">
-    <nav class="navbar navbar-default" role="navigation">
+    <nav class="navbar navbar-default" role="navigation"> 
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -117,19 +81,13 @@ if (isset($_POST['submit'])){
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Recruiters<b class="caret"></b></a>
                         <ul class="dropdown-menu">
+                            <li><a href="login.html">Recruiter</a></li>
                             <li><a href="companylogin.php">Recruiters Login</a></li>
                             <li><a href="Company_reg.php">Recruiters Registration</a></li>
                             <li><a href="login.php">Admin Login</a></li>
+                            
                         </ul>
                     </li>
-                    <?php
-                    if (isset($_SESSION['id'])){
-                        echo "<li><a href=\"./logout.php\">Logout</a></li>";
-                    } else {
-                        echo "<li><a href=\"./userlogin.php\">Login</a></li>";
-                    }
-                    ?>
-
                     <li><a href="./about.php">About</a></li>
                     <li><a href="./contact.php">Contact</a></li>
                     <li><a href="./faq.php">FAQ</a></li>
@@ -260,14 +218,13 @@ if (isset($_POST['submit'])){
     </div>
 
     <div class="inputGroup inputGroup1">
-        <label for="loginEmail" id="loginEmailLabel">Email</label>
-        <input type="text" name="email" id="loginEmail" maxlength="254" />
-        <p class="helper helper1">email</p>
+        <label for="loginEmail" id="loginEmailLabel">Name</label>
+        <input type="text" name="name" id="loginEmail" maxlength="254" />
+        <p class="helper helper1">name</p>
     </div>
     <div class="inputGroup inputGroup2">
         <label for="loginPassword" id="loginPasswordLabel">Password</label>
         <input type="password" name="password" id="loginPassword" />
-        <a href="forgetpassword.php?user=company"><h3>Forget Password?</h3></a>
         <label id="showPasswordToggle" for="showPasswordCheck">Show
             <input id="showPasswordCheck" type="checkbox"/>
             <div class="indicator"></div>
