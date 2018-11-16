@@ -43,6 +43,7 @@
                         <ul class="dropdown-menu">
                             <li><a href="./companylogin.php">Recruiters Login</a></li>
                             <li><a href="./Company_reg.php">Recruiters Registration</a></li>
+                            <li><a href="./login.php">Admin Login</a></li>
                         </ul>
                     </li>
                 <?php } ?>

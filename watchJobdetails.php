@@ -21,6 +21,7 @@ if (isset($_GET['j'])){
         $skill1 = $row['skill'];
         $education1 = $row['mineducation'];
         $role1 = $row['role'];
+        $type = $row['type'];
 
         $company = "select * from company where id = {$cid1}";
         $cquery = mysqli_query($connection, $company);
@@ -60,24 +61,30 @@ if (isset($_GET['j'])){
     </div>
 
     <div class="col-md-8 single_right">
+        <?php
+        if ($type == "company") {
+            ?>
         <h3>Watch The Company Profile Details</h3>
-        <div class="row_1">
-            <div class="col-sm-5 single_img">
-                <img src="companyImage/<?php echo $db_company_img; ?>" class="img-responsive" alt=""/>
-            </div>
-            <div class="col-sm-7 single-para">
-                <p><b><i>Posted By :</i></b> <?php echo $db_company_name?></p>
-                <p><b>Registration :</b> <?php echo $db_company_reg?>  </p>
-                <p><b>ISO :</b> <?php echo $db_company_iso?>  </p>
-                <p><b>Scale :</b> <?php echo $db_company_scale?>  </p>
-                <p><b>Email :</b> <?php echo $db_company_em?>  </p>
-                <p><b>Address :</b> <?php echo $db_company_address?>  </p>
-                <p><b>Country :</b> <?php echo $db_company_country?>  </p>
-                <p><b>Subject :</b> <?php echo $db_company_subject?>  </p>
-                <p><b>ESTD :</b> <?php echo $db_company_dob?>  </p>
-            </div>
-            <div class="clearfix"> </div>
-        </div>
+                <div class="row_1">
+                    <div class="col-sm-5 single_img">
+                        <img src="companyImage/<?php echo $db_company_img; ?>" class="img-responsive" alt=""/>
+                    </div>
+                    <div class="col-sm-7 single-para">
+                        <p><b><i>Posted By :</i></b> <?php echo $db_company_name ?></p>
+                        <p><b>Registration :</b> <?php echo $db_company_reg ?>  </p>
+                        <p><b>ISO :</b> <?php echo $db_company_iso ?>  </p>
+                        <p><b>Scale :</b> <?php echo $db_company_scale ?>  </p>
+                        <p><b>Email :</b> <?php echo $db_company_em ?>  </p>
+                        <p><b>Address :</b> <?php echo $db_company_address ?>  </p>
+                        <p><b>Country :</b> <?php echo $db_company_country ?>  </p>
+                        <p><b>Subject :</b> <?php echo $db_company_subject ?>  </p>
+                        <p><b>ESTD :</b> <?php echo $db_company_dob ?>  </p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <?php
+            }
+        ?>
         <h5>Job Details Related To This Post</h5>
         <div class="panel panel-warning">
             <div class="panel-heading">
