@@ -104,11 +104,11 @@ if (isset($_POST['submit'])){
                             <div class="row">
                                 <div class="col-sm-4">
                                     <ul class="multi-column-dropdown">
-                                        <li><a href="services.html">Cars</a></li>
-                                        <li><a href="services.html">Nurse</a></li>
-                                        <li><a href="services.html">Security</a></li>
-                                        <li><a href="services.html">Driver</a></li>
-                                        <li><a href="services.html">Fooding</a></li>
+                                        <li><a href="services.php?job=car">Cars</a></li>
+                                        <li><a href="services.php?job=nurse">Nurse</a></li>
+                                        <li><a href="services.php?job=security">Security</a></li>
+                                        <li><a href="services.php?job=driver">Driver</a></li>
+                                        <li><a href="services.php?job=fooding">Fooding</a></li>
                                     </ul>
                                 </div>
                             </div>
