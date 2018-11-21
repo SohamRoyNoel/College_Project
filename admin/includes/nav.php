@@ -11,9 +11,7 @@
 			   </div>
 			 <div class="border-bottom">
         	<div class="full-left">
-        	  <section class="full-top">
-				<button id="toggle"><i class="fa fa-arrows-alt"></i></button>	
-			</section>
+        	  
 			<li>
 <?php
 if(isset($_SESSION['name'])) {
@@ -59,6 +57,9 @@ echo $_SESSION['name'];
                     </li>
                     <li>
                         <a href="qna.php" class=" hvr-bounce-to-right"><i class="fa fa-fax nav_icon"></i><span class="nav-label">QNA</span> </a>
+                    </li>
+                    <li>
+                        <a href="add_creator.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i><span class="nav-label">Add admin</span> </a>
                     </li>
                     <li>
                         <a href="contact.php" class=" hvr-bounce-to-right"><i class="fa fa-book nav_icon"></i><span class="nav-label">Contact</span> </a>

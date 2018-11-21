@@ -31,9 +31,9 @@
                         <th>Name</th>
                         <th>Message</th>
                         <th>Phone</th>
-                        <th>Email</th>
                         <th>Reply</th>
-                         <th>Delete</th>
+                        <th>Delete</th>
+                         <th>Email</th>
                          <th>Submit</th>
                    
         
@@ -44,7 +44,8 @@
                       
 
   <?php 
-    
+                    
+
     $query = "SELECT * FROM contact ";
     $select_users = mysqli_query($connection,$query);  
     while($row = mysqli_fetch_assoc($select_users)) {
@@ -64,21 +65,54 @@
         echo "<td>$message</td>";
 
         echo "<td>$phone</td>";
-        echo "<td>$email</td>";
-        if(isset($_POST['submit'])){
-            $reply   =  escape($_POST['reply']);
-         $query = "UPDATE contact SET reply  = '{$reply}' WHERE id = $id"; 
-            $select = mysqli_query($connection,$query);
-         
-        }
-        echo "<td>$reply</td>";
+        
+         echo "<td>$reply</td>";
       echo "<td><a onClick=\"javascript: return confirm('Are you sure you want to delete'); \" href='contact.php?delete={$id}'><i class='fa fa-trash'></i></a></td>"; 
-    echo "<form id=''  action='' method='post'>
-     <td><input type='text' placeholder='type' required=''  name='reply'><button name='submit' type='submit'>Submit</button></td></form>";    
-        echo "</tr>";
-   
+        
+        if(isset($_POST['c_id'])){
+    
+    $the_id =  escape($_POST['c_id']);
+
     }
+ require_once ('../PHPMailer/PHPMailerAutoload.php');                   
+    if(isset($_POST['submit'])){
+            $reply   =  escape($_POST['reply']);
+          $email1   =  escape($_POST['email1']);
+         $query = "UPDATE contact SET reply  = '{$reply}' WHERE id = $the_id"; 
+            $select = mysqli_query($connection,$query);
+
+                        $mail = new PHPMailer();
+                        $mail->isSMTP();
+                        $mail->SMTPAuth = true;
+                        $mail->SMTPSecure = 'ssl';
+                        $mail->Host = 'smtp.gmail.com';
+                        $mail->Port = '465';
+                        $mail->isHTML();
+                        $mail->Username='jobseekerowner@gmail.com';
+                        $mail->Password = 'iloveass1234';
+                        $mail->SetFrom('no-reply@howcode.org');
+                        $mail->Subject = 'Reply';
+                        $mail->Body = $reply;
+                        $mail->AddAddress($email1);
+                        $mail->Send();
+                  if(!$mail->Send()){
+                         echo "<script>alert(\"Not sent.\")</script>";
+                  }
+                     else {
+                        echo "<script>alert(\"sent.\")</script>";
+                    }
+
+        }
+          echo "<form id=''  action='' method='post'>
+        <td> <input value='{$email}' name='email1' readonly></td>;  
+     <td><input type='text' placeholder='type' required=''  name='reply'><input type=\"hidden\" name=\"c_id\" value=\"{$id}\"><input name='submit' type='submit' value='submit'></td></form>";    
+        echo "</tr>";
+    }
+
+  
+    
  ?>
+  
 
    </tbody>
             </table>

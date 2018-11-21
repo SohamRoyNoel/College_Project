@@ -78,7 +78,7 @@
          	<div class="vali-form">
             <div class="col-md-6 form-group1">
               <label for="title" class="control-label">Title</label>
-              <input value="<?php echo $title1; ?>" type="text" placeholder="Title" required="" name="title">
+              <input maxlength="10" value="<?php echo $title1; ?>" type="text" placeholder="Title" required="" name="title">
             </div>
             <div class="clearfix"> </div>
             </div>
@@ -86,38 +86,46 @@
              <div class="clearfix"> </div>
           <div class="col-md-6 form-group1">
               <label for="education" class="control-label">Education</label>
-              <input value="<?php echo $education1; ?>" type="text" placeholder="Education" required=""  name="education">
+              <input maxlength="10" value="<?php echo $education1; ?>" type="text" placeholder="Education" required=""  name="education">
             </div>
             <br>
            <div class="col-md-6 form-group1">
               <label for="skill" class="control-label">Skills</label>
-              <input value="<?php echo $skill1; ?>" type="text" placeholder="Skills" required=""  name="skill">
+              <input maxlength="10" value="<?php echo $skill1; ?>" type="text" placeholder="Skills" required=""  name="skill">
             </div>
             <br>
             <div class="col-md-6 form-group1">
               <label for="target" class="control-label">Target</label>
-              <input value="<?php echo $target1; ?>" type="text" placeholder="Target" required=""  name="target">
+              <input maxlength="10" value="<?php echo $target1; ?>" type="text" placeholder="Target" required=""  name="target">
             </div>
             <br>
             <div class="col-md-6 form-group1">
               <label for="location" class="control-label">Location</label>
-              <input value="<?php echo $location1; ?>" type="text" placeholder="Location" required=""  name="location">
+              <input maxlength="20" value="<?php echo $location1; ?>" type="text" placeholder="Location" required=""  name="location">
             </div>
             <br>
             <div class="col-md-6 form-group1">
               <label for="salary" class="control-label">Salary</label>
-              <input value="<?php echo $salary1; ?>" type="text" placeholder="" required=""  name="salary">
+              <input onkeypress="return isNumberKey(event)" value="<?php echo $salary1; ?>" type="text" placeholder="" required=""  name="salary">
             </div>
+             <script>
+                    function isNumberKey(evt){
+                        var charCode = (evt.which) ? evt.which : event.keyCode
+                        if (charCode > 31 && (charCode < 48 || charCode > 57))
+                            return false;
+                        return true;
+                    }
+                </script>
             <br>
             <div class="col-md-6 form-group1">
               <label for="hremail1" class="control-label">Email</label>
-              <input value="<?php echo $hremail1; ?>" type="email" placeholder="Email" required=""  name="hremail">
+              <input maxlength="20" minlength="5" value="<?php echo $hremail1; ?>" type="email" placeholder="Email" required=""  name="hremail">
             </div>
             <div class="clearfix"> </div>
             <br>
             <div class="col-md-12 form-group1 ">
               <label for="object" class="control-label">Post</label>
-              <textarea id="body" name="object"  placeholder="Write...." required=""><?php echo str_replace('\r\n', '</br>', $object1) ; ?></textarea>
+              <textarea maxlength="200" id="body" name="object"  placeholder="Write...." required=""><?php echo str_replace('\r\n', '</br>', $object1) ; ?></textarea>
             </div>
             <br>
              <div class="clearfix"> </div>
