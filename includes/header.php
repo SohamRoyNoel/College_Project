@@ -48,7 +48,7 @@
                     </li>
                 <?php } ?>
                 <?php
-                if (isset($_SESSION['id'])){
+                if (isset($_SESSION['em'])){
                     echo "<li><a href=\"./logout.php\">Logout</a></li>";
                 } else {
                     echo "<li><a href=\"./userlogin.php\">Login</a></li>";
