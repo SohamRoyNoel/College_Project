@@ -57,7 +57,7 @@
                     </ul>
                 </li>
                 <?php
-                if (!isset($_SESSION['iso'])){
+                if (!isset($_SESSION['iso']) && !isset($_SESSION['sex'])){
                     ?>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Recruiters<b class="caret"></b></a>
@@ -69,8 +69,8 @@
                     </li>
                 <?php } ?>
                 <?php
-                if (isset($_SESSION['id'])){
-                    echo "<li><a href=\"./userlogin.php\">Logout</a></li>";
+                if (isset($_SESSION['em'])){
+                    echo "<li><a href=\"./logout.php\">Logout</a></li>";
                 } else {
                     echo "<li><a href=\"./userlogin.php\">Login</a></li>";
                 }
@@ -83,10 +83,13 @@
                     $sec = $_SESSION['secret'];
                     $img = $_SESSION['img'];
                     if ($sec == "XXX105") {
-                        echo "<li><a href=\"./userprofile.php\"><img src=\"userImage/$img\" class=\"img-circle\" height=\"30\" width=\"35\" alt='No Pic'> </a></li>";
+                        echo "<li><a href=\"./userprofile.php\"><img src=\"userImage/$img\" class=\"img-circle\" height=\"30\" width=\"35\" alt=''> </a></li>";
                     }
                     if ($sec == "XXX106") {
-                        echo "<li><a href=\"./companyprofile.php\"><img src=\"companyImage/$img\" class=\"img-circle\" height=\"30\" width=\"35\" alt='No Pic'> </a></li>";
+                        echo "<li><a href=\"./companyprofile.php\"><img src=\"companyImage/$img\" class=\"img-circle\" height=\"30\" width=\"35\" alt=''> </a></li>";
+                    }
+                    if ($sec == "XXX107") {
+                        echo "<li><a href=\"/JOBS/admin\"><img src=\"admin/images/$img\" class=\"img-circle\" height=\"30\" width=\"35\" alt=''> </a></li>";
                     }
                 }
                 ?>
@@ -207,7 +210,28 @@
         </div>
 
         <?php
-        $jobs = "select * from jobs";
+                $post_query_count =  "select * from jobs";
+                $find_count = mysqli_query($connection, $post_query_count);
+                $count = mysqli_num_rows($find_count);
+
+                $count = ceil($count / 5);
+        ?>
+
+        <?php
+
+        if (isset($_GET['page'])){
+            $page = $_GET['page'];
+        } else {
+            $page = "";
+        }
+
+        if ($page == "" || $page == 1){
+            $page_1 = 0;
+        } else {
+            $page_1 = ($page * 5) - 5;
+        }
+
+        $jobs = "select * from jobs limit $page_1, 5";
         $query = mysqli_query($connection, $jobs);
         while ($row = mysqli_fetch_assoc($query)){
             $id1 = $row['id'];
@@ -223,6 +247,8 @@
             $skill1 = $row['skill'];
             $education1 = $row['mineducation'];
             $role1 = $row['role'];
+            $img = $row['img'];
+            $type = $row['type'];
 
             $company = "select * from company where id = {$cid1}";
             $cquery = mysqli_query($connection, $company);
@@ -237,11 +263,10 @@
                 $db_company_password = $row['password'];
             }
             ?>
-
             <div class="col-md-8 pull-right">
                 <div class="col_1">
                     <div class="col-sm-4 row_2">
-                        <a href="watchJobdetails.php?j=<?php echo $id1; ?>"><img src="companyImage/<?php echo $db_company_img; ?>" class="img-responsive" alt=""/></a>
+                        <a href="watchJobdetails.php?j=<?php echo $id1; ?>"><img src="<?php if($type == "company"){ echo 'companyImage/' . $db_company_img;} else {echo 'companyImage/20.jpg';} ?>" class="img-responsive" alt=""/></a>
                     </div>
                     <div class="col-sm-8 row_1">
                         <h4><a href="watchJobdetails.php?j=<?php echo $id1; ?>"><?php echo $title1; ?></a></h4>
@@ -260,6 +285,25 @@
 
 
         <?php } ?>
+
+        <div class="col-md-5 pull-right">
+            <ul class="pagination">
+                <li class="<?php echo $page == 1? 'disabled':$page == ''? 'disabled':'' ?>"><a href="index.php?page=<?php echo $page>=0? $page - 1:$page?>" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+<!--                <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>-->
+                <?php
+                      for ($j=1; $j <= $count; $j++)  {
+
+                          if ($j == $page){
+                              echo "<li><a style='background: #f15f43 !important;' href=\"index.php?page={$j}\">$j</a></li>";
+                          } else {
+                              echo "<li><a href=\"index.php?page={$j}\">$j</a></li>";
+                          }
+
+                      }
+                ?>
+                <li class="<?php echo $page == $count? 'disabled':'' ?>"><a href="index.php?page=<?php echo $page + 1?>" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+            </ul>
+        </div>
 
         <div class="clearfix"> </div>
     </div>

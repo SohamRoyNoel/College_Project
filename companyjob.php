@@ -24,8 +24,8 @@ if (isset($_POST['submit'])){
 
     if (!is_null($object) && !is_null($hremail) && !is_null($hrcontact) && !is_null($salary) && !is_null($location) && !is_null($target) && !is_null($skill) && !is_null($education) && !is_null($role)){
 
-        $query = "insert into jobs (company_id, title, role, mineducation, skill, targetTo, location, salary, HRph, HRem, object, date) values 
-                          ('{$company_id }', '{$title}', '{$role}', '{$education}', '{$skill}', '{$target}', '{$location}', '{$salary}', '{$hrcontact}', '{$hremail}', '{$object}', '{$date}')";
+        $query = "insert into jobs (company_id, title, role, mineducation, skill, targetTo, location, salary, HRph, HRem, object, date, type) values 
+                          ('{$company_id }', '{$title}', '{$role}', '{$education}', '{$skill}', '{$target}', '{$location}', '{$salary}', '{$hrcontact}', '{$hremail}', '{$object}', '{$date}', 'company')";
         $execute = mysqli_query($connection, $query);
 
         header("Location: companyjob.php");

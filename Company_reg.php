@@ -10,35 +10,48 @@ if (isset($_POST['submit'])){
     $ccountry = escape($_POST['con']);
     $cpassword = escape($_POST['ps']);
 
-    if (!is_null($cname) && !is_null($creg) && !is_null($ciso) && !is_null($cdob) && !is_null($cem) && !is_null($ccountry) && !is_null($cpassword)){
+    // Captcha setup
+    $secretkey = "6LfTpHsUAAAAANMny2MKqV6Fvfm_3E13o0IQlH3_";
+    $responseKey = $_POST['g-recaptcha-response'];
+    $userIP = $_SERVER['REMOTE_ADDR'];
 
-        $querys = "select * from company";
-        $send = mysqli_query($connection, $querys);
-        $flag = 1;
+    $url = "https://www.google.com/recaptcha/api/siteverify?secret=$secretkey&response=$responseKey&remoteip=$userIP";
+    $response = file_get_contents($url);
+    $response = json_decode($response);
+    if ($response->success){
+        if (!is_null($cname) && !is_null($creg) && !is_null($ciso) && !is_null($cdob) && !is_null($cem) && !is_null($ccountry) && !is_null($cpassword)){
 
-        while ($row = mysqli_fetch_assoc($send)) {
-            $ems = $row['email'];
-            $isos = $row['iso'];
-            $regs = $row['reg'];
-            if ($ems == $cem || $isos == $ciso || $regs == $creg){
-                $flag = 0;
+            $querys = "select * from company";
+            $send = mysqli_query($connection, $querys);
+            $flag = 1;
+
+            while ($row = mysqli_fetch_assoc($send)) {
+                $ems = $row['email'];
+                $isos = $row['iso'];
+                $regs = $row['reg'];
+                if ($ems == $cem || $isos == $ciso || $regs == $creg){
+                    $flag = 0;
+                }
             }
+
+            if ($flag == 1) {
+                $query = "insert into company (name, reg, iso, email, password, country, since) values ('{$cname}', '{$creg}', '{$ciso}', '{$cem}', '{$cpassword}', '{$ccountry}', '{$cdob}')";
+                $execute = mysqli_query($connection, $query);
+
+                Confirm1();
+                header("Location: companylogin.php");
+            }
+
+            if ($flag == 0){
+                Hold();
+                header("Location: Company_reg.php");
+            }
+
         }
-
-        if ($flag == 1) {
-            $query = "insert into company (name, reg, iso, email, password, country, since) values ('{$cname}', '{$creg}', '{$ciso}', '{$cem}', '{$cpassword}', '{$ccountry}', '{$cdob}')";
-            $execute = mysqli_query($connection, $query);
-
-            Confirm1();
-            header("Location: companylogin.php");
-        }
-
-        if ($flag == 0){
-            Hold();
-            header("Location: Company_reg.php");
-        }
-
+    } else {
+        echo "<script>alert(\"Something Went Wrong.\")</script>";
     }
+    // end code
 }
 
 
@@ -239,6 +252,7 @@ if (isset($_POST['submit'])){
                         <input placeholder="Password" minlength="5" name="ps" type="password" id="password1" required="">
                     </div>
                 </div>
+                <div class="g-recaptcha" data-sitekey="6LfTpHsUAAAAAEyNe-MJPRt1mS7m3HW8gUiBJN4y"></div>
                 <div class="sub-agile">
                     <i style="color: white" class="glyphicon glyphicon-exclamation-sign"></i>
                     <label for="brand1">
@@ -267,7 +281,7 @@ if (isset($_POST['submit'])){
         //empty string means no validation error
     }
 </script>
-
+<script src='https://www.google.com/recaptcha/api.js'></script>
 <div class="footer">
     <div class="" style="margin-left: 460px">
         <p>Copyright © 2018 Seeking . All Rights Reserved . Design by <a href="" target="_blank">PreciousSquad</a> </p>

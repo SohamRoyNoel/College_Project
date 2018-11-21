@@ -48,12 +48,12 @@ function ifItIsMethod($method=null){
     return false;
 
 }
-function login_user($name, $password)
+function login_user($email,$password)
  {
 
      global $connection;
 
-      $query = "SELECT * FROM creators WHERE name = '{$name}' ";
+      $query = "SELECT * FROM creators WHERE email = '{$email}' ";
      $select_user_query = mysqli_query($connection, $query);
      if (!$select_user_query) {
 
@@ -72,15 +72,17 @@ function login_user($name, $password)
          $db_user_sex = $row['sex'];
 
 
-         if ($password = $db_user_password) {
+         if ($password == $row['password']) {
 
              $_SESSION['name'] = $db_username;
              $_SESSION['email'] = $db_user_email;
+             $_SESSION['em'] = $db_user_email;
              $_SESSION['no'] = $db_user_no;
              $_SESSION['extra'] = $db_user_extra;
              $_SESSION['img'] = $db_user_img;
              $_SESSION['address'] = $db_user_address;
              $_SESSION['sex'] = $db_user_sex;
+             $_SESSION['secret'] = "XXX107";
 
 
 
@@ -90,8 +92,7 @@ function login_user($name, $password)
          } else {
 
 
-             return false;
-
+            echo "<script>alert(\"Opppps! Wrong Email or Password.\")</script>";
 
 
          }
