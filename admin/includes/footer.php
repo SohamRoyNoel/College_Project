@@ -1,6 +1,6 @@
 		<!---->
 <div class="copy">
-            <p> &copy; 2018 Minimal. All Rights Reserved | Design by <a href="creator_users.php">Team</a> </p>
+            <p> &copy; 2018 Seeking . All Rights Reserved . Design by <a href="creator_users.php">PreciousSquad</a> </p>
 	    </div>
 		</div>
 		<div class="clearfix"> </div>

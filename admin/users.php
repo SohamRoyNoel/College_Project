@@ -27,6 +27,7 @@
 											<tr>
                         <th>Id</th>
                         <th>Username</th>
+                       <th>Image</th> 
                         <th>Address</th>
                         <th>Phone no</th>
                         <th>Email</th>
@@ -53,12 +54,14 @@
         $user_email          = $row['email'];
         $user_extra          = $row['extra'];
         $user_sex          = $row['sex'];
+        $user_img          = $row['img'];
            
         
         echo "<tr>";
         
         echo "<td>$user_id </td>";
         echo "<td>$username</td>";
+        echo "<td><img width='40' src='../userImage/$user_img' alt='image'></td>";
         echo "<td>$user_address</td>";
 
         echo "<td>$user_phone</td>";
@@ -81,14 +84,7 @@
             </table>
                </div>
 </div>     
-
-<script>
-$(document).ready(function(){
-    $(".btn-info").click(function(){
-        $(".collapse").collapse('toggle');
-    });
-});
-</script>         
+    
 <?php
 
 

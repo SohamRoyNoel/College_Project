@@ -41,7 +41,7 @@
          	<div class="vali-form">
             <div class="col-md-6 form-group1">
               <label for="title" class="control-label">Title</label>
-              <input type="text" placeholder="Title" required="" name="title">
+              <input maxlength="50" type="text" placeholder="Title" required="" name="title">
             </div>
             <div class="clearfix"> </div>
             </div>
@@ -59,24 +59,44 @@
             <br>
             <div class="col-md-6 form-group1">
               <label for="target" class="control-label">Target</label>
-              <input type="text" placeholder="Target" required=""  name="target">
+         
+                                <select name="target" class="form-control">
+                                    <option value="">Select Type Of Job</option>
+                                    <option value="Tech Support">Tech Support</option>
+                                    <option value="Part Time">Part Time</option>
+                                    <option value="Full Time">Full Time</option>
+                                    <option value="Internship">Internship</option>
+                                    <option value="Health Care">Health Care</option>
+                                    <option value="Research">Research</option>
+                                    <option value="Defence">Defence</option>
+                                </select>
+
+                        
             </div>
             <br>
             <div class="col-md-6 form-group1">
               <label for="location" class="control-label">Location</label>
-              <input type="text" placeholder="Location" required=""  name="location">
+              <input maxlength="50" type="text" placeholder="Location" required=""  name="location">
             </div>
             <br>
             <div class="col-md-6 form-group1">
               <label for="salary" class="control-label">Salary</label>
-              <input type="text" placeholder="" required=""  name="salary">
+              <input onkeypress="return isNumberKey(event)" type="text" placeholder="" required=""  name="salary">
             </div>
+            <script>
+                    function isNumberKey(evt){
+                        var charCode = (evt.which) ? evt.which : event.keyCode
+                        if (charCode > 31 && (charCode < 48 || charCode > 57))
+                            return false;
+                        return true;
+                    }
+                </script>
             <br>
             <div class="clearfix"> </div>
             <br>
             <div class="col-md-6 form-group1">
               <label for="hremail1" class="control-label">Email</label>
-              <input type="email" placeholder="Email" required=""  name="hremail">
+              <input maxlength="30" minlength="5" type="email" placeholder="Email" required=""  name="hremail">
             </div>
             <br>
             <div class="panel-body">
@@ -100,19 +120,27 @@
             <br>
             <div class="col-md-6 form-group1">
               <label for="role" class="control-label">Role</label>
-              <input type="text" placeholder="Role" required=""  name="role">
+              <input  type="text" placeholder="Role" required=""  name="role">
             </div>
             <div class="clearfix"> </div>
             <br>
             <div class="col-md-6 form-group1">
               <label for="HRph" class="control-label">Phone no.</label>
-              <input type="text" placeholder="No." required=""  name="HRph">
+              <input maxlength="10" minlength="10" onkeypress="return isNumberKey(event)" type="text" placeholder="No." required=""  name="HRph">
             </div>
+            <script>
+                    function isNumberKey(evt){
+                        var charCode = (evt.which) ? evt.which : event.keyCode
+                        if (charCode > 31 && (charCode < 48 || charCode > 57))
+                            return false;
+                        return true;
+                    }
+                </script>
             <div class="clearfix"> </div>
             <br>
             <div class="col-md-12 form-group1 ">
               <label for="object" class="control-label">Post</label>
-              <textarea id="froala-editor" name="object"  placeholder="Write...." required=""></textarea>
+              <textarea maxlength="200" id="froala-editor" name="object"  placeholder="Write...." required=""></textarea>
             </div>
             <br>
              <div class="clearfix"> </div>

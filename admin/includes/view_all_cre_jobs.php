@@ -97,7 +97,6 @@ confirmQuery($update_to_delete_status);
                         <th>Education</th>
                         <th>Skill</th>
                         <th>Salary</th>
-                        <th>Object</th>
                         <th>Location</th>
                         <th>Edit</th>
                         <th>Delete</th>
@@ -148,7 +147,6 @@ confirmQuery($update_to_delete_status);
         echo "<td>$education1</td>";
         echo "<td>$skill1</td>";
          echo "<td>$salary1</td>";
-        echo "<td>$object1</td>";
         echo "<td>$location1</td>";
 
         echo "<td><a href='cre_jobs.php?source=edit_cre_job&p_id={$id1}'><i class='fa fa-edit'></i></a></td>";

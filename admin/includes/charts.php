@@ -70,9 +70,7 @@
 					<h3>Partners</h3>
 					<!-- start content_slider -->
 		<div id="owl-demo" class="owl-carousel text-center">
-			<div class="item">
-				<img class="lazyOwl img-responsive" data-src="images/1.jpg" alt="name">
-			</div>
+			
 			<div class="item">
 				<img class="lazyOwl img-responsive" data-src="images/2.jpg" alt="name">
 			</div>

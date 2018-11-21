@@ -98,7 +98,6 @@ confirmQuery($update_to_delete_status);
                         <th>Education</th>
                         <th>Skill</th>
                         <th>Salary</th>
-                        <th>Object</th>
                         <th>Location</th>
                         <th>Edit</th>
                         <th>Delete</th>
@@ -143,7 +142,7 @@ confirmQuery($update_to_delete_status);
         $img = $row['img'];
         
         echo "<td>$name</td>";
-        echo "<td><img width='100' src='../companyImage/$img' alt='image'></td>";
+        echo "<td><img width='40' src='../companyImage/$img' alt='image'></td>";
         
         }
   
@@ -152,7 +151,6 @@ confirmQuery($update_to_delete_status);
         echo "<td>$education1</td>";
         echo "<td>$skill1</td>";
          echo "<td>$salary1</td>";
-        echo "<td>$object1</td>";
         echo "<td>$location1</td>";
 
         echo "<td><a href='jobs.php?source=edit_job&p_id={$id1}'><i class='fa fa-edit'></i></a></td>";

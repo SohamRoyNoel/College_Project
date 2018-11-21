@@ -26,7 +26,8 @@
 										<thead>
 											<tr>
                         <th>Id</th>
-                        <th>Username</th>
+                        <th>Name</th>
+                        <th>Image</th>
                         <th>Reg</th>
                         <th>ISO</th>
                         <th>Email</th>
@@ -55,12 +56,14 @@
         $country          = $row['country'];
         $since          = $row['since'];
         $address          = $row['address'];
+         $img          = $row['img'];
            
         
         echo "<tr>";
         
         echo "<td>$id </td>";
         echo "<td>$name</td>";
+        echo "<td><img width='40' src='../companyImage/$img' alt='image'></td>";
         echo "<td>$reg</td>";
 
         echo "<td>$iso</td>";
