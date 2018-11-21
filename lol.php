@@ -13,32 +13,37 @@
     <h2>OUR TEAM</h2>
     <p>Meet the team - our precious squad</p>
 
-    <div class="w3-row"><br>
+    <div class=""><br>
 
-        <div class="w3-quarter">
+        <div class="col-sm-3">
             <img src="favicon/soham.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
             <h3>Soham Roy</h3>
             <p>UI Developer</p>
         </div>
 
-        <div class="w3-quarter">
+        <div class="col-sm-3">
             <img src="favicon/aditya.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
             <h3>Aditya Rahut</h3>
             <p>Admin Developer</p>
         </div>
 
-        <div class="w3-quarter">
-            <img src="favicon/ivy.jpg" alt="Boss" style="width:135px; height: 134px" class="w3-circle w3-hover-opacity">
+        <div class="col-sm-2">
+            <img src="favicon/ivy.jpg" alt="Boss" style="width:135px; height: 128px" class="w3-circle w3-hover-opacity">
             <h3>Ivy Saha</h3>
             <p>Analyst & Debugger</p>
         </div>
 
-        <div class="w3-quarter">
+        <div class="col-sm-2">
             <img src="favicon/tanay.jpg" alt="Boss" style="width:135px; height: 136px"class="w3-circle w3-hover-opacity">
             <h3>Tanay Das</h3>
             <p>Tester</p>
         </div>
 
+        <div class="col-sm-2">
+            <img src="favicon/sreeparna.jpg" alt="Boss" style="width:135px; height: 136px"class="w3-circle w3-hover-opacity">
+            <h3>Sreeparna Dutta</h3>
+            <p>Tester</p>
+        </div>
     </div>
 </div>
 
@@ -66,7 +71,7 @@
                 <span class="w3-opacity">per month</span>
             </li>
             <li class="w3-theme-l5 w3-padding-24">
-                <a href=""> <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Login</button></a>
+                <a href="login.php"> <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Login</button></a>
             </li>
         </ul>
     </div>

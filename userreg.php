@@ -13,30 +13,47 @@ if (isset($_POST['register'])){
     $interest = escape($_POST['interest']);
     $password = escape($_POST['password']);
 
-    if (!empty($name) && !empty($phone) && !empty($sex) && !empty($dob) && !empty($address) && !empty($email) && !empty($extra) && !empty($interest)){
+    //CAPTCHA
 
-        $querys = "select * from user";
-        $send = mysqli_query($connection, $querys);
-        $flag = 1;
+    $secretkey = "6LfTpHsUAAAAANMny2MKqV6Fvfm_3E13o0IQlH3_";
+    $responseKey = $_POST['g-recaptcha-response'];
+    $userIP = $_SERVER['REMOTE_ADDR'];
 
-        while ($row = mysqli_fetch_assoc($send)) {
-            $em = $row['email'];
-            if ($em == $email){
-                $flag = 0;
+    $url = "https://www.google.com/recaptcha/api/siteverify?secret=$secretkey&response=$responseKey&remoteip=$userIP";
+    $response = file_get_contents($url);
+    $response = json_decode($response);
+    if ($response->success){
+        if (!empty($name) && !empty($phone) && !empty($sex) && !empty($dob) && !empty($address) && !empty($email) && !empty($extra) && !empty($interest)){
+
+            $querys = "select * from user";
+            $send = mysqli_query($connection, $querys);
+            $flag = 1;
+
+            while ($row = mysqli_fetch_assoc($send)) {
+                $em = $row['email'];
+                if ($em == $email){
+                    $flag = 0;
+                }
+            }
+
+            if ($flag == 1) {
+                $query = "insert into user (name, phone, sex, dob, address, email, extra, interest, password) values ('{$name}', '{$phone}', '{$sex}', '{$dob}', '{$address}', '{$email}', '{$extra}', '{$interest}', '{$password}')";
+                $execute = mysqli_query($connection, $query);
+
+                Confirm();
+            }
+
+            if ($flag == 0){
+                Hold();
             }
         }
-
-        if ($flag == 1) {
-            $query = "insert into user (name, phone, sex, dob, address, email, extra, interest, password) values ('{$name}', '{$phone}', '{$sex}', '{$dob}', '{$address}', '{$email}', '{$extra}', '{$interest}', '{$password}')";
-            $execute = mysqli_query($connection, $query);
-
-            Confirm();
-        }
-
-        if ($flag == 0){
-            Hold();
-        }
+    } else {
+        echo "<script>alert(\"Something Went Wrong.\")</script>";
     }
+
+    //End CAPTCHA
+
+
 }
 ?>
 <div class="container">
@@ -146,6 +163,7 @@ if (isset($_POST['register'])){
                         </div>
                     </div>
                 </div>
+                <div class="g-recaptcha" data-sitekey="6LfTpHsUAAAAAEyNe-MJPRt1mS7m3HW8gUiBJN4y"></div>
                 <div class="row">
                     <div class="form-actions floatRight">
                         <input type="submit" value="Register" name="register" class="btn btn-primary btn-sm">
@@ -155,6 +173,7 @@ if (isset($_POST['register'])){
         </div>
     </div>
 </div>
+<script src='https://www.google.com/recaptcha/api.js'></script>
 <div class="footer">
     <div class="" style="margin-left: 460px">
         <p>Copyright © 2018 Seeking . All Rights Reserved . Design by <a href="" target="_blank">PreciousSquad</a> </p>

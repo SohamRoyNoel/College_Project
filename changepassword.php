@@ -28,6 +28,13 @@ if (isset($_POST['submit'])){
             header("Location: index.php");
         }
     }
+     if ($f == "creator"){
+        if ($fst == $snd){
+            $query = "update creators set password = '{$fst}' where email='{$em}'";
+            $execute = mysqli_query($connection, $query);
+            header("Location: index.php");
+        }
+    }
 }
 
 ?>

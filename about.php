@@ -10,9 +10,9 @@
                     <ul>
                         <li><span class="dropcap">1.</span>
                             <div class="item_content">
-                                <h5><a href="#">nunc nobis videntur parum</a></h5>
-                                <p> anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur paru.</p>
-                                <p class="m_1">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock</p>
+                                <h5><a href="#">One of the major advantages</a></h5>
+                                <p> One of the major advantages of job hunting on the Internet is convenience. From the comfort of your home, you can access thousands of job openings. You needn't drive to employers' offices to ask whether they have job openings. You can search for jobs in your geographic area or you can explore opportunities in the next city, across the country or on the other side of the world. In addition, if you embark upon a long-distance job search, some employers conduct video interviews, which makes it easy to interview for jobs that are outside your region.</p>
+                                <p class="m_1"> .</p>
                             </div>
                         </li>
                     </ul>
@@ -23,9 +23,9 @@
                     <ul>
                         <li><span class="dropcap">2.</span>
                             <div class="item_content">
-                                <h5><a href="#">nunc nobis videntur parum</a></h5>
-                                <p> anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur paru.</p>
-                                <p class="m_1">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock</p>
+                                <h5><a href="#">You can search </a></h5>
+                                <p> You can search for jobs in your geographic area or you can explore opportunities in the next city, across the country or on the other side of the world.</p>
+                                <p class="m_1"> In addition, if you embark upon a long-distance job search, some employers conduct video interviews, which makes it easy to interview for jobs that are outside your region</p>
                             </div>
                         </li>
                     </ul>
@@ -36,9 +36,9 @@
                     <ul>
                         <li><span class="dropcap">3.</span>
                             <div class="item_content">
-                                <h5><a href="#">nunc nobis videntur parum</a></h5>
-                                <p> anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur paru.</p>
-                                <p class="m_1">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock</p>
+                                <h5><a href="#">Saving Money is an Advantage</a></h5>
+                                <p>Job hunting on the Internet saves you money. The job search eliminates the cost of printing resumes and cover letters, and paying for postage to mail application packages to prospective employers.</p>
+                                <p class="m_1"> Online resources are also available to help you design and format a visually appealing resume, which can save money you would spend hiring a career coach or professional resume writer.</p>
                             </div>
                         </li>
                     </ul>

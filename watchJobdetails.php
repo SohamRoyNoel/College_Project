@@ -77,8 +77,8 @@ if (isset($_GET['j'])){
             <div class="panel-heading">
                 <h4 class="panel-title">
                     <div style="color: black">
-                        <b style="color: #00acee">Company :</b> &nbsp; <?php echo $db_company_name; ?><br>
-                        <b style="color: #00acee">Company :</b>&nbsp; <?php echo $title1; ?><br>
+                        <b style="color: #00acee">Company :</b> &nbsp; <?php echo $type == "company"? $db_company_name : "Seeker.com" ?><br>
+                        <b style="color: #00acee">Title :</b>&nbsp; <?php echo $title1; ?><br>
                         <b style="color: #00acee">Role :</b>&nbsp;<?php echo $role1; ?><br>
                         <b style="color: #00acee">Min Education :</b>&nbsp;<?php echo $education1; ?><br>
                         <b style="color: #00acee">Skill :</b>&nbsp;<?php echo $skill1; ?><br>
